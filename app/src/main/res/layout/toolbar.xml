@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mToolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/card_color"
+    android:elevation="@dimen/_3sdp">
+
+    <TextView
+        android:id="@+id/toolbarText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/capriola"
+        android:gravity="center"
+        tools:text="Toolbar"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sdp"
+        />
+
+
+
+    <ImageButton
+        android:id="@+id/toolbarImageFirst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:tint="@color/white"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/play_audio"
+        android:src="@drawable/play" />
+
+    <ImageButton
+        android:id="@+id/toolbarImageSecond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:contentDescription="@string/copy_button"
+        android:background="@android:color/transparent"
+        android:layout_gravity="end"/>
+
+</androidx.appcompat.widget.Toolbar>

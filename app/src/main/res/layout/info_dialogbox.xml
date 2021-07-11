@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:elevation="@dimen/_10sdp"
+        app:cardBackgroundColor="#1B0B3E"
+        app:cardCornerRadius="@dimen/_20sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:contentDescription="TODO"
+                    android:gravity="center"
+                    app:srcCompat="@drawable/ic_info"
+                    app:tint="@color/gold" />
+
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:fontFamily="@font/dosis_medium"
+                    android:gravity="center_horizontal"
+                    android:text="Information"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_20sdp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:fontFamily="@font/dosis_medium"
+                android:gravity="center_horizontal"
+                android:text="All Hadiths are from Sahih al-Bukhari.A Book by Muhammad al-Bukhari."
+                android:textColor="@color/gold"
+                android:textSize="@dimen/_18sdp"
+                tools:layout_editor_absoluteY="14dp" />
+
+            <Button
+                android:id="@+id/yes_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="end"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:elevation="@dimen/_10sdp"
+                android:backgroundTint="#00682B"
+                android:drawableLeft="@drawable/ic_yes"
+                android:text="@string/ok"
+                android:textColor="#FFFFFF"
+                app:cornerRadius="@dimen/_15sdp"
+                tools:ignore="RtlHardcoded" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

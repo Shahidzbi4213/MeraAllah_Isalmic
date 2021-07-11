@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_blue"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".ui.NamazDetailActivity">
+
+    <include
+        android:id="@+id/toolbar_include_namazDetail"
+        layout="@layout/toolbar" />
+
+    <ScrollView
+        android:id="@+id/scrollNamaz"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layoutNamaz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/namazProcess"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:background="@drawable/view_background"
+                    android:fontFamily="@font/lateef"
+                    android:gravity="center"
+                    android:lineSpacingExtra="@dimen/_2sdp"
+                    android:padding="@dimen/_10sdp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_25sdp" />
+
+                <TextView
+                    android:id="@+id/namaz"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:background="@drawable/view_background"
+                    android:fontFamily="@font/lateef"
+                    android:gravity="center"
+                    android:lineSpacingExtra="@dimen/_5sdp"
+                    android:padding="@dimen/_10sdp"
+                    android:text="الله أَكْبَر"
+                    android:textColor="@color/gold"
+                    android:textSize="@dimen/_25sdp" />
+
+                <TextView
+                    android:id="@+id/namazTranslation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:background="@drawable/view_background"
+                    android:fontFamily="@font/lateef"
+                    android:gravity="center"
+                    android:lineSpacingExtra="@dimen/_2sdp"
+                    android:padding="@dimen/_10sdp"
+                    android:text="ترجمہ: "
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_25sdp" />
+
+                <TextView
+                    android:id="@+id/transliteration"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:background="@drawable/view_background"
+                    android:fontFamily="@font/dosis_medium"
+                    android:gravity="center"
+                    android:lineSpacingExtra="@dimen/_2sdp"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/transliteration"
+                    android:textColor="@color/gold"
+                    android:textSize="@dimen/_16sdp" />
+
+                <ImageView
+                    android:id="@+id/process_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="@drawable/view_background"
+                    android:contentDescription="@string/process_image"
+                    android:padding="@dimen/_20sdp"
+                    app:srcCompat="@drawable/fourth" />
+
+            </LinearLayout>
+
+            <TableLayout
+                android:id="@+id/namazRakkatTableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="@dimen/_50sdp"
+                android:background="@android:color/white"
+                android:elevation="@dimen/_5sdp"
+                android:gravity="center_horizontal"
+                android:stretchColumns="*">
+
+                <!-- Table Heading -->
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/table_border"
+                        android:backgroundTint="@color/card_color"
+                        android:fontFamily="@font/droid_sans_bold"
+                        android:gravity="center"
+                        android:padding="@dimen/_8sdp"
+                        android:text="Salah Rakkat"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/_18sdp"
+                        android:textStyle="italic" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@drawable/table_border"
+                    android:backgroundTint="@color/gold">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.5"
+                        android:fontFamily="@font/droid_sans_bold"
+                        android:gravity="center_horizontal"
+                        android:padding="10sp"
+                        android:text="Salah"
+                        android:textColor="@android:color/black"
+                        android:textStyle="italic"
+                        app:autoSizeMaxTextSize="@dimen/_12sdp"
+                        app:autoSizeTextType="uniform" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/droid_sans_bold"
+                        android:gravity="center_horizontal"
+                        android:padding="10sp"
+                        android:text="Farz"
+                        android:textColor="@android:color/black"
+                        android:textStyle="italic"
+                        app:autoSizeMaxTextSize="@dimen/_12sdp"
+                        app:autoSizeTextType="uniform" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.1"
+                        android:fontFamily="@font/droid_sans_bold"
+                        android:gravity="center_horizontal"
+                        android:padding="10sp"
+                        android:text="Sunnah"
+                        android:textColor="@color/black"
+                        android:textStyle="italic"
+                        app:autoSizeMaxTextSize="@dimen/_12sdp"
+                        app:autoSizeTextType="uniform" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/droid_sans_bold"
+                        android:gravity="center_horizontal"
+                        android:padding="10sp"
+                        android:text="Wajib"
+                        android:textColor="@color/black"
+                        android:textStyle="italic"
+                        app:autoSizeMaxTextSize="@dimen/_12sdp"
+                        app:autoSizeTextType="uniform" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/droid_sans_bold"
+                        android:gravity="center_horizontal"
+                        android:padding="10sp"
+                        android:text="Total"
+                        android:textColor="@color/black"
+                        android:textStyle="italic"
+                        app:autoSizeMaxTextSize="@dimen/_12sdp"
+                        app:autoSizeTextType="uniform" />
+
+                </TableRow>
+
+                <!-- Table Data -->
+
+                <TableRow android:background="@drawable/table_border">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:fontFamily="@font/droid_sans_bold"
+                        android:gravity="center_horizontal"
+                        android:padding="10sp"
+                        android:text="Fajar"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/droid_sans_bold"
+                        android:gravity="center_horizontal"
+                        android:padding="10sp"
+                        android:text="2"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/droid_sans_bold"
+                        android:gravity="center_horizontal"
+                        android:padding="10sp"
+                        android:text="2"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/droid_sans_bold"
+                        android:gravity="center_horizontal"
+                        android:padding="10sp"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/droid_sans_bold"
+                        android:gravity="center_horizontal"
+                        android:padding="10sp"
+                        android:text="4"
+                        android:textColor="#4F07ED"
+                        android:textSize="@dimen/_12sdp" />
+
+                </TableRow>
+
+                <TableRow android:background="@drawable/table_border">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:fontFamily="@font/droid_sans_bold"
+                        android:gravity="center_horizontal"
+                        android:padding="10sp"
+                        android:text="Zuhur"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/droid_sans_bold"
+                        android:gravity="center_horizontal"
+                        android:padding="10sp"
+                        android:text="4"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/capriola"
+                        android:gravity="center_horizontal"
+                        android:padding="10sp"
+                        android:text="4+2"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/droid_sans_bold"
+                        android:gravity="center_horizontal"
+                        android:padding="10sp"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/droid_sans_bold"
+                        android:gravity="center_horizontal"
+                        android:padding="10sp"
+                        android:text="10"
+                        android:textColor="#4F07ED"
+                        android:textSize="@dimen/_12sdp" />
+
+                </TableRow>
+
+                <TableRow android:background="@drawable/table_border">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:fontFamily="@font/droid_sans_bold"
+                        android:gravity="center_horizontal"
+                        android:padding="10sp"
+                        android:text="Asr"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/droid_sans_bold"
+                        android:gravity="center_horizontal"
+                        android:padding="10sp"
+                        android:text="4"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/droid_sans_bold"
+                        android:gravity="center_horizontal"
+                        android:padding="10sp"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/droid_sans_bold"
+                        android:gravity="center_horizontal"
+                        android:padding="10sp"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/droid_sans_bold"
+                        android:gravity="center_horizontal"
+                        android:padding="10sp"
+                        android:text="4"
+                        android:textColor="#4F07ED"
+                        android:textSize="@dimen/_12sdp" />
+
+                </TableRow>
+
+                <TableRow android:background="@drawable/table_border">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:fontFamily="@font/droid_sans_bold"
+                        android:gravity="center_horizontal"
+                        android:padding="10sp"
+                        android:text="Maghrib"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/droid_sans_bold"
+                        android:gravity="center_horizontal"
+                        android:padding="10sp"
+                        android:text="3"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/droid_sans_bold"
+                        android:gravity="center_horizontal"
+                        android:padding="10sp"
+                        android:text="2"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/droid_sans_bold"
+                        android:gravity="center_horizontal"
+                        android:padding="10sp"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/droid_sans_bold"
+                        android:gravity="center_horizontal"
+                        android:padding="10sp"
+                        android:text="5"
+                        android:textColor="#4F07ED"
+                        android:textSize="@dimen/_12sdp" />
+
+                </TableRow>
+
+                <TableRow android:background="@drawable/table_border">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:fontFamily="@font/droid_sans_bold"
+                        android:gravity="center_horizontal"
+                        android:padding="10sp"
+                        android:text="Isha"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/droid_sans_bold"
+                        android:gravity="center_horizontal"
+                        android:padding="10sp"
+                        android:text="4"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/droid_sans_bold"
+                        android:gravity="center_horizontal"
+                        android:padding="10sp"
+                        android:text="2"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/droid_sans_bold"
+                        android:gravity="center_horizontal"
+                        android:padding="10sp"
+                        android:text="3"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/droid_sans_bold"
+                        android:gravity="center_horizontal"
+                        android:padding="10sp"
+                        android:text="9"
+                        android:textColor="#4F07ED"
+                        android:textSize="@dimen/_12sdp" />
+
+                </TableRow>
+
+                <TableRow android:background="@drawable/table_border">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:fontFamily="@font/droid_sans_bold"
+                        android:gravity="center_horizontal"
+                        android:padding="10sp"
+                        android:text="Jummah"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/droid_sans_bold"
+                        android:gravity="center_horizontal"
+                        android:padding="10sp"
+                        android:text="2"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/droid_sans_bold"
+                        android:gravity="center_horizontal"
+                        android:padding="10sp"
+                        android:text="4+4+2"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/droid_sans_bold"
+                        android:gravity="center_horizontal"
+                        android:padding="10sp"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/droid_sans_bold"
+                        android:gravity="center_horizontal"
+                        android:padding="10sp"
+                        android:text="12"
+                        android:textColor="#4F07ED"
+                        android:textSize="@dimen/_12sdp" />
+
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

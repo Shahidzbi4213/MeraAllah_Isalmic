@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_blue"
+    android:fitsSystemWindows="true">
+
+
+    <include
+        android:id="@+id/include_gold_rates"
+        layout="@layout/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <AutoCompleteTextView
+        android:id="@+id/autoTxt"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:completionThreshold="1"
+        android:padding="@dimen/_15sdp"
+        android:background="@drawable/edittext_bg"
+        android:fontFamily="@font/capriola"
+        android:gravity="center"
+        android:hint="@string/select_country"
+        android:textColor="@color/gold"
+        android:textColorHint="#B3B3B2"
+        android:textCursorDrawable="@drawable/my_cursor"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include_gold_rates"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/find_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="46dp"
+        android:background="@drawable/namaz_name_bg"
+        android:elevation="@dimen/_10sdp"
+        android:fontFamily="@font/capriola"
+        android:padding="@dimen/_15sdp"
+        android:text="Find Rate"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_16sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/autoTxt" />
+
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/white"
+        android:elevation="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/find_btn">
+
+        <!-- Table Heading -->
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/card_color"
+                android:fontFamily="@font/capriola"
+                android:gravity="center"
+                android:padding="@dimen/_8sdp"
+                android:text="Gold"
+                android:textColor="@color/gold"
+                android:textSize="@dimen/_20sdp" />
+        </TableRow>
+
+        <TableRow android:background="#51DA51">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="@font/capriola"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:text="Location"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/capriola"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:text="10g"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/capriola"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:text="Tola"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+        </TableRow>
+
+        <!-- Table Data -->
+
+        <TableRow android:background="#F4C833">
+
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/capriola"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:id="@+id/gramTenChoubis"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/capriola"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:id="@+id/tola"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/capriola"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+        </TableRow>
+
+    </TableLayout>
+
+
+    <TableLayout
+        android:id="@+id/tableLayoutSilver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
+        android:background="@android:color/white"
+        android:elevation="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout">
+
+        <!-- Table Heading -->
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/card_color"
+                android:fontFamily="@font/capriola"
+                android:gravity="center"
+                android:padding="@dimen/_8sdp"
+                android:text="Silver"
+                android:textColor="#C0C0C0"
+                android:textSize="@dimen/_20sdp" />
+        </TableRow>
+
+        <TableRow android:background="#51DA51">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="@font/capriola"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:text="Location"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/capriola"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:text="10g"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/capriola"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:text="Tola"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+        </TableRow>
+
+        <!-- Table Data -->
+
+        <TableRow android:background="#C0C0C0">
+
+            <TextView
+                android:id="@+id/locationSilver"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/capriola"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:id="@+id/gramTenChoubisSilver"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/capriola"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:id="@+id/tolaSilver"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/capriola"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+        </TableRow>
+
+    </TableLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

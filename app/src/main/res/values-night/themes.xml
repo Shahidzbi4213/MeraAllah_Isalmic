@@ -1,0 +1,112 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.MeraAllah" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/card_color</item>
+        <item name="colorPrimaryVariant">@color/card_color</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <!-- Customize your theme here. -->
+        <item name="android:actionMenuTextColor">@color/white</item>
+        <item name="android:homeAsUpIndicator">@drawable/back_arrow</item>
+    </style>
+
+    <style name="SplashScreen" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <item name="android:windowBackground">@drawable/splash_background</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="CircularDeterminateProgressBar">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/progress_bar_style</item>
+    </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_down_animation</item>
+        <item name="android:windowExitAnimation">@anim/slide_up_animation</item>
+    </style>
+
+    <style name="Theme_Dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+
+    <style name="QiblaTheme" parent="Theme.MeraAllah">
+        <item name="android:fitsSystemWindows">true</item>
+    </style>
+
+    <style name="apply">
+        <item name="android:layout_marginTop">@dimen/_10sdp</item>
+    </style>
+
+     <style name="Custom" parent="android:Theme.DeviceDefault.Dialog">
+         <item name="DialogTitleAppearance">@android:style/TextAppearance.Medium</item>
+         <item name="DialogTitleText">Updating…</item>
+         <item name="DialogSpotColor">@color/gold</item>
+         <item name="DialogSpotCount">4</item>
+         <item name="fontFamily">@font/capriola</item>
+         <item name="android:progressBackgroundTint">@color/card_color</item>
+         <item name="android:background">@color/card_color</item>
+         <item name="background">@color/card_color</item>
+     </style>
+
+    <style name="Regular">
+        <item name="android:lineSpacingExtra">@dimen/_7sdp</item>
+    </style>
+
+
+    <style name="DateText">
+        <item name="android:fontFamily">monospace</item>
+        <item name="fontFamily">monospace</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/_13sdp</item>
+        <item name="android:elevation">@dimen/_10sdp</item>
+        <item name="elevation">@dimen/_10sdp</item>
+        <item name="android:typeface">normal</item>
+
+    </style>
+
+    <style name="HeaderText">
+        <item name="android:fontFamily">@font/capriola</item>
+        <item name="fontFamily">@font/dosis_medium</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="android:typeface">normal</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="WeekText">
+        <item name="android:fontFamily">monospace</item>
+        <item name="fontFamily">monospace</item>
+        <item name="android:textColor">@color/gold</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:typeface">normal</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="JustChange">
+        <item name="mcv_arrowColor">@android:color/transparent</item>
+        <item name="mcv_leftArrowMask">@drawable/ic_back</item>
+        <item name="mcv_rightArrowMask">@drawable/ic_next</item>
+        <item name="mcv_selectionColor">@color/gold</item>
+        <item name="mcv_headerTextAppearance">@style/HeaderText</item>
+        <item name="mcv_dateTextAppearance">@style/DateText</item>
+        <item name="mcv_weekDayTextAppearance">@style/WeekText</item>
+        <item name="mcv_showOtherDates">none</item>
+        <item name="elevation">@dimen/_10sdp</item>
+        <item name="android:elevation">@dimen/_10sdp</item>
+        <item name="android:background">@drawable/view_background</item>
+        <item name="background">@drawable/view_background</item>
+    </style>
+
+
+</resources>

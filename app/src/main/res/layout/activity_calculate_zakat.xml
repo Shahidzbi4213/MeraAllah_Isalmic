@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/dark_blue"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <include
+        android:id="@+id/toolbar_include_zakatFinder"
+        layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <AutoCompleteTextView
+            android:id="@+id/Complete_country"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:background="@drawable/edittext_bg"
+            android:completionThreshold="1"
+            android:fontFamily="@font/capriola"
+            android:gravity="center"
+            android:hint="@string/select_country"
+            android:textColor="@color/gold"
+            android:textColorHint="#B3B3B2"
+            android:textCursorDrawable="@drawable/my_cursor"
+            android:textSize="@dimen/_12sdp" />
+
+        <EditText
+            android:id="@+id/editTextCash"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:background="@drawable/edittext_bg"
+            android:cursorVisible="true"
+            android:elevation="@dimen/_10sdp"
+            android:fontFamily="@font/capriola"
+            android:gravity="center"
+            android:hint="@string/enter_cash"
+            android:inputType="number"
+            android:textColor="@color/gold"
+            android:textColorHint="#B3B3B2"
+            android:textCursorDrawable="@drawable/my_cursor"
+            android:textSize="@dimen/_12sdp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_calculate"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_weight="1"
+            android:background="@drawable/edittext_bg"
+            android:backgroundTint="#024F2A"
+            android:elevation="@dimen/_10sdp"
+            android:fontFamily="@font/capriola"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/calculate"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp" />
+
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/viewD"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/transparent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/zakkatDetail"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@android:color/transparent"
+        android:visibility="gone"
+        app:cardBackgroundColor="@color/card_color"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardElevation="@dimen/_5sdp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:id="@+id/zakkatShower"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/dosis_medium"
+                    android:gravity="center"
+                    android:text="Country"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_18sdp" />
+
+                <TextView
+                    android:id="@+id/txtCountryName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/gold"
+                    android:textSize="@dimen/_18sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/dosis_medium"
+                    android:gravity="center"
+                    android:text="@string/eligible"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_18sdp" />
+
+                <TextView
+                    android:id="@+id/txtStatus"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/gold"
+                    android:textSize="@dimen/_18sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/dosis_medium"
+                    android:gravity="center"
+                    android:text="Today's Nisab"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_18sdp" />
+
+                <TextView
+                    android:id="@+id/txtNisab"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/gold"
+                    android:textSize="@dimen/_18sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/dosis_medium"
+                    android:gravity="center"
+                    android:text="@string/your_amount"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_18sdp" />
+
+                <TextView
+                    android:id="@+id/txtAmount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/gold"
+                    android:textSize="@dimen/_18sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/dosis_medium"
+                    android:gravity="center"
+                    android:text="Zakkat Amount"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_18sdp" />
+
+                <TextView
+                    android:id="@+id/txtPaidZakat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/gold"
+                    android:textSize="@dimen/_18sdp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

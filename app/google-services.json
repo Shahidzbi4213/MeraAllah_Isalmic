@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "671254215853",
+    "project_id": "mera-allah-6395f",
+    "storage_bucket": "mera-allah-6395f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:671254215853:android:d66c70f8f947715d1b5a24",
+        "android_client_info": {
+          "package_name": "com.edu.pk.gulehri.meraallah"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "671254215853-9kvebkhbaddq4nf1vnfit9prbip6436n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7xo-5408RTIO7b4biAO9hSD2ck9_3AA4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "671254215853-9kvebkhbaddq4nf1vnfit9prbip6436n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

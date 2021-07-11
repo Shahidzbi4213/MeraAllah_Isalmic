@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginStart="@dimen/_10sdp"
+    android:layout_marginEnd="@dimen/_10sdp"
+    android:layout_weight="1"
+    android:background="@drawable/dialog"
+    android:elevation="@dimen/_10sdp"
+    android:orientation="vertical"
+    android:padding="@dimen/_7sdp">
+
+    <TextView
+        android:id="@+id/txtClose"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_gravity="end"
+        android:background="@drawable/circlebackground"
+        android:gravity="center"
+        android:text="@string/txtClose"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_10sdp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/quiz_result"
+            android:src="@drawable/trophy" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/capriola"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:text="@string/quiz_result"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_18sdp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/_10sdp"
+            android:background="#FF6D00"
+            android:elevation="@dimen/_5sdp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/questionSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/_1sdp"
+                android:fontFamily="@font/capriola"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_18sdp"
+                tools:text="20" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/_1sdp"
+                android:fontFamily="@font/capriola"
+                android:text="@string/questions"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_13sdp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#0DA733"
+            android:padding="@dimen/_10sdp"
+            android:elevation="@dimen/_5sdp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/correctQuestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/_1sdp"
+                android:fontFamily="@font/capriola"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_18sdp"
+                tools:text="15" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/_1sdp"
+                android:fontFamily="@font/capriola"
+                android:text="@string/correct"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_13sdp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#C01C18"
+            android:padding="@dimen/_10sdp"
+            android:elevation="@dimen/_5sdp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/wrongQuestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/_1sdp"
+                android:fontFamily="@font/capriola"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_18sdp"
+                tools:text="5" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/_1sdp"
+                android:fontFamily="@font/capriola"
+                android:text="@string/wrong"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_13sdp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:baselineAligned="false"
+        android:elevation="@dimen/_10sdp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/_10sdp"
+            android:background="#C78500"
+            android:elevation="@dimen/_5sdp"
+            android:fontFamily="@font/dosis_medium"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/myScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/_1sdp"
+                android:fontFamily="@font/capriola"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_18sdp"
+                tools:text="60" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/_1sdp"
+                android:fontFamily="@font/capriola"
+                android:text="@string/yourScore"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_13sdp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/_10sdp"
+            android:background="#017786"
+            android:elevation="@dimen/_5sdp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/highScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/_1sdp"
+                android:fontFamily="@font/capriola"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_18sdp"
+                tools:text="80" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/_1sdp"
+                android:fontFamily="@font/capriola"
+                android:text="@string/highScore"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_13sdp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_15sdp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/playAgain"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/button_play_again"
+            android:elevation="@dimen/_10sdp"
+            android:fontFamily="@font/capriola"
+            android:text="@string/playAgain"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/showAnswers"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/mainMenu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/button_main_menu"
+            android:elevation="@dimen/_10sdp"
+            android:fontFamily="@font/capriola"
+            android:text="@string/mainMenu"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/showAnswers"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/showAnswers"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/showasnwer_backgroung"
+            android:elevation="@dimen/_10sdp"
+            android:fontFamily="@font/capriola"
+            android:text="@string/show_answers"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/mainMenu"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/playAgain"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

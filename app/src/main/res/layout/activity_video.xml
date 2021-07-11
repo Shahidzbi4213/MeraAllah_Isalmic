@@ -1,0 +1,901 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_blue"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".ui.VideoActivity">
+
+    <include
+        android:id="@+id/toolbar_include_Video"
+        layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <!--Card A-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardA"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:cardBackgroundColor="@color/card_color"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_5sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/img_thumb_A"
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        app:srcCompat="@drawable/ic_video" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_name_A"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:fontFamily="serif"
+                            android:gravity="center"
+                            android:text="TextView"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <ProgressBar
+                            android:id="@+id/pbA"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:max="100"
+                            android:progressTint="@color/gold"
+                            android:visibility="gone" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_per_A"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:text="20%"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12sdp"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/img_dwn_A"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_download"
+                        app:tint="@color/gold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--Card B-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardB"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:cardBackgroundColor="@color/card_color"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_5sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/img_thumb_B"
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        app:srcCompat="@drawable/ic_video" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_name_B"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:fontFamily="serif"
+                            android:gravity="center"
+                            android:text="TextView"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <ProgressBar
+                            android:id="@+id/pbB"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:max="100"
+                            android:progressTint="@color/gold"
+                            android:visibility="gone" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_per_B"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:text="20%"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12sdp"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/img_dwn_B"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_download"
+                        app:tint="@color/gold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--Card C-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardC"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:cardBackgroundColor="@color/card_color"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_5sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/img_thumb_C"
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        app:srcCompat="@drawable/ic_video" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_name_C"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:fontFamily="serif"
+                            android:gravity="center"
+                            android:text="TextView"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <ProgressBar
+                            android:id="@+id/pbC"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:max="100"
+                            android:progressTint="@color/gold"
+                            android:visibility="gone" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_per_C"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:text="20%"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12sdp"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/img_dwn_C"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_download"
+                        app:tint="@color/gold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--Card D-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardD"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:cardBackgroundColor="@color/card_color"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_5sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/img_thumb_D"
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        app:srcCompat="@drawable/ic_video" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_name_D"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:fontFamily="serif"
+                            android:gravity="center"
+                            android:text="TextView"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <ProgressBar
+                            android:id="@+id/pbD"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:max="100"
+                            android:progressTint="@color/gold"
+                            android:visibility="gone" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_per_D"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:text="20%"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12sdp"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/img_dwn_D"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_download"
+                        app:tint="@color/gold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--Card E-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardE"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:cardBackgroundColor="@color/card_color"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_5sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/img_thumb_E"
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        app:srcCompat="@drawable/ic_video" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_name_E"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:fontFamily="serif"
+                            android:gravity="center"
+                            android:text="TextView"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <ProgressBar
+                            android:id="@+id/pbE"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:max="100"
+                            android:progressTint="@color/gold"
+                            android:visibility="gone" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_per_E"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:text="20%"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12sdp"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/img_dwn_E"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_download"
+                        app:tint="@color/gold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--Card F-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardF"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:cardBackgroundColor="@color/card_color"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_5sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/img_thumb_F"
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        app:srcCompat="@drawable/ic_video" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_name_F"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:fontFamily="serif"
+                            android:gravity="center"
+                            android:text="TextView"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <ProgressBar
+                            android:id="@+id/pbF"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:max="100"
+                            android:progressTint="@color/gold"
+                            android:visibility="gone" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_per_F"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:text="20%"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12sdp"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/img_dwn_F"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_download"
+                        app:tint="@color/gold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--Card G-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:cardBackgroundColor="@color/card_color"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_5sdp"
+                android:id="@+id/cardG">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/img_thumb_G"
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        app:srcCompat="@drawable/ic_video" />
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_name_G"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:fontFamily="serif"
+                            android:gravity="center"
+                            android:text="TextView"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <ProgressBar
+                            android:id="@+id/pbG"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:max="100"
+                            android:progressTint="@color/gold"
+                            android:visibility="gone" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_per_G"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:text="20%"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12sdp"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/img_dwn_G"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_download"
+                        app:tint="@color/gold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--Card H-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardH"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:cardBackgroundColor="@color/card_color"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_5sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/img_thumb_H"
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        app:srcCompat="@drawable/ic_video" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_name_H"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:fontFamily="serif"
+                            android:gravity="center"
+                            android:text="TextView"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <ProgressBar
+                            android:id="@+id/pbH"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:max="100"
+                            android:progressTint="@color/gold"
+                            android:visibility="gone" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_per_H"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:text="20%"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12sdp"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/img_dwn_H"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_download"
+                        app:tint="@color/gold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--Card I-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardI"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:cardBackgroundColor="@color/card_color"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_5sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/img_thumb_I"
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        app:srcCompat="@drawable/ic_video" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_name_I"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:fontFamily="serif"
+                            android:gravity="center"
+                            android:text="TextView"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <ProgressBar
+                            android:id="@+id/pbI"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:max="100"
+                            android:progressTint="@color/gold"
+                            android:visibility="gone" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_per_I"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:text="20%"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12sdp"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/img_dwn_I"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        app:srcCompat="@drawable/ic_download"
+                        app:tint="@color/gold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--Card J-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardJ"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:cardBackgroundColor="@color/card_color"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_5sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/img_thumb_J"
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        app:srcCompat="@drawable/ic_video" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_name_J"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:fontFamily="serif"
+                            android:gravity="center"
+                            android:text="TextView"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <ProgressBar
+                            android:id="@+id/pbJ"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:max="100"
+                            android:progressTint="@color/gold"
+                            android:visibility="gone" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_per_J"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:text="20%"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12sdp"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/img_dwn_j"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        app:srcCompat="@drawable/ic_download"
+                        app:tint="@color/gold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

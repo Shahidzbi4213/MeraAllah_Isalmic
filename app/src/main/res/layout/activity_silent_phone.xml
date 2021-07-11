@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_blue"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.SilentPhoneActivity">
+
+    <include
+        android:id="@+id/toolbar_include_silent"
+        layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_30sdp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/fajarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:background="@drawable/view_background"
+            android:elevation="@dimen/_10sdp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewFajar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_weight="0.7"
+                android:background="@drawable/namaz_name_bg"
+                android:fontFamily="@font/capriola"
+                android:gravity="center"
+                android:text="Fajar"
+                android:textColor="@color/white"
+                android:textColorHint="#0A15E6"
+                android:textSize="@dimen/_16sdp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/time_fajar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/droid_sans_bold"
+                android:gravity="center"
+                android:textColor="@color/gold"
+                android:textSize="@dimen/_20sdp"
+                tools:text="12:00 AM" />
+
+            <ImageButton
+                android:id="@+id/clock_fajar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_weight="0.3"
+                android:background="@drawable/namaz_btn_bg"
+                android:tint="@color/white"
+                app:srcCompat="@drawable/time" />
+
+            <ImageButton
+                android:id="@+id/reset_fajar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_weight="0.3"
+                android:background="@drawable/namaz_reset_btn_bg"
+                android:tint="@color/white"
+                app:srcCompat="@drawable/reset" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/zuhurLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:background="@drawable/view_background"
+            android:elevation="@dimen/_10sdp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewZuhur"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_weight="0.7"
+                android:background="@drawable/namaz_name_bg"
+                android:fontFamily="@font/capriola"
+                android:gravity="center"
+                android:text="Zuhur"
+                android:textColor="@color/white"
+                android:textColorHint="#0A15E6"
+                android:textSize="@dimen/_16sdp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/time_zuhur"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/droid_sans_bold"
+                android:gravity="center"
+                android:textColor="@color/gold"
+                android:textSize="@dimen/_20sdp" />
+
+            <ImageButton
+                android:id="@+id/clock_zuhur"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_weight="0.3"
+                android:background="@drawable/namaz_btn_bg"
+                android:tint="@color/white"
+                app:srcCompat="@drawable/time" />
+
+            <ImageButton
+                android:id="@+id/reset_zuhur"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_weight="0.3"
+                android:background="@drawable/namaz_reset_btn_bg"
+                android:tint="@color/white"
+                app:srcCompat="@drawable/reset" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/asrLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:background="@drawable/view_background"
+            android:elevation="@dimen/_10sdp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewAsr"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_weight="0.7"
+                android:background="@drawable/namaz_name_bg"
+                android:fontFamily="@font/capriola"
+                android:gravity="center"
+                android:text="Asr"
+                android:textColor="@color/white"
+                android:textColorHint="#0A15E6"
+                android:textSize="@dimen/_16sdp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/time_asr"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/droid_sans_bold"
+                android:gravity="center"
+                android:textColor="@color/gold"
+                android:textSize="@dimen/_20sdp" />
+
+            <ImageButton
+                android:id="@+id/clock_asr"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_weight="0.3"
+                android:background="@drawable/namaz_btn_bg"
+                android:tint="@color/white"
+                app:srcCompat="@drawable/time" />
+
+            <ImageButton
+                android:id="@+id/reset_asr"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_weight="0.3"
+                android:background="@drawable/namaz_reset_btn_bg"
+                android:tint="@color/white"
+                app:srcCompat="@drawable/reset" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/maghribLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:background="@drawable/view_background"
+            android:elevation="@dimen/_10sdp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewMaghrib"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_weight="0.7"
+                android:background="@drawable/namaz_name_bg"
+                android:fontFamily="@font/capriola"
+                android:gravity="center"
+                android:text="Maghrib"
+                android:textColor="@color/white"
+                android:textColorHint="#0A15E6"
+                android:textSize="@dimen/_16sdp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/time_maghrib"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/droid_sans_bold"
+                android:gravity="center"
+                android:textColor="@color/gold"
+                android:textSize="@dimen/_20sdp" />
+
+            <ImageButton
+                android:id="@+id/clock_maghrib"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_weight="0.3"
+                android:background="@drawable/namaz_btn_bg"
+                android:tint="@color/white"
+                app:srcCompat="@drawable/time" />
+
+            <ImageButton
+                android:id="@+id/reset_maghrib"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_weight="0.3"
+                android:background="@drawable/namaz_reset_btn_bg"
+                android:tint="@color/white"
+                app:srcCompat="@drawable/reset" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ishaLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:background="@drawable/view_background"
+            android:elevation="@dimen/_10sdp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewIsha"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_weight="0.7"
+                android:background="@drawable/namaz_name_bg"
+                android:fontFamily="@font/capriola"
+                android:gravity="center"
+                android:text="Isha"
+                android:textColor="@color/white"
+                android:textColorHint="#0A15E6"
+                android:textSize="@dimen/_16sdp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/time_isha"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/droid_sans_bold"
+                android:gravity="center"
+                android:textColor="@color/gold"
+                android:textSize="@dimen/_20sdp" />
+
+            <ImageButton
+                android:id="@+id/clock_isha"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_weight="0.3"
+                android:background="@drawable/namaz_btn_bg"
+                android:tint="@color/white"
+                app:srcCompat="@drawable/time" />
+
+            <ImageButton
+                android:id="@+id/reset_isha"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_weight="0.3"
+                android:background="@drawable/namaz_reset_btn_bg"
+                android:tint="@color/white"
+                app:srcCompat="@drawable/reset" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/jummahLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:background="@drawable/view_background"
+            android:elevation="@dimen/_10sdp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewJummah"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_weight="0.7"
+                android:background="@drawable/namaz_name_bg"
+                android:fontFamily="@font/capriola"
+                android:gravity="center"
+                android:text="Jummah"
+                android:textColor="@color/white"
+                android:textColorHint="#0A15E6"
+                android:textSize="@dimen/_16sdp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/time_jummah"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/droid_sans_bold"
+                android:gravity="center"
+                android:textColor="@color/gold"
+                android:textSize="@dimen/_20sdp" />
+
+            <ImageButton
+                android:id="@+id/clock_jummah"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_weight="0.3"
+                android:background="@drawable/namaz_btn_bg"
+                android:tint="@color/white"
+                app:srcCompat="@drawable/time" />
+
+            <ImageButton
+                android:id="@+id/reset_jummah"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_weight="0.3"
+                android:background="@drawable/namaz_reset_btn_bg"
+                android:tint="@color/white"
+                app:srcCompat="@drawable/reset" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

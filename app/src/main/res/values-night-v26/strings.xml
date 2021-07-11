@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hadith">Hadith of the Day</string>
+    <string name="ok">Ok</string>
+    <string name="hijri_calender">Hijri Calender</string>
+    <string name="hijri_calender_info">Hijri Calender Infromation</string>
+    <string name="al_quran_with_english_translation">Al Quran With English Translation</string>
+    <string name="al_quran">Al Quran</string>
+    <string name="al_quran_with_urdu_translation">Al Quran With Urdu Translation</string>
+    <string name="janaza">Janaza</string>
+    <string name="kalimas">Six Kalimas</string>
+    <string name="janaza_Detail">Janaza Detail</string>
+    <string name="surah">Surah List</string>
+    <string name="note">Do you want to Download Holy Quran of 15 Lines/Per Page ?</string>
+    <string name="quranEPak">Quran E Pak</string>
+    <string name="qaida">Qaida</string>
+    <string name="message">Do you want to download Norani Qaida ?</string>
+    <string name="newBorn">Islamic Practices for Newborn Child</string>
+    <string name="enter_cash">Enter Cash</string>
+    <string name="calculate">Calculate</string>
+    <string name="eligible">Eligible</string>
+    <string name="your_amount">Your Amount</string>
+    <string name="quiz_result">Quiz Result</string>
+    <string name="search_menu">Search Menu</string>
+    <string name="prophet_names">Asma Ul Rasool</string>
+    <string name="allah_names">Amsa Ul Husna</string>
+    <string name="islamic_videos">Islamic Videos</string>
+    <string name="date">Date</string>
+    <string name="month">Month</string>
+    <string name="year">Year</string>
+</resources>

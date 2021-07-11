@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_blue"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".ui.SupplicationDetailActivity">
+
+    <include
+        android:id="@+id/toolbar_include_supplication_detail"
+        layout="@layout/toolbar" />
+
+
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+
+        <LinearLayout
+            android:id="@+id/supplicationLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@drawable/view_background"
+                android:elevation="@dimen/_10sdp"
+                android:fontFamily="@font/yrsa_semibold"
+                android:gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:text="نیا چاند دیکھتے وقت کی دعا"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_18sdp" />
+
+            <TextView
+                android:id="@+id/dua"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@drawable/view_background"
+                android:elevation="@dimen/_10sdp"
+                android:fontFamily="@font/lateef"
+                android:gravity="center"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:padding="@dimen/_10sdp"
+                android:text="اللَّهُمَّ أَهِلَّهُ عَلَيْنَا بِالأَمْنِ وَالإِيمَانِ ، والسَّلامَةِ والإِسْلامِ ، وَالتَّوْفِيقِ لِمَا تُحِبُّ وَتَرْضَى ، رَبُّنَا وَرَبُّكَ اللهُ"
+                android:textColor="@color/gold"
+                android:textSize="@dimen/_25sdp" />
+
+
+            <TextView
+                android:id="@+id/duaMeaning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@drawable/view_background"
+                android:elevation="@dimen/_10sdp"
+                android:fontFamily="@font/lateef"
+                android:gravity="center"
+                android:lineSpacingExtra="@dimen/_2sdp"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/tarjuma"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_25sdp" />
+
+            <TextView
+                android:id="@+id/reference"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@drawable/view_background"
+                android:elevation="@dimen/_10sdp"
+                android:fontFamily="@font/dosis_medium"
+                android:gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/reference"
+                android:textColor="@color/gold"
+                android:textSize="@dimen/_15sdp" />
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

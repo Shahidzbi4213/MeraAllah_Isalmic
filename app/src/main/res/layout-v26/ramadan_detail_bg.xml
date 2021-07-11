@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/mmLayout"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:elevation="@dimen/_10sdp"
+        app:cardBackgroundColor="@color/card_color"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardUseCompatPadding="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/ramdan_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="(1)"
+                android:fontFamily="@font/dosis_medium"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/_20sdp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/ramadan_reference_arabic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/lateef"
+                android:padding="@dimen/_10sdp"
+                android:layoutDirection="rtl"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:justificationMode="inter_word"
+                android:text="يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ كُتِبَ عَلَيْكُمُ ٱلصِّيَامُ كَمَا كُتِبَ عَلَى ٱلَّذِينَ مِن قَبْلِكُمْ لَعَلَّكُمْ تَتَّقُونَ"
+                android:textColor="@color/gold"
+                android:textSize="@dimen/_22sdp" />
+
+            <view
+                android:id="@+id/first"
+                class="androidx.viewpager.widget.ViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:background="#747075" />
+
+            <TextView
+                android:id="@+id/ramadan_refernce_lang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:fontFamily="@font/lateef"
+                android:padding="@dimen/_10sdp"
+                android:justificationMode="inter_word"
+                android:text="اے ایمان والو! تم پر روزہ رکھنا اسی طرح روزہ رکھتا ہے جس طرح تم سے پہلے لوگوں پر یہ حکم دیا گیا تھا کہ تم نیک ہوجاؤ"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_22sdp" />
+
+
+            <view
+                android:id="@+id/second"
+                class="androidx.viewpager.widget.ViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:background="#747075"  />
+
+            <TextView
+                android:id="@+id/ramadan_detail_reference"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:fontFamily="@font/dosis_medium"
+                android:padding="@dimen/_10sdp"
+                android:gravity="center"
+                android:justificationMode="inter_word"
+                android:text="Surah Baqarah Ayah [183]"
+                android:textColor="@color/gold"
+                android:textSize="@dimen/_16sdp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

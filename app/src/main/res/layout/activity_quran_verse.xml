@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_blue"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".ui.QuranVerse">
+
+    <include
+        android:id="@+id/toolbar_include_QuranVerse"
+        layout="@layout/toolbar" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="@dimen/_10sdp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtArabic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/view_background"
+                android:elevation="@dimen/_10sdp"
+                android:fontFamily="@font/lateef"
+                android:gravity="center"
+                android:layoutDirection="rtl"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:padding="@dimen/_15sdp"
+                android:textAlignment="center"
+                android:textColor="@color/gold"
+                android:textSize="@dimen/_25sdp" />
+
+            <com.bullhead.quranquotes.views.QuranVerseView
+                android:id="@+id/quranVerse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/view_background"
+                android:elevation="@dimen/_10sdp"
+                android:gravity="center"
+                android:paddingTop="@dimen/_5sdp"
+                style="@style/Regular"
+                android:theme="@style/Regular"
+                android:paddingBottom="@dimen/_5sdp"
+                android:textAlignment="center"
+                app:surahNameTextColor="@color/gold"
+                app:surahNameTextSize="@dimen/_12sdp"
+                app:verseTextColor="@color/white"
+                app:verseTextSize="@dimen/_16sdp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

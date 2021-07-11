@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.edu.pk.gulehri.meraallah">
+    <!-- Device  Boot Permission -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- Storage Permission -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- Do Not Disturb  And Battery Optimization Permissions -->
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+    <!-- Location Permission -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- Read Wifi State  And Internet Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MeraAllah">
+        <!-- Activities -->
+        <activity android:name=".ui.VideoPlayActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name=".ui.VideoActivity" />
+        <activity
+            android:name=".ui.ProphetNamesDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.AllahNamesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ProphetNamesActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.NewBornDetailActivity" />
+        <activity android:name=".ui.NewBornActivity" />
+        <activity android:name=".ui.QaidaViewerActivity" />
+        <activity android:name=".ui.QuranFifteenActivity" />
+        <activity
+            android:name=".ui.SurahNamesActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.JanazaDetailActivity" />
+        <activity
+            android:name=".ui.QaidaActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.KalimasDetailActivity" />
+        <activity android:name=".ui.KalimasActivity" />
+        <activity android:name=".ui.JanazaActivity" />
+        <activity android:name=".ui.ZakkatDetailActivity" />
+        <activity android:name=".ui.HijriInfoDetail" />
+        <activity android:name=".ui.HijriCalenderInformation" />
+        <activity
+            android:name=".ui.HijriCalender"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.HadithOfDay"
+            android:launchMode="singleTop" />
+        <activity android:name=".ui.QuranVerse" />
+        <activity android:name=".ui.ZakkatActivity" />
+        <activity android:name=".ui.FindRatesActivity" />
+        <activity android:name=".ui.PrayerCalculation" />
+        <activity android:name=".ui.ShowAnswer" />
+        <activity
+            android:name=".ui.CalculateZakkatActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.PrayerTime" />
+        <activity android:name=".ui.HajjActivity" />
+        <activity android:name=".ui.HajjDetailActivity" />
+        <activity
+            android:name=".ui.SilentPhoneActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.RamadanDetailActivity" />
+        <activity android:name=".ui.RamadanActivity" />
+        <activity android:name=".ui.AblutionDetailActivity" />
+        <activity android:name=".ui.AblutionActivity" />
+        <activity
+            android:name=".ui.TasbeehDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.TasbeehActivity" />
+        <activity android:name=".ui.NamazActivity" />
+        <activity android:name=".ui.SupplicationDetailActivity" />
+        <activity android:name=".ui.NamazDetailActivity" />
+        <activity android:name=".ui.ShahadatActivity" />
+        <activity android:name=".ui.SupplicationActivity" />
+        <activity
+            android:name=".ui.AllahNamesDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.QuizActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.hassanjamil.hqibla.CompassActivity"
+            android:label="Find Qibla"
+            android:screenOrientation="portrait"
+            android:theme="@style/QiblaTheme" />
+
+        <!-- Splash Screen As Launcher Activity -->
+        <activity
+            android:name=".ui.SplashScreen"
+            android:noHistory="true"
+            android:theme="@style/SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Fonts That has been Added to the Project -->
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <!-- Registering Broadcast BootReceiver -->
+        <receiver
+            android:name=".receivers.BootReceiver"
+            android:enabled="true">
+            <intent-filter android:priority="999">
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receivers.RingerReceiver" />
+        <receiver android:name=".receivers.NotificationReceiver" />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/detailView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_blue"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbarProphetNames"
+        layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_weight="1"
+        android:background="@drawable/detail_activity_background"
+        android:elevation="@dimen/_5sdp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/counterViewProphet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:fontFamily="@font/capriola"
+            android:gravity="end"
+            android:text="(1)"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:autoSizeMaxTextSize="@dimen/_20sdp"
+            app:autoSizeTextType="uniform" />
+
+
+        <TextView
+            android:id="@+id/nameInArabicProphet"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/lateef"
+            android:gravity="center"
+            android:text="@string/nameOfAllah"
+            android:textColor="@color/gold"
+            app:autoSizeMaxTextSize="@dimen/_25sdp"
+            app:autoSizeTextType="uniform" />
+
+        <TextView
+            android:id="@+id/nameInEnglishProphet"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/dosis_medium"
+            android:gravity="center"
+            android:text="Allah"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            app:autoSizeMaxTextSize="@dimen/_18sdp"
+            app:autoSizeTextType="uniform" />
+
+        <TextView
+            android:id="@+id/meaningOfNameProphet"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:fontFamily="@font/capriola"
+            android:gravity="center"
+            android:text="Meaning: The Giver of Peace"
+            android:textColor="@color/gold"
+            android:textStyle="italic"
+            app:autoSizeMaxTextSize="@dimen/_15sdp"
+            app:autoSizeTextType="uniform" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_weight="1.7"
+        android:background="@drawable/detail_activity_background"
+        android:elevation="@dimen/_5sdp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/referenceOfNameProphet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:fontFamily="@font/capriola"
+            android:text="Advantage of Name:"
+            android:textColor="@color/white"
+            android:textStyle="italic"
+            app:autoSizeMaxTextSize="@dimen/_14sdp"
+            app:autoSizeTextType="uniform" />
+
+        <TextView
+            android:id="@+id/referenceInUrduProphet"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:fontFamily="@font/lateef"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/_5sdp"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/bismiAllah"
+            android:textColor="@color/gold"
+            app:autoSizeMaxTextSize="@dimen/_20sdp"
+            app:autoSizeTextType="uniform"
+            tools:ignore="NestedWeights" />
+
+        <TextView
+            android:id="@+id/referenceInEnglishProphet"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:fontFamily="@font/dosis_medium"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/_3sdp"
+            android:text="@string/meaningOfAyat"
+            android:textColor="@color/white"
+            app:autoSizeMaxTextSize="@dimen/_16sdp"
+            app:autoSizeTextType="uniform" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_weight="0.3"
+        android:background="@android:color/transparent"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_minus"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:background="@drawable/detail_activity_background"
+            android:elevation="@dimen/_5sdp"
+            android:fontFamily="@font/capriola"
+            android:gravity="center"
+            android:text="@string/previous"
+            android:textColor="@color/white"
+            app:autoSizeMaxTextSize="@dimen/_12sdp"
+            app:autoSizeTextType="uniform" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_plus"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:background="@drawable/detail_activity_background"
+            android:elevation="@dimen/_5sdp"
+            android:fontFamily="@font/capriola"
+            android:gravity="center"
+            android:text="@string/next"
+            android:textColor="@color/white"
+            app:autoSizeMaxTextSize="@dimen/_12sdp"
+            app:autoSizeTextType="uniform" />
+    </LinearLayout>
+
+</LinearLayout>

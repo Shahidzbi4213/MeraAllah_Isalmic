@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarKalimas"
+        android:layout_width="match_parent"
+        android:fitsSystemWindows="true"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/_3sdp">
+
+        <include
+            android:id="@+id/toolbar_include_hajj"
+            layout="@layout/toolbar" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/hajjTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/card_color"
+            app:tabIndicatorColor="@color/gold"
+            app:tabSelectedTextColor="@color/gold"
+            app:tabTextColor="@color/white">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/english" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/urdu" />
+        </com.google.android.material.tabs.TabLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/hajjViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dark_blue"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

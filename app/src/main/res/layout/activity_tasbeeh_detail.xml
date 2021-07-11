@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_blue"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".ui.TasbeehDetailActivity">
+
+    <include
+        android:id="@+id/toolbar_include_tasbeeh_detail"
+        layout="@layout/toolbar" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:id="@+id/mProgressBar"
+            style="@style/CircularDeterminateProgressBar"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:progress="0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/linearLayout3"
+            app:layout_constraintStart_toEndOf="@+id/linearLayoutFirst"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:progress="100" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutFirst"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/view_background"
+            android:elevation="@dimen/_20sdp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/countOutOf"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/dosis_medium"
+                android:gravity="center|bottom"
+                android:text="0/33"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_18sdp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:fontFamily="@font/dosis_medium"
+                android:gravity="center|bottom"
+                android:text="Count"
+                android:textColor="@color/gold"
+                android:textSize="@dimen/_16sdp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_view_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/dosis_medium"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="bold"
+            android:text="0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/mProgressBar"
+            app:layout_constraintStart_toStartOf="@+id/mProgressBar"
+            app:layout_constraintTop_toTopOf="@+id/mProgressBar"
+            tools:text="50" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/view_background"
+            android:elevation="@dimen/_20sdp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/totalCountText"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/dosis_medium"
+                android:gravity="center|bottom"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_18sdp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:fontFamily="@font/dosis_medium"
+                android:gravity="center|bottom"
+                android:text="Total"
+                android:textColor="@color/gold"
+                android:textSize="@dimen/_16sdp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/tasbeehatLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_weight="1"
+        android:background="@drawable/view_background"
+        android:elevation="@dimen/_20sdp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/duaTasbeeh"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:fontFamily="@font/lateef"
+            android:gravity="center"
+            android:layoutDirection="rtl"
+            android:lineSpacingExtra="@dimen/_5sdp"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/tasbeeh_dua"
+            android:textColor="@color/gold"
+            app:autoSizeMaxTextSize="@dimen/_30sdp"
+            app:autoSizeTextType="uniform" />
+
+        <TextView
+            android:id="@+id/duaTasbeehTranslation"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:fontFamily="@font/dosis_medium"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/_2sdp"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/tasbeeh_translation"
+            android:textColor="@color/white"
+            app:autoSizeMaxTextSize="@dimen/_22sdp"
+            app:autoSizeTextType="uniform" />
+
+        <TextView
+            android:id="@+id/duaTasbeehTransliteration"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:fontFamily="@font/dosis_medium"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/_2sdp"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/tasbeeh_transliteration"
+            android:textColor="@color/gold"
+            app:autoSizeMaxTextSize="@dimen/_22sdp"
+            app:autoSizeTextType="uniform" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/counterIncrease"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_70sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/view_background"
+        android:elevation="@dimen/_20sdp"
+        android:gravity="center">
+
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:contentDescription="Plus Counter"
+            android:padding="@dimen/_10sdp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/plus"
+            app:tint="#FFD700" />
+    </LinearLayout>
+
+
+</LinearLayout>
