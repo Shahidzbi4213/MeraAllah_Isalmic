@@ -17,7 +17,6 @@ import static com.edu.pk.gulehri.meraallah.R.drawable.qaida;
 import static com.edu.pk.gulehri.meraallah.R.drawable.qibla_compass;
 import static com.edu.pk.gulehri.meraallah.R.drawable.quiz_icon;
 import static com.edu.pk.gulehri.meraallah.R.drawable.quran;
-import static com.edu.pk.gulehri.meraallah.R.drawable.quran_e_pak;
 import static com.edu.pk.gulehri.meraallah.R.drawable.quranfifteen;
 import static com.edu.pk.gulehri.meraallah.R.drawable.ramadan;
 import static com.edu.pk.gulehri.meraallah.R.drawable.shahada;
@@ -212,7 +211,7 @@ public class Model {
             new Model("ظَاهِرٌ", "Zahir", "The manifest", "", "", 0),
             new Model("بَاطِنٌ", "Batin", "One who have knowledge of Inner", "", "", 0),
             new Model("يَتِيمٌ", "Yateem", "The orphan", "", "", 0),
-            new Model("كَريِمٌ", "Karim", "The Gracious", "إِنَّهُۥ لَقَوْلُ رَسُولٍۢ كَرِيمٍۢ", "", 0),
+            new Model("كَريِمٌ", "Karim", "The Gracious", "", "", 0),
             new Model("حَكِيمٌ", "Hakeem", "The Wise", "", "", 0),
             new Model("سَيِّدٌ", "Sayyid", "The Chief", "", "", 0),
             new Model("سِرَاجٌ", "Siraj", "One Who has splendour", "", "", 0),
