@@ -339,7 +339,6 @@ public class Model {
             new Model("أَسْتَغْفِرُ اللَّهَ وَأَتُوبُ إِلَيْهِ", "I seek Allah forgiveness and I turn to Him in repentance.", "Astaghfirullaaha wa 'atoobu 'ilayhi."),
             new Model("أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ", "I take refuge in Allah perfect words from the evil He has created.", "'A'oothu bikalimaatil-laahit-taammaati min sharri maa khalaqa."),
             new Model("رَّبِّ زِدْنِي عِلْمًا", "O my Lord! advance me in knowledge.", "Rabbi zidnee AAilman"),
-            new Model("", "", ""),
     };
 
     public static final Model[] ABLUTION = {
