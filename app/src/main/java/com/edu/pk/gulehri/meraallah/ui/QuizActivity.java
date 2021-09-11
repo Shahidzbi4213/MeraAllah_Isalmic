@@ -1,5 +1,28 @@
 package com.edu.pk.gulehri.meraallah.ui;
 
+import static com.edu.pk.gulehri.meraallah.R.drawable;
+import static com.edu.pk.gulehri.meraallah.R.id;
+import static com.edu.pk.gulehri.meraallah.R.string;
+import static com.edu.pk.gulehri.meraallah.R.style;
+import static com.edu.pk.gulehri.meraallah.constansts.Constants.HighScore;
+import static com.edu.pk.gulehri.meraallah.constansts.Constants.SHARED_PREFERENCES;
+import static com.edu.pk.gulehri.meraallah.constansts.Constants.SHARED_PREFERENCES_HIGH_SCORE;
+import static com.edu.pk.gulehri.meraallah.constansts.Constants.TAG;
+import static com.edu.pk.gulehri.meraallah.constansts.Constants.answer;
+import static com.edu.pk.gulehri.meraallah.constansts.Constants.backPressedTime;
+import static com.edu.pk.gulehri.meraallah.constansts.Constants.buttonLabel;
+import static com.edu.pk.gulehri.meraallah.constansts.Constants.correctAnswer;
+import static com.edu.pk.gulehri.meraallah.constansts.Constants.crossFlag;
+import static com.edu.pk.gulehri.meraallah.constansts.Constants.currentQuestion;
+import static com.edu.pk.gulehri.meraallah.constansts.Constants.flag;
+import static com.edu.pk.gulehri.meraallah.constansts.Constants.mScore;
+import static com.edu.pk.gulehri.meraallah.constansts.Constants.menuFlag;
+import static com.edu.pk.gulehri.meraallah.constansts.Constants.questionCounter;
+import static com.edu.pk.gulehri.meraallah.constansts.Constants.questionList;
+import static com.edu.pk.gulehri.meraallah.constansts.Constants.questionTotal;
+import static com.edu.pk.gulehri.meraallah.constansts.Constants.showAnswerFlag;
+import static com.edu.pk.gulehri.meraallah.constansts.Constants.wrongAnswer;
+
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Context;
@@ -29,29 +52,6 @@ import java.util.Objects;
 import ticker.views.com.ticker.widgets.circular.timer.callbacks.CircularViewCallback;
 import ticker.views.com.ticker.widgets.circular.timer.view.CircularView;
 
-import static com.edu.pk.gulehri.meraallah.R.drawable;
-import static com.edu.pk.gulehri.meraallah.R.id;
-import static com.edu.pk.gulehri.meraallah.R.string;
-import static com.edu.pk.gulehri.meraallah.R.style;
-import static com.edu.pk.gulehri.meraallah.constansts.Constants.HighScore;
-import static com.edu.pk.gulehri.meraallah.constansts.Constants.SHARED_PREFERENCES;
-import static com.edu.pk.gulehri.meraallah.constansts.Constants.SHARED_PREFERENCES_HIGH_SCORE;
-import static com.edu.pk.gulehri.meraallah.constansts.Constants.TAG;
-import static com.edu.pk.gulehri.meraallah.constansts.Constants.answer;
-import static com.edu.pk.gulehri.meraallah.constansts.Constants.backPressedTime;
-import static com.edu.pk.gulehri.meraallah.constansts.Constants.buttonLabel;
-import static com.edu.pk.gulehri.meraallah.constansts.Constants.correctAnswer;
-import static com.edu.pk.gulehri.meraallah.constansts.Constants.crossFlag;
-import static com.edu.pk.gulehri.meraallah.constansts.Constants.currentQuestion;
-import static com.edu.pk.gulehri.meraallah.constansts.Constants.flag;
-import static com.edu.pk.gulehri.meraallah.constansts.Constants.mScore;
-import static com.edu.pk.gulehri.meraallah.constansts.Constants.menuFlag;
-import static com.edu.pk.gulehri.meraallah.constansts.Constants.questionCounter;
-import static com.edu.pk.gulehri.meraallah.constansts.Constants.questionList;
-import static com.edu.pk.gulehri.meraallah.constansts.Constants.questionTotal;
-import static com.edu.pk.gulehri.meraallah.constansts.Constants.showAnswerFlag;
-import static com.edu.pk.gulehri.meraallah.constansts.Constants.wrongAnswer;
-
 public class QuizActivity extends AppCompatActivity {
 
 
@@ -71,7 +71,7 @@ public class QuizActivity extends AppCompatActivity {
         quizBinding = ActivityQuizBinding.inflate(getLayoutInflater());
         setContentView(quizBinding.getRoot());
 
-        //Here We take create object of our result dialog and sit it view when it called
+        //Here We take create object of our result dialog and set it view when it called
         myDialog = new Dialog(this, style.Theme_Dialog);
 
         resultBinding = ResultLayoutBinding.inflate(getLayoutInflater());
@@ -87,7 +87,7 @@ public class QuizActivity extends AppCompatActivity {
         //Getting question of selected category and storing it list
 
         questionList = dbHelper.getAllData();
-        //This giver us the number of total question in the list
+        //This give us the number of total question in the list
         questionTotal = questionList.size();
 
         //this method is gives Call here to give us next question and shows what option is selected
@@ -276,6 +276,7 @@ public class QuizActivity extends AppCompatActivity {
                             @Override
                             public void onTimerFinish() {
                                 if (!answer) {
+                                    //-3 will be deducted from total score
                                     mScore = mScore - 3;
                                     wrongAnswer++;
                                     quizBinding.score.setText(String.valueOf(mScore));

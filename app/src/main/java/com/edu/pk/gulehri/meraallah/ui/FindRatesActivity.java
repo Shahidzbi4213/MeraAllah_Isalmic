@@ -46,6 +46,7 @@ public class FindRatesActivity extends AppCompatActivity {
     private Elements dataElementsGold;
     private Elements dataElementsSilver;
     private String TOLA_GOLD, GRAM_GOLD;
+    private String TOLA_SILVER, GRAM_SILVER;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -122,12 +123,16 @@ public class FindRatesActivity extends AppCompatActivity {
                 Document docSilver = Jsoup.connect(urlSilver).get();
 
                 if (country.equals("Pakistan")) {
-                    elementsGold = docGold.getElementsByClass("bold_text");
-                    GRAM_GOLD = elementsGold.get(0).text();
-                    TOLA_GOLD = elementsGold.get(1).text();
+                    elementsGold = docGold.getElementsByClass("table");
+                    dataElementsGold = elementsGold.select("td");
+                    GRAM_GOLD = dataElementsGold.get(1).text();
+                    TOLA_GOLD = dataElementsGold.get(3).text();
 
-                    elementsSilver = docSilver.getElementsByClass("table table-bordered content-box mb-0");
-                    dataElementsSilver =elementsSilver.select("td");
+                    elementsSilver = docSilver.getElementsByClass("table");
+                    dataElementsSilver = elementsSilver.select("td");
+                    GRAM_SILVER = dataElementsSilver.get(0).text();
+                    TOLA_SILVER = dataElementsSilver.get(1).text();
+
 
                 } else {
                     elementsGold = docGold.getElementsByClass("table-responsive");
@@ -151,8 +156,8 @@ public class FindRatesActivity extends AppCompatActivity {
                     binding.tola.setText(TOLA_GOLD);
 
                     binding.locationSilver.setText("Pakistan");
-                    binding.gramTenChoubisSilver.setText(dataElementsSilver.get(0).text());
-                    binding.tolaSilver.setText(dataElementsSilver.get(1).text());
+                    binding.gramTenChoubisSilver.setText(GRAM_SILVER);
+                    binding.tolaSilver.setText(TOLA_SILVER);
 
                 } else {
                     binding.location.setText(dataElementsGold.get(0).text());
