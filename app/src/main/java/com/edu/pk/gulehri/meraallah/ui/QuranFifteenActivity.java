@@ -15,9 +15,15 @@ import com.edu.pk.gulehri.meraallah.R;
 import com.edu.pk.gulehri.meraallah.adapters.SurahNamesAdapter;
 import com.edu.pk.gulehri.meraallah.databinding.ActivityQuranFifteenBinding;
 import com.edu.pk.gulehri.meraallah.model.DataModel;
+import com.edu.pk.gulehri.meraallah.model.SurahList;
 import com.github.barteksc.pdfviewer.util.FitPolicy;
+import com.google.common.reflect.TypeToken;
+import com.google.gson.Gson;
 
 import java.io.File;
+import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class QuranFifteenActivity extends AppCompatActivity {
@@ -25,6 +31,7 @@ public class QuranFifteenActivity extends AppCompatActivity {
     private ActivityQuranFifteenBinding binding;
     private int position;
     private File file;
+    private List<SurahList> surahList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,27 +43,6 @@ public class QuranFifteenActivity extends AppCompatActivity {
         getValues();
         setPdfViewer();
     }
-
-    private void setPdfViewer() {
-        try {
-            int jumpPage = Integer.parseInt(DataModel.QURAN_SURAH_PAGES_LIST[position].getSURAH_PAGE_NUMBER()) - 1;
-
-            binding.pdfViewer.fromFile(file)
-                    .swipeHorizontal(false)
-                    .fitEachPage(true)
-                    .spacing(7)
-                    .pageFitPolicy(FitPolicy.BOTH)
-                    .enableAntialiasing(true)
-                    .defaultPage(jumpPage)
-                    .load();
-            binding.pdfViewer.useBestQuality(true);
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-    }
-
 
 
     private void setToolBar() {
@@ -80,37 +66,53 @@ public class QuranFifteenActivity extends AppCompatActivity {
         }
     }
 
-    private void getValues() {
-        Intent intent = getIntent();
-        String itemText = intent.getStringExtra(SurahNamesAdapter.ITEM_TEXT);
-        String path = "/storage/emulated/0/Android/data/com.edu.pk.gulehri.meraallah/files/Android/Quran.pdf";
-        file = new File(path);
+    private void setPdfViewer() {
+        try {
+            int jumpPage = Integer.parseInt(DataModel.QURAN_SURAH_PAGES_LIST[position].getSURAH_PAGE_NUMBER()) - 1;
 
-        position = findIndex(DataModel.QURAN_SURAH_PAGES_LIST, itemText);
+            binding.pdfViewer.fromFile(file)
+                    .swipeHorizontal(false)
+                    .fitEachPage(true)
+                    .spacing(7)
+                    .pageFitPolicy(FitPolicy.BOTH)
+                    .enableAntialiasing(true)
+                    .defaultPage(jumpPage)
+                    .load();
+            binding.pdfViewer.useBestQuality(true);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 
-    private int findIndex(DataModel[] arr, String text) {
 
-        // if array is Null
-        if (arr == null) {
-            return -1;
-        }
+    private void getValues() {
+        Intent intent = getIntent();
+        String itemText = intent.getStringExtra(SurahNamesAdapter.ITEM_TEXT);
+        String sList = intent.getStringExtra("sList");
 
-        // find length of array
-        int len = arr.length;
-        int i = 0;
+        Gson gson = new Gson();
+        Type type = new TypeToken<List<SurahList>>() {
+        }.getType();
+        surahList = gson.fromJson(sList, type);
+        String path = "/storage/emulated/0/Android/data/com.edu.pk.gulehri.meraallah/files/Android/Quran.pdf";
+        file = new File(path);
 
 
-        // traverse in the array
-        while (i < len) {
+        position = findIndex((ArrayList<SurahList>) surahList, itemText);
 
-            // if the i-th element is t
-            // then return the index
-            if (arr[i].getSURAH_NAME_ENGLISH().equals(text)) {
-                return i;
+    }
+
+    private int findIndex(ArrayList<SurahList> arr, String text) {
+
+        int count = 0;
+        for (SurahList i : arr) {
+
+            if (i.getEnglishName().equals(text)) {
+                return count;
             } else {
-                i = i + 1;
+                count++;
             }
         }
         return -1;

@@ -1,5 +1,10 @@
 package com.edu.pk.gulehri.meraallah.ui;
 
+import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
+import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
+import static android.view.View.GONE;
+import static android.view.View.VISIBLE;
+
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
@@ -29,11 +34,6 @@ import com.google.firebase.storage.StorageReference;
 
 import java.io.File;
 import java.util.Objects;
-
-import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
-import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
-import static android.view.View.GONE;
-import static android.view.View.VISIBLE;
 
 public class VideoActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -217,12 +217,16 @@ public class VideoActivity extends AppCompatActivity implements View.OnClickList
             Toast.makeText(this, "Connect to Internet to Download Video", Toast.LENGTH_SHORT).show();
         } else {
             setChildPath();
+
+            //Folder
             File storagePath = new File(this.getExternalFilesDir(null), "Android");
             // Create directory if not exists
             if (!storagePath.exists()) {
                 boolean mkdirs = storagePath.mkdirs();
             }
             StorageReference pathReference = FirebaseStorage.getInstance().getReference();
+
+            //Save Video Folder
             File file = new File(storagePath, PATH);
             pathReference.child(CHILD).getFile(file).addOnSuccessListener(taskSnapshot -> {
                 sp = getPreferences(MODE_PRIVATE);

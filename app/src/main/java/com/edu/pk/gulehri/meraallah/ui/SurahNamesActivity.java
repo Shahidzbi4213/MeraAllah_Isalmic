@@ -1,5 +1,11 @@
 package com.edu.pk.gulehri.meraallah.ui;
 
+import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
+import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
+import static android.content.pm.PackageManager.PERMISSION_GRANTED;
+import static android.os.Build.VERSION.SDK_INT;
+import static android.os.Build.VERSION_CODES.Q;
+
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
@@ -37,22 +43,21 @@ import com.edu.pk.gulehri.meraallah.adapters.SurahNamesAdapter;
 import com.edu.pk.gulehri.meraallah.databinding.ActivitySurahNamesBinding;
 import com.edu.pk.gulehri.meraallah.databinding.DownloadDailogBinding;
 import com.edu.pk.gulehri.meraallah.databinding.WannaDownloadDialogBinding;
-import com.edu.pk.gulehri.meraallah.model.DataModel;
+import com.edu.pk.gulehri.meraallah.model.SurahList;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
-import java.io.File;
-import java.lang.reflect.Field;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
-import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
-import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
-import static android.content.pm.PackageManager.PERMISSION_GRANTED;
-import static android.os.Build.VERSION.SDK_INT;
-import static android.os.Build.VERSION_CODES.Q;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.lang.reflect.Field;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.Objects;
 
 
 public class SurahNamesActivity extends AppCompatActivity
@@ -60,12 +65,12 @@ public class SurahNamesActivity extends AppCompatActivity
 
     public static final String CHECK_FILE_DOWNLOAD = "Check File";
     public static final String FILE_PATH = "File Path";
-
     private static final String[] perms = {READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE};
     private static final int REQUEST_CODE = 7878;
-
     private ActivitySurahNamesBinding binding;
     private boolean flag;
+    private final ArrayList<SurahList> surahList = new ArrayList<>();
+    private SurahNamesAdapter adapter;
 
 
     private SharedPreferences sp;
@@ -118,11 +123,42 @@ public class SurahNamesActivity extends AppCompatActivity
         try {
             binding.surahNameRecycleView.setVisibility(View.VISIBLE);
             binding.surahNameRecycleView.setLayoutManager(new LinearLayoutManager(this));
-            ArrayList<DataModel> list = new ArrayList<>(Arrays.asList(DataModel.QURAN_SURAH_PAGES_LIST));
-            binding.surahNameRecycleView.setAdapter(new SurahNamesAdapter(list));
+            adapter = new SurahNamesAdapter(readFromJson());
+            binding.surahNameRecycleView.setAdapter(adapter);
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+    }
+
+    private ArrayList<SurahList> readFromJson() throws IOException, JSONException {
+
+        String json;
+        InputStream stream = getAssets().open("surah_list.json");
+        int size = stream.available();
+
+        byte[] buffer = new byte[size];
+        stream.read(buffer);
+        stream.close();
+
+        json = new String(buffer, StandardCharsets.UTF_8);
+        JSONObject object = new JSONObject(json);
+        JSONArray array = object.getJSONArray("data");
+
+        for (int i = 0; i < array.length(); i++) {
+
+            JSONObject metaData = array.getJSONObject(i);
+
+            final String name = metaData.getString("name");
+            final String englishName = metaData.getString("englishName");
+            final String englishNameTranslation = metaData.getString("englishNameTranslation");
+            final String numberOfAyahs = String.valueOf(metaData.getInt("numberOfAyahs"));
+            final String type = metaData.getString("revelationType");
+
+            final SurahList listOfSurah = new SurahList(name, englishName, englishNameTranslation, numberOfAyahs, type);
+            surahList.add(listOfSurah);
+        }
+        return surahList;
 
     }
 
@@ -151,7 +187,7 @@ public class SurahNamesActivity extends AppCompatActivity
 
             // Create directory if not exists
             if (!storagePath.exists()) {
-                boolean mkdirs = storagePath.mkdirs();
+                storagePath.mkdirs();
             }
 
             //Downloaded File Name
@@ -220,7 +256,6 @@ public class SurahNamesActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
-
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -236,7 +271,6 @@ public class SurahNamesActivity extends AppCompatActivity
         }
     }
 
-
     public void requestPermission() {
 
         if ((ContextCompat.checkSelfPermission(this, perms[0]) == PERMISSION_GRANTED) ||
@@ -246,7 +280,6 @@ public class SurahNamesActivity extends AppCompatActivity
             ActivityCompat.requestPermissions(this, perms, REQUEST_CODE);
         }
     }
-
 
     private boolean haveNetworkConnection() {
         ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -263,29 +296,6 @@ public class SurahNamesActivity extends AppCompatActivity
         startActivity(new Intent(this, MainActivity.class));
     }
 
-    private List<DataModel> searchSurah(String newText) {
-        //Text userType in searchBar
-        String userInput = newText.toLowerCase();
-
-        ArrayList<DataModel> surahList = new ArrayList<>();
-
-        //Convert Array to list
-        List<DataModel> dataList = new ArrayList<>(Arrays.asList(DataModel.QURAN_SURAH_PAGES_LIST));
-
-        try {
-            //Array Iteration || Array Traverse
-            for (DataModel QURAN_SURAH_PAGES_LIST : dataList) {
-                if (QURAN_SURAH_PAGES_LIST.getSURAH_NAME_ENGLISH().toLowerCase().contains(userInput)) {
-                    surahList.add(QURAN_SURAH_PAGES_LIST);
-                }
-            }
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return surahList;
-    }
-
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
@@ -300,7 +310,7 @@ public class SurahNamesActivity extends AppCompatActivity
         ImageView imageSearch = searchView.findViewById(androidx.appcompat.R.id.search_button);
 
         try {
-            Field field = TextView.class.getDeclaredField("mCursorDrawableRes");
+            @SuppressLint("SoonBlockedPrivateApi") Field field = TextView.class.getDeclaredField("mCursorDrawableRes");
             field.setAccessible(true);
             field.set(txtSearch, R.drawable.my_cursor);
         } catch (Exception e) {
@@ -322,15 +332,18 @@ public class SurahNamesActivity extends AppCompatActivity
     }
 
 
+    @SuppressLint("NotifyDataSetChanged")
     @Override
     public boolean onQueryTextSubmit(String query) {
         return false;
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     @Override
     public boolean onQueryTextChange(String newText) {
-        List<DataModel> dataModels = searchSurah(newText);
-        binding.surahNameRecycleView.setAdapter(new SurahNamesAdapter((ArrayList<DataModel>) dataModels));
-        return true;
+
+        adapter.filter(newText);
+        return false;
+
     }
 }
