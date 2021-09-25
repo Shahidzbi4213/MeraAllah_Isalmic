@@ -109,12 +109,14 @@ public class Constants {
     public static final String DB_NAME = "islamic_quiz";
     public static final int VERSION = 1;
 
+
     public static final String CREATE_TABLE_QUESTION = " CREATE TABLE " + QUESTIONS_TABLE +
             "( " + UID + " INTEGER PRIMARY KEY, " + COLUMNS_QUESTION + " TEXT, " + COLUMNS_OPTION1
             + " TEXT, " + COLUMNS_OPTION2 + " TEXT, " + COLUMNS_OPTION3 + " TEXT, " +
             COLUMNS_OPTION4 + " TEXT, " + ANSWER + " INTEGER " + ");";
 
 
-    public static final String[] ALL_COLUMNS = {COLUMNS_QUESTION, COLUMNS_OPTION1, COLUMNS_OPTION2, COLUMNS_OPTION3, COLUMNS_OPTION4, ANSWER};
+    public static final String[] ALL_COLUMNS = {COLUMNS_QUESTION, COLUMNS_OPTION1, COLUMNS_OPTION2, COLUMNS_OPTION3,
+            COLUMNS_OPTION4, ANSWER};
     public static final String DELETE_TABLE_QUESTIONS = " DROP TABLE IF EXISTS " + QUESTIONS_TABLE;
 }
