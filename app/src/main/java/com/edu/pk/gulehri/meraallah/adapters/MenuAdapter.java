@@ -17,6 +17,7 @@ import com.edu.pk.gulehri.meraallah.R;
 import com.edu.pk.gulehri.meraallah.model.Model;
 import com.edu.pk.gulehri.meraallah.ui.AblutionActivity;
 import com.edu.pk.gulehri.meraallah.ui.AllahNamesActivity;
+import com.edu.pk.gulehri.meraallah.ui.ArabicQuran;
 import com.edu.pk.gulehri.meraallah.ui.HadithOfDay;
 import com.edu.pk.gulehri.meraallah.ui.HajjActivity;
 import com.edu.pk.gulehri.meraallah.ui.HijriCalender;
@@ -144,6 +145,10 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MyHolder> {
 
                 case "Hijri Calender":
                     intent = new Intent(mContext, HijriCalender.class);
+                    break;
+
+                case "Quran":
+                    intent = new Intent(mContext, ArabicQuran.class);
                     break;
 
                 case "Janaza":

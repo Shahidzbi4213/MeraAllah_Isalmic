@@ -332,13 +332,11 @@ public class SurahNamesActivity extends AppCompatActivity
     }
 
 
-    @SuppressLint("NotifyDataSetChanged")
     @Override
     public boolean onQueryTextSubmit(String query) {
         return false;
     }
 
-    @SuppressLint("NotifyDataSetChanged")
     @Override
     public boolean onQueryTextChange(String newText) {
 

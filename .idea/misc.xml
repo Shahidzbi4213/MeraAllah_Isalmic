@@ -4,13 +4,15 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout-sw600dp/activity_quiz.xml" value="0.1" />
+        <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/activity_arabic_quran.xml" value="0.19270833333333334" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/activity_quiz.xml" value="0.12" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/gold_rates_layout.xml" value="0.1" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/lesson_layout.xml" value="0.1" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/result_layout.xml" value="0.19270833333333334" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/sample_dialog.xml" value="0.19270833333333334" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/surah_info_dialog.xml" value="0.33" />
-        <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/surah_names_list_view.xml" value="0.67" />
+        <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/surah_names_list_view.xml" value="0.19270833333333334" />
+        <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/menu/options_menu.xml" value="0.19270833333333334" />
       </map>
     </option>
   </component>
@@ -67,7 +69,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.12" />
+        <option name="scale" value="0.1" />
       </ProjectState>
     </option>
   </component>

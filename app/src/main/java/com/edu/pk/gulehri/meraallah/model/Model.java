@@ -1,7 +1,6 @@
 package com.edu.pk.gulehri.meraallah.model;
 
-import com.edu.pk.gulehri.meraallah.R;
-
+import static com.edu.pk.gulehri.meraallah.R.drawable.ar_quran;
 import static com.edu.pk.gulehri.meraallah.R.drawable.calender;
 import static com.edu.pk.gulehri.meraallah.R.drawable.charity;
 import static com.edu.pk.gulehri.meraallah.R.drawable.child;
@@ -25,6 +24,8 @@ import static com.edu.pk.gulehri.meraallah.R.drawable.tasbeeh;
 import static com.edu.pk.gulehri.meraallah.R.drawable.vibrate;
 import static com.edu.pk.gulehri.meraallah.R.drawable.video;
 import static com.edu.pk.gulehri.meraallah.R.drawable.waddu;
+
+import com.edu.pk.gulehri.meraallah.R;
 
 public class Model {
 
@@ -251,6 +252,7 @@ public class Model {
             new Model(quran, "Quran Verse"),
             new Model(hadith, "Today's Hadith"),
             new Model(calender, "Hijri Calender"),
+            new Model(ar_quran, "Quran"),
             new Model(quranfifteen, "Al Quran"),
             new Model(graveyard, "Janaza"),
             new Model(kalimas, "Six Kalimas"),

@@ -3,20 +3,15 @@
     package="com.edu.pk.gulehri.meraallah">
     <!-- Device  Boot Permission -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-    <!-- Storage Permission -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> <!-- Storage Permission -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <!-- Do Not Disturb  And Battery Optimization Permissions -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- Do Not Disturb  And Battery Optimization Permissions -->
     <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
-    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
-    <!-- Location Permission -->
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" /> <!-- Location Permission -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <!-- Read Wifi State  And Internet Permissions -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- Read Wifi State  And Internet Permissions -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-
 
     <application
         android:allowBackup="true"
@@ -26,9 +21,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MeraAllah">
+        <activity
+            android:name=".ui.ArabicQuran"
+            android:exported="true" />
         <!-- Activities -->
-        <activity android:name=".ui.VideoPlayActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity
+            android:name=".ui.VideoPlayActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
         <activity android:name=".ui.VideoActivity" />
         <activity
             android:name=".ui.ProphetNamesDetailActivity"
@@ -102,9 +101,7 @@
             android:name="com.hassanjamil.hqibla.CompassActivity"
             android:label="Find Qibla"
             android:screenOrientation="portrait"
-            android:theme="@style/QiblaTheme" />
-
-        <!-- Splash Screen As Launcher Activity -->
+            android:theme="@style/QiblaTheme" /> <!-- Splash Screen As Launcher Activity -->
         <activity
             android:name=".ui.SplashScreen"
             android:noHistory="true"
@@ -114,14 +111,10 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- Fonts That has been Added to the Project -->
+        </activity> <!-- Fonts That has been Added to the Project -->
         <meta-data
             android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" />
-
-        <!-- Registering Broadcast BootReceiver -->
+            android:resource="@array/preloaded_fonts" /> <!-- Registering Broadcast BootReceiver -->
         <receiver
             android:name=".receivers.BootReceiver"
             android:enabled="true">
@@ -132,7 +125,6 @@
         </receiver>
         <receiver android:name=".receivers.RingerReceiver" />
         <receiver android:name=".receivers.NotificationReceiver" />
-
     </application>
 
 </manifest>

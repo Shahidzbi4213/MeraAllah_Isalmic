@@ -47,7 +47,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/_7sdp"
                 android:layout_marginEnd="@dimen/_15sdp"
-                android:fontFamily="@font/janna_tl_bold"
+                android:fontFamily="@font/q_font"
                 android:text="تکبیر تحریمہ"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_14sdp"
