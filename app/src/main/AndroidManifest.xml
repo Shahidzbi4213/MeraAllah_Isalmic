@@ -22,9 +22,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MeraAllah">
         <activity
-            android:name=".ui.ArabicQuran"
+            android:name=".ui.ShowQuran"
             android:exported="true" />
-        <!-- Activities -->
+        <activity
+            android:name=".ui.ArabicQuran"
+            android:exported="true" /> <!-- Activities -->
         <activity
             android:name=".ui.VideoPlayActivity"
             android:configChanges="keyboardHidden|orientation|screenSize" />
