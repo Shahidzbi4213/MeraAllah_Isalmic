@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
@@ -16,7 +17,7 @@ import com.edu.pk.gulehri.meraallah.R;
 import com.edu.pk.gulehri.meraallah.databinding.SurahInfoDialogBinding;
 import com.edu.pk.gulehri.meraallah.databinding.SurahNamesListViewBinding;
 import com.edu.pk.gulehri.meraallah.model.SurahList;
-import com.edu.pk.gulehri.meraallah.ui.ShowQuran;
+import com.edu.pk.gulehri.meraallah.ui.ShowQuranActivity;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;
@@ -76,11 +77,14 @@ public class ArabicAdapter extends RecyclerView.Adapter<ArabicAdapter.DataHolder
         holder.binding.surahCount.setText(String.format("(%d)", position + 1));
 
         holder.itemView.setOnClickListener(v -> {
-            Intent intent = new Intent(mContext, ShowQuran.class);
-            intent.putExtra("itemName", surahList.get(position).getEnglishName());
+            Intent intent = new Intent(mContext, ShowQuranActivity.class);
             Gson gson = new Gson();
             String s = gson.toJson(list, List.class);
-            intent.putExtra("sList", s);
+            SharedPreferences sp = mContext.getSharedPreferences("saveList", Context.MODE_PRIVATE);
+            SharedPreferences.Editor edit = sp.edit();
+            edit.putString("list", s);
+            edit.putString("itemName", surahList.get(position).getEnglishName());
+            edit.apply();
             mContext.startActivity(intent);
         });
         holder.binding.btnForInfo.setOnClickListener(v1 -> {

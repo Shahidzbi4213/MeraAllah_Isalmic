@@ -22,21 +22,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MeraAllah">
         <activity
-            android:name=".ui.ShowQuran"
+            android:name=".ui.QuranSettingActivity"
+            android:exported="true" />
+        <!-- Activities -->
+        <activity
+            android:name=".ui.ShowQuranActivity"
             android:exported="true" />
         <activity
             android:name=".ui.ArabicQuran"
-            android:exported="true" /> <!-- Activities -->
+            android:exported="true" />
         <activity
             android:name=".ui.VideoPlayActivity"
             android:configChanges="keyboardHidden|orientation|screenSize" />
         <activity android:name=".ui.VideoActivity" />
         <activity
             android:name=".ui.ProphetNamesDetailActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".ui.AllahNamesActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".ui.ProphetNamesActivity"
             android:screenOrientation="portrait" />
