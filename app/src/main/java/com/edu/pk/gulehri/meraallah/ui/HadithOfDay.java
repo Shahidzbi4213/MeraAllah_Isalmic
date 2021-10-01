@@ -1,5 +1,11 @@
 package com.edu.pk.gulehri.meraallah.ui;
 
+import static android.app.AlarmManager.RTC_WAKEUP;
+import static android.os.Build.VERSION.SDK_INT;
+import static android.os.Build.VERSION_CODES.M;
+import static android.provider.Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS;
+import static com.edu.pk.gulehri.meraallah.constansts.Constants.DELAY;
+
 import android.annotation.SuppressLint;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
@@ -26,20 +32,12 @@ import androidx.core.content.res.ResourcesCompat;
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
 import com.edu.pk.gulehri.meraallah.R;
-import com.edu.pk.gulehri.meraallah.constansts.Constants;
 import com.edu.pk.gulehri.meraallah.databinding.ActivityHadithOfDayBinding;
 import com.edu.pk.gulehri.meraallah.databinding.InfoDialogboxBinding;
 import com.edu.pk.gulehri.meraallah.receivers.NotificationReceiver;
 
 import java.util.Calendar;
 import java.util.Objects;
-
-import static android.app.AlarmManager.INTERVAL_DAY;
-import static android.app.AlarmManager.RTC_WAKEUP;
-import static android.os.Build.VERSION.SDK_INT;
-import static android.os.Build.VERSION_CODES.M;
-import static android.provider.Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS;
-import static com.edu.pk.gulehri.meraallah.constansts.Constants.DELAY;
 
 public class HadithOfDay extends AppCompatActivity implements View.OnClickListener {
 
@@ -50,6 +48,7 @@ public class HadithOfDay extends AppCompatActivity implements View.OnClickListen
         super.onCreate(savedInstanceState);
         binding = ActivityHadithOfDayBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
 
         setToolBar();
         batteryPermission();

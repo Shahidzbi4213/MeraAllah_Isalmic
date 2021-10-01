@@ -62,8 +62,11 @@
         <item name="background">@color/card_color</item>
     </style>
 
-    <style name="Regular">
+    <style name="Regular" parent="Widget.AppCompat.TextView">
         <item name="android:lineSpacingExtra">@dimen/_7sdp</item>
+        <item name="android:fontFamily">@font/catamaran_medium</item>
+        <item name="fontFamily">@font/catamaran_medium</item>
+        <item name="font">@font/catamaran_medium</item>
     </style>
 
 

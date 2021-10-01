@@ -50,7 +50,7 @@
             android:gravity="center"
             android:text="@string/nameOfAllah"
             android:textColor="@color/gold"
-            app:autoSizeMaxTextSize="@dimen/_20sdp"
+            app:autoSizeMaxTextSize="@dimen/_25sdp"
             app:autoSizeTextType="uniform" />
 
         <TextView

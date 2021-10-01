@@ -4,7 +4,6 @@ import static android.graphics.text.LineBreaker.JUSTIFICATION_MODE_INTER_WORD;
 import static android.graphics.text.LineBreaker.JUSTIFICATION_MODE_NONE;
 import static android.os.Build.VERSION.SDK_INT;
 import static android.os.Build.VERSION_CODES.O;
-import static com.edu.pk.gulehri.meraallah.adapters.RamadanDetailAdapter.RamadanDetailHolder;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -20,12 +19,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.core.content.res.ResourcesCompat;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.recyclerview.widget.RecyclerView.ViewHolder;
 
 import com.edu.pk.gulehri.meraallah.R;
 import com.edu.pk.gulehri.meraallah.model.Model;
 
-public class RamadanDetailAdapter extends RecyclerView.Adapter<RamadanDetailHolder> {
+public class RamadanDetailAdapter extends RecyclerView.Adapter<RamadanDetailAdapter.RamadanDetailHolder> {
 
     private static String SELECTED_LANGUAGE;
     private static int CLICKED_ITEM_POSITION;
@@ -39,7 +37,7 @@ public class RamadanDetailAdapter extends RecyclerView.Adapter<RamadanDetailHold
 
     @NonNull
     @Override
-    public RamadanDetailHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public RamadanDetailAdapter.RamadanDetailHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.ramadan_detail_bg, parent, false);
         return new RamadanDetailHolder(view);
     }
@@ -238,19 +236,20 @@ public class RamadanDetailAdapter extends RecyclerView.Adapter<RamadanDetailHold
 
     }
 
-    public static class RamadanDetailHolder extends ViewHolder {
+
+    static class RamadanDetailHolder extends RecyclerView.ViewHolder {
         final TextView ramdan_count, ramadan_reference_arabic, ramadan_refernce_lang, ramadan_detail_reference;
         View first, second;
 
         public RamadanDetailHolder(@NonNull View itemView) {
             super(itemView);
+
             ramdan_count = itemView.findViewById(R.id.ramdan_count);
             ramadan_reference_arabic = itemView.findViewById(R.id.ramadan_reference_arabic);
             ramadan_refernce_lang = itemView.findViewById(R.id.ramadan_refernce_lang);
             ramadan_detail_reference = itemView.findViewById(R.id.ramadan_detail_reference);
             first = itemView.findViewById(R.id.first);
             second = itemView.findViewById(R.id.second);
-
         }
     }
 }

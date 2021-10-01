@@ -3,12 +3,15 @@ package com.edu.pk.gulehri.meraallah.adapters;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
+import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.res.ResourcesCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.edu.pk.gulehri.meraallah.R;
@@ -35,6 +38,12 @@ public class TasbeehAdapter extends RecyclerView.Adapter<TasbeehAdapter.MyTasbee
     @SuppressLint("DefaultLocale")
     @Override
     public void onBindViewHolder(@NonNull TasbeehAdapter.MyTasbeehHolder holder, int position) {
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            holder.tasbeehDua.setTypeface(ResourcesCompat.getFont(mContext, R.font.q_font));
+        } else {
+            holder.tasbeehDua.setTypeface(Typeface.DEFAULT);
+        }
 
         holder.count.setText(String.format("(%d)", position + 1));
         holder.tasbeehDua.setText(Model.TASBEEHAT[position].getTASBEEH());
