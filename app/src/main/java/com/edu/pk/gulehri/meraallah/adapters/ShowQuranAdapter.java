@@ -5,12 +5,16 @@ import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
+import android.os.Build;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.res.ResourcesCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.edu.pk.gulehri.meraallah.R;
@@ -60,10 +64,12 @@ public class ShowQuranAdapter extends RecyclerView.Adapter<ShowQuranAdapter.Qura
         final int radioButton = sp.getInt("rbID", 0);
         final boolean checkLang = sp.getBoolean("checkLang", false);
 
-       /*
+        final boolean checkSeekArabic = sp.getBoolean("checkSeekArabic", false);
+        final boolean checkSeekTranslation = sp.getBoolean("checkSeekTranslation", false);
 
-        final int seekArabic = sp.getInt("seekbarArabic",0);
-        final int seekTranslation =  sp.getInt("seekbarTranslation",0);*/
+        final int seekArabic = sp.getInt("seekbarArabic", 0);
+        final int seekTranslation = sp.getInt("seekbarTranslation", 0);
+
 
         if (switchArabic || !checkArabic) {
             holder.binding.tvAyah.setVisibility(View.VISIBLE);
@@ -78,14 +84,33 @@ public class ShowQuranAdapter extends RecyclerView.Adapter<ShowQuranAdapter.Qura
         }
 
         if (!checkLang || radioButton == R.id.radioUrdu) {
+            Typeface typeface = ResourcesCompat.getFont(mContext, R.font.jameel);
+            holder.binding.tvTranslation.setTypeface(typeface);
             holder.binding.tvTranslation.setText(listUrdu.get(position));
         } else if (radioButton == R.id.radioEnglish) {
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                Typeface typeface = ResourcesCompat.getFont(mContext, R.font.catamaran_medium);
+                holder.binding.tvTranslation.setTypeface(typeface);
+            } else {
+                holder.binding.tvTranslation.setTypeface(Typeface.SERIF);
+            }
+
+
             holder.binding.tvTranslation.setText(listEnglish.get(position));
         }
 
-        //setting textSize
-       /* holder.binding.tvAyah.setTextSize(TypedValue.COMPLEX_UNIT_PX,seekArabic);
-        holder.binding.tvTranslation.setTextSize(TypedValue.COMPLEX_UNIT_PX,seekTranslation);*/
+        if (!checkSeekArabic) {
+            holder.binding.tvAyah.setTextSize(TypedValue.COMPLEX_UNIT_PX, 50);
+        } else {
+            holder.binding.tvAyah.setTextSize(TypedValue.COMPLEX_UNIT_PX, seekArabic);
+        }
+        if (!checkSeekTranslation) {
+            holder.binding.tvTranslation.setTextSize(TypedValue.COMPLEX_UNIT_PX, 45);
+        } else {
+            holder.binding.tvTranslation.setTextSize(TypedValue.COMPLEX_UNIT_PX, seekTranslation);
+        }
+
 
         NumberFormat nf = NumberFormat.getInstance(Locale.forLanguageTag("AR"));
         holder.binding.tvSurah.setText(surahName);

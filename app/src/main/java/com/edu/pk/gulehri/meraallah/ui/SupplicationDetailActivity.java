@@ -1,5 +1,8 @@
 package com.edu.pk.gulehri.meraallah.ui;
 
+import static android.graphics.text.LineBreaker.JUSTIFICATION_MODE_INTER_WORD;
+import static com.edu.pk.gulehri.meraallah.constansts.Constants.ANIMATION_CHANGE_DURATION;
+
 import android.annotation.SuppressLint;
 import android.content.ClipData;
 import android.content.ClipboardManager;
@@ -31,9 +34,6 @@ import com.edu.pk.gulehri.meraallah.adapters.SupplicationAdapter;
 import com.edu.pk.gulehri.meraallah.constansts.Constants;
 import com.edu.pk.gulehri.meraallah.databinding.ActivitySupplicationDetailBinding;
 import com.edu.pk.gulehri.meraallah.model.Model;
-
-import static android.graphics.text.LineBreaker.JUSTIFICATION_MODE_INTER_WORD;
-import static com.edu.pk.gulehri.meraallah.constansts.Constants.ANIMATION_CHANGE_DURATION;
 
 
 public class SupplicationDetailActivity extends AppCompatActivity
@@ -132,7 +132,7 @@ public class SupplicationDetailActivity extends AppCompatActivity
             supplicationDetailBinding.duaMeaning.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
 
             if (language.equals("English")) {
-                Typeface typeface = ResourcesCompat.getFont(this, R.font.dosis_medium);
+                Typeface typeface = ResourcesCompat.getFont(this, R.font.catamaran_medium);
                 supplicationDetailBinding.title.setTypeface(typeface);
                 supplicationDetailBinding.duaMeaning.setTypeface(typeface);
             }
@@ -166,7 +166,7 @@ public class SupplicationDetailActivity extends AppCompatActivity
 
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                Typeface typeface = ResourcesCompat.getFont(this, R.font.dosis_medium);
+                Typeface typeface = ResourcesCompat.getFont(this, R.font.catamaran_medium);
                 supplicationDetailBinding.title.setTypeface(typeface);
                 supplicationDetailBinding.duaMeaning.setTypeface(typeface);
             } else {

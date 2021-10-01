@@ -52,7 +52,7 @@ public class NewChildAdapter extends RecyclerView.Adapter<NewChildAdapter.ChildD
             holder.binding.myLayout.setLayoutDirection(View.LAYOUT_DIRECTION_LTR);
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
 
-                Typeface typeface = ResourcesCompat.getFont(mContext, R.font.dosis_medium);
+                Typeface typeface = ResourcesCompat.getFont(mContext, R.font.catamaran_medium);
                 holder.binding.heading.setTypeface(typeface);
                 holder.binding.count.setTypeface(typeface);
                 holder.binding.count.setTextSize(TypedValue.COMPLEX_UNIT_PX, mContext.getResources().getDimension(R.dimen._16sdp));

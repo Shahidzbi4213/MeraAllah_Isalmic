@@ -1,5 +1,7 @@
 package com.edu.pk.gulehri.meraallah.adapters;
 
+import static com.edu.pk.gulehri.meraallah.R.dimen._20sdp;
+
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Typeface;
@@ -17,8 +19,6 @@ import com.edu.pk.gulehri.meraallah.R;
 import com.edu.pk.gulehri.meraallah.databinding.ZakkatDteailLayoutItemViewBinding;
 import com.edu.pk.gulehri.meraallah.model.DataModel;
 import com.edu.pk.gulehri.meraallah.model.Model;
-
-import static com.edu.pk.gulehri.meraallah.R.dimen._20sdp;
 
 public class ZakkatDetailAdapter extends RecyclerView.Adapter<ZakkatDetailAdapter.MyDateHolder> {
     private final String LANGUAGE;
@@ -73,8 +73,8 @@ public class ZakkatDetailAdapter extends RecyclerView.Adapter<ZakkatDetailAdapte
                 holder.binding.txtFourth.setText("تفصیل: " + " " + Model.ZAKKAT_ELIGIBLE_PEOPLE[position].getDESCRIPTION_IN_URDU());
 
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    holder.binding.txtFourth.setTypeface(ResourcesCompat.getFont(mContext, R.font.lateef));
-                    holder.binding.txtThree.setTypeface(ResourcesCompat.getFont(mContext, R.font.lateef));
+                    holder.binding.txtFourth.setTypeface(ResourcesCompat.getFont(mContext, R.font.jameel));
+                    holder.binding.txtThree.setTypeface(ResourcesCompat.getFont(mContext, R.font.jameel));
                     holder.binding.txtFourth.setTextSize(TypedValue.COMPLEX_UNIT_PX, mContext.getResources().getDimension(_20sdp));
                     holder.binding.txtThree.setTextSize(TypedValue.COMPLEX_UNIT_PX, mContext.getResources().getDimension(R.dimen._22sdp));
                 } else {

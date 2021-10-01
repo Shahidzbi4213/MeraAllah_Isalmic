@@ -1,5 +1,9 @@
 package com.edu.pk.gulehri.meraallah.ui;
 
+import static android.graphics.text.LineBreaker.JUSTIFICATION_MODE_INTER_WORD;
+import static android.os.Build.VERSION_CODES.M;
+import static com.edu.pk.gulehri.meraallah.constansts.Constants.ANIMATION_CHANGE_DURATION;
+
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
@@ -8,7 +12,6 @@ import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.graphics.text.LineBreaker;
@@ -45,10 +48,6 @@ import com.google.firebase.storage.StorageReference;
 
 import java.io.File;
 import java.util.Objects;
-
-import static android.graphics.text.LineBreaker.JUSTIFICATION_MODE_INTER_WORD;
-import static android.os.Build.VERSION_CODES.M;
-import static com.edu.pk.gulehri.meraallah.constansts.Constants.ANIMATION_CHANGE_DURATION;
 
 public class KalimasDetailActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -150,7 +149,7 @@ public class KalimasDetailActivity extends AppCompatActivity implements View.OnC
             binding.kalimaMeaning.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
 
             if (SelectLanguage.equals("English")) {
-                Typeface typeface = ResourcesCompat.getFont(this, R.font.dosis_medium);
+                Typeface typeface = ResourcesCompat.getFont(this, R.font.catamaran_medium);
                 binding.kalimasTitle.setTypeface(typeface);
                 binding.kalimaMeaning.setTypeface(typeface);
             }
@@ -186,7 +185,7 @@ public class KalimasDetailActivity extends AppCompatActivity implements View.OnC
 
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                Typeface typeface = ResourcesCompat.getFont(this, R.font.dosis_medium);
+                Typeface typeface = ResourcesCompat.getFont(this, R.font.catamaran_medium);
                 binding.kalimasTitle.setTypeface(typeface);
                 binding.kalimaMeaning.setTypeface(typeface);
             } else {

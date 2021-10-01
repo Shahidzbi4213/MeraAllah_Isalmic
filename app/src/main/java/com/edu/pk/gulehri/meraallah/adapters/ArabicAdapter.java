@@ -69,7 +69,7 @@ public class ArabicAdapter extends RecyclerView.Adapter<ArabicAdapter.DataHolder
 
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            holder.binding.surahCount.setTypeface(ResourcesCompat.getFont(mContext, R.font.dosis_medium));
+            holder.binding.surahCount.setTypeface(ResourcesCompat.getFont(mContext, R.font.catamaran_medium));
         }
 
         holder.binding.surahArabic.setText(surahList.get(position).getName());

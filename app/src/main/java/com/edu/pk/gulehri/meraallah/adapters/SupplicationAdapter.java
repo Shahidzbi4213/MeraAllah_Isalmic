@@ -62,7 +62,7 @@ public class SupplicationAdapter extends RecyclerView.Adapter<SupplicationAdapte
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
 
-                Typeface typeface = ResourcesCompat.getFont(mContext, R.font.dosis_medium);
+                Typeface typeface = ResourcesCompat.getFont(mContext, R.font.catamaran_medium);
                 holder.duaCount.setTypeface(typeface);
                 holder.duaTitle.setTypeface(typeface);
                 holder.duaTitle.setTextSize(TypedValue.COMPLEX_UNIT_PX, mContext.getResources().getDimension(R.dimen._16sdp));

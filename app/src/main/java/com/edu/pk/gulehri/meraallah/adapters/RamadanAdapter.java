@@ -18,8 +18,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.edu.pk.gulehri.meraallah.R;
 import com.edu.pk.gulehri.meraallah.model.Model;
-import com.edu.pk.gulehri.meraallah.ui.CalculateZakkatActivity;
-import com.edu.pk.gulehri.meraallah.ui.FindRatesActivity;
 import com.edu.pk.gulehri.meraallah.ui.RamadanDetailActivity;
 
 public class RamadanAdapter extends RecyclerView.Adapter<RamadanAdapter.RamadanHolder> {
@@ -56,7 +54,7 @@ public class RamadanAdapter extends RecyclerView.Adapter<RamadanAdapter.RamadanH
             holder.mLinearLayout.setLayoutDirection(View.LAYOUT_DIRECTION_LTR);
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
 
-                Typeface typeface = ResourcesCompat.getFont(mContext, R.font.dosis_medium);
+                Typeface typeface = ResourcesCompat.getFont(mContext, R.font.catamaran_medium);
 
                 holder.heading.setTypeface(typeface);
                 holder.count.setTypeface(typeface);

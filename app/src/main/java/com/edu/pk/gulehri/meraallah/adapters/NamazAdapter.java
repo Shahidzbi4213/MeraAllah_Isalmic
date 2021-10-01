@@ -56,7 +56,7 @@ public class NamazAdapter extends RecyclerView.Adapter<NamazAdapter.MyNamazHolde
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
 
-                Typeface typeface = ResourcesCompat.getFont(mContext, R.font.dosis_medium);
+                Typeface typeface = ResourcesCompat.getFont(mContext, R.font.catamaran_medium);
                 holder.namazHeading.setTypeface(typeface);
                 holder.namazSteps.setTypeface(typeface);
                 holder.namazHeading.setTextSize(TypedValue.COMPLEX_UNIT_PX, mContext.getResources().getDimension(R.dimen._16sdp));

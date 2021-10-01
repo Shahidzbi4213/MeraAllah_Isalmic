@@ -5,19 +5,29 @@ import static com.edu.pk.gulehri.meraallah.R.id;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.MenuItem;
+import android.view.View;
 import android.widget.RadioButton;
+import android.widget.SeekBar;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.res.ResourcesCompat;
 
+import com.edu.pk.gulehri.meraallah.R;
 import com.edu.pk.gulehri.meraallah.databinding.ActivityQuranSettingBinding;
+
+import java.util.Objects;
 
 public class QuranSettingActivity extends AppCompatActivity {
 
     private ActivityQuranSettingBinding binding;
     private SharedPreferences sp;
     private SharedPreferences.Editor edit;
-    private boolean checkArabic, checkTranslation, checkLang;
 
 
     @Override
@@ -30,9 +40,31 @@ public class QuranSettingActivity extends AppCompatActivity {
         edit = sp.edit();
 
 
+        setToolBar();
         setValue();
         getValue();
 
+    }
+
+    private void setToolBar() {
+        try {
+            setSupportActionBar(binding.tbQuranSetting.mToolbar);
+            binding.tbQuranSetting.mToolbar.setElevation(0);
+            binding.tbQuranSetting.toolbarImageFirst.setVisibility(View.GONE);
+            binding.tbQuranSetting.toolbarImageSecond.setVisibility(View.GONE);
+            binding.tbQuranSetting.toolbarText.setText(R.string.quran_setting);
+
+            Toolbar.LayoutParams params = new Toolbar.LayoutParams(Toolbar.LayoutParams.WRAP_CONTENT, Toolbar.LayoutParams.WRAP_CONTENT);
+            params.gravity = Gravity.CENTER;
+            binding.tbQuranSetting.toolbarText.setLayoutParams(params);
+            Objects.requireNonNull(getSupportActionBar()).setDisplayShowTitleEnabled(false);
+            final Drawable drawable = ResourcesCompat.getDrawable(getResources(), R.drawable.back_arrow, null);
+            getSupportActionBar().setHomeAsUpIndicator(drawable);
+            getSupportActionBar().setHomeButtonEnabled(true);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        } catch (NullPointerException e) {
+            e.printStackTrace();
+        }
     }
 
     private void setValue() {
@@ -53,13 +85,12 @@ public class QuranSettingActivity extends AppCompatActivity {
             edit.apply();
         });
 
-
-      /*
         binding.seekBarArabic.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @SuppressLint("SetTextI18n")
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                 binding.arabicPx.setText("" + i + "%");
+                edit.putBoolean("checkSeekArabic", true);
                 edit.putInt("seekbarArabic", i);
                 edit.apply();
             }
@@ -74,12 +105,15 @@ public class QuranSettingActivity extends AppCompatActivity {
 
             }
         });
+
         binding.seekBarTranslation.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @SuppressLint("SetTextI18n")
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                 binding.translationPx.setText("" + i + "%");
+                edit.putBoolean("checkSeekTranslation", true);
                 edit.putInt("seekbarTranslation", i);
+                edit.apply();
 
             }
 
@@ -92,14 +126,16 @@ public class QuranSettingActivity extends AppCompatActivity {
             public void onStopTrackingTouch(SeekBar seekBar) {
 
             }
-        });*/
+        });
     }
 
     @SuppressLint("SetTextI18n")
     private void getValue() {
-        checkArabic = sp.getBoolean("checkArabic", false);
-        checkTranslation = sp.getBoolean("checkTranslation", false);
-        checkLang = sp.getBoolean("checkLang", false);
+        final boolean checkArabic = sp.getBoolean("checkArabic", false);
+        final boolean checkTranslation = sp.getBoolean("checkTranslation", false);
+        final boolean checkLang = sp.getBoolean("checkLang", false);
+        final boolean checkSeekArabic = sp.getBoolean("checkSeekArabic", false);
+        final boolean checkSeekTranslation = sp.getBoolean("checkSeekTranslation", false);
 
         /*Setting Arabic Switch Button */
         if (!checkArabic) {
@@ -129,36 +165,43 @@ public class QuranSettingActivity extends AppCompatActivity {
             radioButton.setChecked(true);
         }
 
-       /* binding.switchArabic.setChecked(sp.getBoolean("switchArabic", false));
-        binding.switchTranslation.setChecked(sp.getBoolean("switchTranslation", false));
-        RadioButton radioButton = findViewById(sp.getInt("id", 0));
-        radioButton.setChecked(true);
-
-        final int seekArabic = sp.getInt("seekbarArabic", 0);
-
-        if (seekArabic > 0) {
-            binding.seekBarArabic.setProgress(seekArabic);
-            binding.arabicPx.setText("" + seekArabic + "%");
+        if (!checkSeekArabic) {
+            binding.arabicPx.setText("" + 50 + "%");
+            binding.seekBarArabic.setProgress(50);
+            edit.putInt("seekbarArabic", 50);
+            edit.apply();
         } else {
-            binding.seekBarArabic.setProgress(60);
-            binding.arabicPx.setText("" + 60 + "%");
+            final int progress = sp.getInt("seekbarArabic", 0);
+            binding.arabicPx.setText("" + progress + "%");
+            binding.seekBarArabic.setProgress(progress);
         }
 
-
-        final int seekTranslation = sp.getInt("seekbarTranslation", 0);
-
-        if (seekArabic > 0) {
-            binding.seekBarTranslation.setProgress(seekTranslation);
-            binding.translationPx.setText("" + seekTranslation + "%");
+        if (!checkSeekTranslation) {
+            binding.translationPx.setText("" + 45 + "%");
+            binding.seekBarTranslation.setProgress(45);
+            edit.putInt("seekbarTranslation", 45);
+            edit.apply();
         } else {
-            binding.seekBarTranslation.setProgress(60);
-            binding.translationPx.setText("" + 60 + "%");
-        }*/
+            final int progress = sp.getInt("seekbarTranslation", 0);
+            binding.translationPx.setText("" + progress + "%");
+            binding.seekBarTranslation.setProgress(progress);
+        }
+
     }
 
     @Override
     public void onBackPressed() {
         startActivity(new Intent(this, ShowQuranActivity.class));
         finish();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        super.onOptionsItemSelected(item);
+
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+        }
+        return true;
     }
 }

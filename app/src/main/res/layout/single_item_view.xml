@@ -49,11 +49,10 @@
                 android:layout_marginStart="@dimen/_5sdp"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:layout_marginBottom="@dimen/_5sdp"
-                android:fontFamily="@font/yrsa_semibold"
+                android:fontFamily="@font/jameel"
                 android:text="تکبیر تحریمہ"
                 android:textColor="@color/white"
-                android:textSize="@dimen/_14sdp"
-                android:textStyle="bold" />
+                android:textSize="@dimen/_16sdp" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

@@ -53,6 +53,7 @@
                 android:layout_weight="1"
                 android:fontFamily="@font/catamaran_medium"
                 android:text="Translation"
+                android:elevation="@dimen/_10sdp"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_16sdp"
                 android:thumb="@drawable/toggle_thumb"
@@ -83,11 +84,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:buttonTint="@color/gold"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
                 android:fontFamily="@font/catamaran_medium"
-                android:paddingStart="@dimen/_10sdp"
-                android:paddingEnd="@dimen/_10sdp"
                 android:text="Urdu"
+                android:background="@drawable/radio_bg"
+                android:button="@null"
+                android:elevation="@dimen/_10sdp"
+                android:gravity="center"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_16sdp" />
 
@@ -96,11 +100,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:buttonTint="@color/gold"
                 android:fontFamily="@font/catamaran_medium"
-                android:paddingStart="@dimen/_10sdp"
-                android:paddingEnd="@dimen/_10sdp"
                 android:text="English"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/radio_bg"
+                android:button="@null"
+                android:elevation="@dimen/_10sdp"
+                android:gravity="center"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_16sdp" />
         </RadioGroup>
@@ -140,9 +146,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:progressBackgroundTint="@color/white"
-                android:progressTint="@color/gold"
-                android:thumbTint="@color/dark_blue" />
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:progressDrawable="@drawable/seekbar_style"
+                android:thumb="@drawable/seek_thumb" />
 
             <TextView
                 android:id="@+id/arabicPx"
@@ -153,7 +160,7 @@
                 android:fontFamily="@font/catamaran_medium"
                 android:gravity="end"
                 android:text="10dp"
-                android:textColor="@color/white"
+                android:textColor="@color/gold"
                 android:textSize="@dimen/_14sdp" />
 
             <TextView
@@ -172,9 +179,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:progressBackgroundTint="@color/white"
-                android:progressTint="@color/gold"
-                android:thumbTint="@color/dark_blue" />
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:progressDrawable="@drawable/seekbar_style"
+                android:thumb="@drawable/seek_thumb" />
 
             <TextView
                 android:id="@+id/translationPx"
@@ -187,7 +195,7 @@
                 android:fontFamily="@font/catamaran_medium"
                 android:gravity="end"
                 android:text="10dp"
-                android:textColor="@color/white"
+                android:textColor="@color/gold"
                 android:textSize="@dimen/_14sdp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>

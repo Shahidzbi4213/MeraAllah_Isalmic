@@ -35,7 +35,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_10sdp"
-                android:fontFamily="@font/capriola"
+                android:fontFamily="@font/catamaran_medium"
                 android:text="@string/_Allahname"
                 android:gravity="center"
                 android:textColor="@color/white"

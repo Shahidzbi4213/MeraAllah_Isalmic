@@ -1,5 +1,9 @@
 package com.edu.pk.gulehri.meraallah.adapters;
 
+import static android.graphics.text.LineBreaker.JUSTIFICATION_MODE_INTER_WORD;
+import static android.util.TypedValue.COMPLEX_UNIT_PX;
+import static android.view.View.GONE;
+
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Typeface;
@@ -17,10 +21,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.edu.pk.gulehri.meraallah.R;
 import com.edu.pk.gulehri.meraallah.model.Model;
-
-import static android.graphics.text.LineBreaker.JUSTIFICATION_MODE_INTER_WORD;
-import static android.util.TypedValue.COMPLEX_UNIT_PX;
-import static android.view.View.GONE;
 
 public class HajjDetailAdapter extends RecyclerView.Adapter<HajjDetailAdapter.MyHajjDetailHolder> {
 
@@ -62,7 +62,7 @@ public class HajjDetailAdapter extends RecyclerView.Adapter<HajjDetailAdapter.My
 
                 holder.dua.setTextSize(COMPLEX_UNIT_PX, mContext.getResources().getDimension(R.dimen._18sdp));
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    holder.dua.setTypeface(ResourcesCompat.getFont(mContext, R.font.dosis_medium));
+                    holder.dua.setTypeface(ResourcesCompat.getFont(mContext, R.font.catamaran_medium));
 
                 } else {
                     holder.dua.setTypeface(Typeface.SANS_SERIF);
@@ -87,7 +87,7 @@ public class HajjDetailAdapter extends RecyclerView.Adapter<HajjDetailAdapter.My
 
                 holder.dua.setTextSize(COMPLEX_UNIT_PX, mContext.getResources().getDimension(R.dimen._18sdp));
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    holder.dua.setTypeface(ResourcesCompat.getFont(mContext, R.font.dosis_medium));
+                    holder.dua.setTypeface(ResourcesCompat.getFont(mContext, R.font.catamaran_medium));
 
                 } else {
                     holder.dua.setTypeface(Typeface.SANS_SERIF);
@@ -112,7 +112,7 @@ public class HajjDetailAdapter extends RecyclerView.Adapter<HajjDetailAdapter.My
 
                 holder.dua.setTextSize(COMPLEX_UNIT_PX, mContext.getResources().getDimension(R.dimen._18sdp));
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    holder.dua.setTypeface(ResourcesCompat.getFont(mContext, R.font.dosis_medium));
+                    holder.dua.setTypeface(ResourcesCompat.getFont(mContext, R.font.catamaran_medium));
 
                 } else {
                     holder.dua.setTypeface(Typeface.SANS_SERIF);
@@ -137,7 +137,7 @@ public class HajjDetailAdapter extends RecyclerView.Adapter<HajjDetailAdapter.My
 
                 holder.dua.setTextSize(COMPLEX_UNIT_PX, mContext.getResources().getDimension(R.dimen._18sdp));
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    holder.dua.setTypeface(ResourcesCompat.getFont(mContext, R.font.dosis_medium));
+                    holder.dua.setTypeface(ResourcesCompat.getFont(mContext, R.font.catamaran_medium));
 
                 } else {
                     holder.dua.setTypeface(Typeface.SANS_SERIF);
@@ -162,7 +162,7 @@ public class HajjDetailAdapter extends RecyclerView.Adapter<HajjDetailAdapter.My
 
                 holder.dua.setTextSize(COMPLEX_UNIT_PX, mContext.getResources().getDimension(R.dimen._18sdp));
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    holder.dua.setTypeface(ResourcesCompat.getFont(mContext, R.font.dosis_medium));
+                    holder.dua.setTypeface(ResourcesCompat.getFont(mContext, R.font.catamaran_medium));
 
                 } else {
                     holder.dua.setTypeface(Typeface.SANS_SERIF);
@@ -187,7 +187,7 @@ public class HajjDetailAdapter extends RecyclerView.Adapter<HajjDetailAdapter.My
 
                 holder.dua.setTextSize(COMPLEX_UNIT_PX, mContext.getResources().getDimension(R.dimen._18sdp));
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    holder.dua.setTypeface(ResourcesCompat.getFont(mContext, R.font.dosis_medium));
+                    holder.dua.setTypeface(ResourcesCompat.getFont(mContext, R.font.catamaran_medium));
 
                 } else {
                     holder.dua.setTypeface(Typeface.SANS_SERIF);
@@ -212,7 +212,7 @@ public class HajjDetailAdapter extends RecyclerView.Adapter<HajjDetailAdapter.My
 
                 holder.dua.setTextSize(COMPLEX_UNIT_PX, mContext.getResources().getDimension(R.dimen._18sdp));
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    holder.dua.setTypeface(ResourcesCompat.getFont(mContext, R.font.dosis_medium));
+                    holder.dua.setTypeface(ResourcesCompat.getFont(mContext, R.font.catamaran_medium));
 
                 } else {
                     holder.dua.setTypeface(Typeface.SANS_SERIF);
@@ -237,7 +237,7 @@ public class HajjDetailAdapter extends RecyclerView.Adapter<HajjDetailAdapter.My
 
                 holder.dua.setTextSize(COMPLEX_UNIT_PX, mContext.getResources().getDimension(R.dimen._18sdp));
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    holder.dua.setTypeface(ResourcesCompat.getFont(mContext, R.font.dosis_medium));
+                    holder.dua.setTypeface(ResourcesCompat.getFont(mContext, R.font.catamaran_medium));
 
                 } else {
                     holder.dua.setTypeface(Typeface.SANS_SERIF);
@@ -262,7 +262,7 @@ public class HajjDetailAdapter extends RecyclerView.Adapter<HajjDetailAdapter.My
 
                 holder.dua.setTextSize(COMPLEX_UNIT_PX, mContext.getResources().getDimension(R.dimen._18sdp));
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    holder.dua.setTypeface(ResourcesCompat.getFont(mContext, R.font.dosis_medium));
+                    holder.dua.setTypeface(ResourcesCompat.getFont(mContext, R.font.catamaran_medium));
 
                 } else {
                     holder.dua.setTypeface(Typeface.SANS_SERIF);
@@ -287,7 +287,7 @@ public class HajjDetailAdapter extends RecyclerView.Adapter<HajjDetailAdapter.My
 
                 holder.dua.setTextSize(COMPLEX_UNIT_PX, mContext.getResources().getDimension(R.dimen._18sdp));
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    holder.dua.setTypeface(ResourcesCompat.getFont(mContext, R.font.dosis_medium));
+                    holder.dua.setTypeface(ResourcesCompat.getFont(mContext, R.font.catamaran_medium));
 
                 } else {
                     holder.dua.setTypeface(Typeface.SANS_SERIF);
@@ -312,7 +312,7 @@ public class HajjDetailAdapter extends RecyclerView.Adapter<HajjDetailAdapter.My
 
                 holder.dua.setTextSize(COMPLEX_UNIT_PX, mContext.getResources().getDimension(R.dimen._18sdp));
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    holder.dua.setTypeface(ResourcesCompat.getFont(mContext, R.font.dosis_medium));
+                    holder.dua.setTypeface(ResourcesCompat.getFont(mContext, R.font.catamaran_medium));
 
                 } else {
                     holder.dua.setTypeface(Typeface.SANS_SERIF);
@@ -337,7 +337,7 @@ public class HajjDetailAdapter extends RecyclerView.Adapter<HajjDetailAdapter.My
 
                 holder.dua.setTextSize(COMPLEX_UNIT_PX, mContext.getResources().getDimension(R.dimen._18sdp));
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    holder.dua.setTypeface(ResourcesCompat.getFont(mContext, R.font.dosis_medium));
+                    holder.dua.setTypeface(ResourcesCompat.getFont(mContext, R.font.catamaran_medium));
 
                 } else {
                     holder.dua.setTypeface(Typeface.SANS_SERIF);
@@ -362,7 +362,7 @@ public class HajjDetailAdapter extends RecyclerView.Adapter<HajjDetailAdapter.My
             }
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                holder.duaTransliteration.setTypeface(ResourcesCompat.getFont(mContext, R.font.dosis_medium));
+                holder.duaTransliteration.setTypeface(ResourcesCompat.getFont(mContext, R.font.catamaran_medium));
 
             } else {
                 holder.duaTransliteration.setTypeface(Typeface.SANS_SERIF);
@@ -379,8 +379,8 @@ public class HajjDetailAdapter extends RecyclerView.Adapter<HajjDetailAdapter.My
                 holder.duaMeaning.setTextSize(COMPLEX_UNIT_PX, mContext.getResources().getDimension(R.dimen._18sdp));
 
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    holder.duaHeading.setTypeface(ResourcesCompat.getFont(mContext, R.font.dosis_medium));
-                    holder.duaMeaning.setTypeface(ResourcesCompat.getFont(mContext, R.font.dosis_medium));
+                    holder.duaHeading.setTypeface(ResourcesCompat.getFont(mContext, R.font.catamaran_medium));
+                    holder.duaMeaning.setTypeface(ResourcesCompat.getFont(mContext, R.font.catamaran_medium));
 
                 } else {
                     holder.duaHeading.setTypeface(Typeface.SANS_SERIF);

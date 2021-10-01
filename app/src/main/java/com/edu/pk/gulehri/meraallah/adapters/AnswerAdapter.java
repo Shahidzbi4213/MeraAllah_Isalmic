@@ -52,7 +52,7 @@ public class AnswerAdapter extends RecyclerView.Adapter<AnswerAdapter.MyAnswerHo
         return questionList.size();
     }
 
-    public class MyAnswerHolder extends RecyclerView.ViewHolder {
+    public static class MyAnswerHolder extends RecyclerView.ViewHolder {
         ShowanswerBackgroundBinding binding;
 
         public MyAnswerHolder(ShowanswerBackgroundBinding backgroundBinding) {

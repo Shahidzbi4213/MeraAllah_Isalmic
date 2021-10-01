@@ -53,7 +53,7 @@ public class KalimasAdapter extends RecyclerView.Adapter<KalimasAdapter.DataHold
             holder.binding.myLayout.setLayoutDirection(View.LAYOUT_DIRECTION_LTR);
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
 
-                Typeface typeface = ResourcesCompat.getFont(mContext, R.font.dosis_medium);
+                Typeface typeface = ResourcesCompat.getFont(mContext, R.font.catamaran_medium);
 
                 holder.binding.heading.setTypeface(typeface);
                 holder.binding.count.setTypeface(typeface);

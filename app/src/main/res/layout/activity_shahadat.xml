@@ -31,7 +31,7 @@
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginEnd="@dimen/_10sdp"
                 android:background="@drawable/view_background"
-                android:fontFamily="@font/dosis_medium"
+                android:fontFamily="@font/catamaran_medium"
                 android:gravity="center"
                 android:lineSpacingExtra="@dimen/_2sdp"
                 android:padding="@dimen/_10sdp"
@@ -48,13 +48,13 @@
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginEnd="@dimen/_10sdp"
                 android:background="@drawable/view_background"
-                android:fontFamily="@font/lateef"
+                android:fontFamily="@font/q_font"
                 android:gravity="center"
                 android:lineSpacingExtra="@dimen/_5sdp"
                 android:padding="@dimen/_10sdp"
                 android:text="أَشْهَدُ أَنْ لَا إِلَٰهَ إِلَّا ٱللَّٰهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا رَسُولُ ٱللَّٰهِ"
                 android:textColor="@color/gold"
-                android:textSize="@dimen/_25sdp" />
+                android:textSize="@dimen/_20sdp" />
 
             <TextView
                 android:id="@+id/shahadaTranlitration"
@@ -64,7 +64,7 @@
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginEnd="@dimen/_10sdp"
                 android:background="@drawable/view_background"
-                android:fontFamily="@font/dosis_medium"
+                android:fontFamily="@font/catamaran_medium"
                 android:gravity="center"
                 android:lineSpacingExtra="@dimen/_2sdp"
                 android:padding="@dimen/_10sdp"
@@ -81,7 +81,7 @@
                 android:layout_marginEnd="@dimen/_10sdp"
                 android:layout_marginBottom="@dimen/_10sdp"
                 android:background="@drawable/view_background"
-                android:fontFamily="@font/dosis_medium"
+                android:fontFamily="@font/catamaran_medium"
                 android:gravity="center"
                 android:lineSpacingExtra="@dimen/_2sdp"
                 android:padding="@dimen/_10sdp"

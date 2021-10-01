@@ -50,7 +50,7 @@
                 android:fontFamily="@font/q_font"
                 android:text="تکبیر تحریمہ"
                 android:textColor="@color/white"
-                android:textSize="@dimen/_14sdp"
+                android:textSize="@dimen/_16sdp"
                 app:layout_constraintEnd_toStartOf="@+id/surahCount"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -60,7 +60,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_7sdp"
                 android:layout_marginEnd="@dimen/_15sdp"
-                android:fontFamily="@font/capriola"
+                android:fontFamily="@font/catamaran_medium"
                 android:text="Al Fatiha"
                 android:textColor="#747373"
                 android:textSize="@dimen/_12sdp"

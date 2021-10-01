@@ -9,7 +9,6 @@ import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.core.content.res.ResourcesCompat;
@@ -52,7 +51,7 @@ public class JanazaAdapter extends RecyclerView.Adapter<JanazaAdapter.MyHolder> 
             holder.binding.myLayout.setLayoutDirection(View.LAYOUT_DIRECTION_LTR);
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
 
-                Typeface typeface = ResourcesCompat.getFont(mContext, R.font.dosis_medium);
+                Typeface typeface = ResourcesCompat.getFont(mContext, R.font.catamaran_medium);
 
                 holder.binding.heading.setTypeface(typeface);
                 holder.binding.count.setTypeface(typeface);

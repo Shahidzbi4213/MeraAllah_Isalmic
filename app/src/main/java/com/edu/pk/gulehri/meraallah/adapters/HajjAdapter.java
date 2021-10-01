@@ -1,5 +1,7 @@
 package com.edu.pk.gulehri.meraallah.adapters;
 
+import static java.lang.String.format;
+
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
@@ -21,8 +23,6 @@ import com.edu.pk.gulehri.meraallah.R;
 import com.edu.pk.gulehri.meraallah.constansts.Constants;
 import com.edu.pk.gulehri.meraallah.model.Model;
 import com.edu.pk.gulehri.meraallah.ui.HajjDetailActivity;
-
-import static java.lang.String.format;
 
 public class HajjAdapter extends RecyclerView.Adapter<HajjAdapter.MyHajjHolder> {
 
@@ -55,7 +55,7 @@ public class HajjAdapter extends RecyclerView.Adapter<HajjAdapter.MyHajjHolder> 
 
         } else if (SELECT_LANGUAGE.equals("English")) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                Typeface typeface = ResourcesCompat.getFont(context, R.font.dosis_medium);
+                Typeface typeface = ResourcesCompat.getFont(context, R.font.catamaran_medium);
                 holder.mCount.setTypeface(typeface);
                 holder.heading.setTypeface(typeface);
 

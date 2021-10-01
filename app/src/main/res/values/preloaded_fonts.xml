@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="preloaded_fonts" translatable="false">
-        <item>@font/amiri</item>
-        <item>@font/capriola</item>
         <item>@font/catamaran_medium</item>
-        <item>@font/dosis_medium</item>
-        <item>@font/droid_sans</item>
-        <item>@font/droid_sans_bold</item>
-        <item>@font/galdeano</item>
-        <item>@font/katibeh</item>
-        <item>@font/lateef</item>
-        <item>@font/orbitron_medium</item>
-        <item>@font/tauri</item>
-        <item>@font/yrsa_semibold</item>
     </array>
 </resources>

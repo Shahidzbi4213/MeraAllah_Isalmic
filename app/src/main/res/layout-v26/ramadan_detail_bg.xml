@@ -33,7 +33,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:text="(1)"
-                android:fontFamily="@font/dosis_medium"
+                android:fontFamily="@font/catamaran_medium"
                 android:textColor="#FFFFFF"
                 android:textSize="@dimen/_20sdp"
                 android:textStyle="bold" />
@@ -44,14 +44,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_10sdp"
-                android:fontFamily="@font/lateef"
+                android:fontFamily="@font/q_font"
                 android:padding="@dimen/_10sdp"
                 android:layoutDirection="rtl"
                 android:lineSpacingExtra="@dimen/_5sdp"
                 android:justificationMode="inter_word"
                 android:text="يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ كُتِبَ عَلَيْكُمُ ٱلصِّيَامُ كَمَا كُتِبَ عَلَى ٱلَّذِينَ مِن قَبْلِكُمْ لَعَلَّكُمْ تَتَّقُونَ"
                 android:textColor="@color/gold"
-                android:textSize="@dimen/_22sdp" />
+                android:textSize="@dimen/_20sdp" />
 
             <view
                 android:id="@+id/first"
@@ -70,12 +70,12 @@
                 android:layout_marginStart="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:layout_marginEnd="@dimen/_10sdp"
-                android:fontFamily="@font/lateef"
+                android:fontFamily="@font/jameel"
                 android:padding="@dimen/_10sdp"
                 android:justificationMode="inter_word"
                 android:text="اے ایمان والو! تم پر روزہ رکھنا اسی طرح روزہ رکھتا ہے جس طرح تم سے پہلے لوگوں پر یہ حکم دیا گیا تھا کہ تم نیک ہوجاؤ"
                 android:textColor="@color/white"
-                android:textSize="@dimen/_22sdp" />
+                android:textSize="@dimen/_20sdp" />
 
 
             <view
@@ -96,7 +96,7 @@
                 android:layout_marginTop="@dimen/_5sdp"
                 android:layout_marginEnd="@dimen/_10sdp"
                 android:layout_marginBottom="@dimen/_10sdp"
-                android:fontFamily="@font/dosis_medium"
+                android:fontFamily="@font/catamaran_medium"
                 android:padding="@dimen/_10sdp"
                 android:gravity="center"
                 android:justificationMode="inter_word"

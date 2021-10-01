@@ -1,5 +1,11 @@
 package com.edu.pk.gulehri.meraallah.adapters;
 
+import static android.graphics.text.LineBreaker.JUSTIFICATION_MODE_INTER_WORD;
+import static android.graphics.text.LineBreaker.JUSTIFICATION_MODE_NONE;
+import static android.os.Build.VERSION.SDK_INT;
+import static android.os.Build.VERSION_CODES.O;
+import static com.edu.pk.gulehri.meraallah.adapters.RamadanDetailAdapter.RamadanDetailHolder;
+
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Color;
@@ -18,12 +24,6 @@ import androidx.recyclerview.widget.RecyclerView.ViewHolder;
 
 import com.edu.pk.gulehri.meraallah.R;
 import com.edu.pk.gulehri.meraallah.model.Model;
-
-import static android.graphics.text.LineBreaker.JUSTIFICATION_MODE_INTER_WORD;
-import static android.graphics.text.LineBreaker.JUSTIFICATION_MODE_NONE;
-import static android.os.Build.VERSION.SDK_INT;
-import static android.os.Build.VERSION_CODES.O;
-import static com.edu.pk.gulehri.meraallah.adapters.RamadanDetailAdapter.RamadanDetailHolder;
 
 public class RamadanDetailAdapter extends RecyclerView.Adapter<RamadanDetailHolder> {
 
@@ -64,7 +64,7 @@ public class RamadanDetailAdapter extends RecyclerView.Adapter<RamadanDetailHold
 
             holder.ramadan_refernce_lang.setTextSize(TypedValue.COMPLEX_UNIT_PX, context.getResources().getDimension(R.dimen._18sdp));
             if (SDK_INT >= O) {
-                holder.ramadan_refernce_lang.setTypeface(ResourcesCompat.getFont(context, R.font.dosis_medium));
+                holder.ramadan_refernce_lang.setTypeface(ResourcesCompat.getFont(context, R.font.catamaran_medium));
             } else {
                 holder.ramadan_refernce_lang.setTypeface(Typeface.SANS_SERIF);
             }
@@ -84,7 +84,7 @@ public class RamadanDetailAdapter extends RecyclerView.Adapter<RamadanDetailHold
             holder.ramdan_count.setText("(" + (position + 1) + ")");
             holder.ramadan_refernce_lang.setTextSize(TypedValue.COMPLEX_UNIT_PX, context.getResources().getDimension(R.dimen._18sdp));
             if (SDK_INT >= O) {
-                holder.ramadan_refernce_lang.setTypeface(ResourcesCompat.getFont(context, R.font.dosis_medium));
+                holder.ramadan_refernce_lang.setTypeface(ResourcesCompat.getFont(context, R.font.catamaran_medium));
             } else {
                 holder.ramadan_refernce_lang.setTypeface(Typeface.SANS_SERIF);
             }
@@ -116,7 +116,7 @@ public class RamadanDetailAdapter extends RecyclerView.Adapter<RamadanDetailHold
             holder.ramadan_reference_arabic.setTextSize(TypedValue.COMPLEX_UNIT_PX, context.getResources().getDimension(R.dimen._18sdp));
 
             if (SDK_INT >= O) {
-                holder.ramadan_reference_arabic.setTypeface(ResourcesCompat.getFont(context, R.font.dosis_medium));
+                holder.ramadan_reference_arabic.setTypeface(ResourcesCompat.getFont(context, R.font.catamaran_medium));
             } else {
                 holder.ramadan_reference_arabic.setTypeface(Typeface.SANS_SERIF);
             }
@@ -138,8 +138,8 @@ public class RamadanDetailAdapter extends RecyclerView.Adapter<RamadanDetailHold
             holder.ramadan_refernce_lang.setTextSize(TypedValue.COMPLEX_UNIT_PX, context.getResources().getDimension(R.dimen._18sdp));
 
             if (SDK_INT >= O) {
-                holder.ramdan_count.setTypeface(ResourcesCompat.getFont(context, R.font.dosis_medium));
-                holder.ramadan_refernce_lang.setTypeface(ResourcesCompat.getFont(context, R.font.dosis_medium));
+                holder.ramdan_count.setTypeface(ResourcesCompat.getFont(context, R.font.catamaran_medium));
+                holder.ramadan_refernce_lang.setTypeface(ResourcesCompat.getFont(context, R.font.catamaran_medium));
             } else {
                 holder.ramdan_count.setTypeface(Typeface.SANS_SERIF, Typeface.BOLD);
                 holder.ramadan_refernce_lang.setTypeface(Typeface.SANS_SERIF);
@@ -163,7 +163,7 @@ public class RamadanDetailAdapter extends RecyclerView.Adapter<RamadanDetailHold
             holder.ramadan_detail_reference.setTextSize(TypedValue.COMPLEX_UNIT_PX, context.getResources().getDimension(R.dimen._18sdp));
 
             if (SDK_INT >= O) {
-                holder.ramadan_detail_reference.setTypeface(ResourcesCompat.getFont(context, R.font.dosis_medium));
+                holder.ramadan_detail_reference.setTypeface(ResourcesCompat.getFont(context, R.font.catamaran_medium));
             } else {
                 holder.ramadan_detail_reference.setTypeface(Typeface.SANS_SERIF);
             }
@@ -205,8 +205,8 @@ public class RamadanDetailAdapter extends RecyclerView.Adapter<RamadanDetailHold
 
             if (SDK_INT >= O) {
                 holder.ramadan_reference_arabic.setJustificationMode(JUSTIFICATION_MODE_NONE);
-                holder.ramadan_reference_arabic.setTypeface(ResourcesCompat.getFont(context, R.font.dosis_medium));
-                holder.ramadan_refernce_lang.setTypeface(ResourcesCompat.getFont(context, R.font.dosis_medium));
+                holder.ramadan_reference_arabic.setTypeface(ResourcesCompat.getFont(context, R.font.catamaran_medium));
+                holder.ramadan_refernce_lang.setTypeface(ResourcesCompat.getFont(context, R.font.catamaran_medium));
             } else {
                 holder.ramadan_reference_arabic.setTypeface(Typeface.SANS_SERIF, Typeface.BOLD);
                 holder.ramadan_refernce_lang.setTypeface(Typeface.SANS_SERIF);

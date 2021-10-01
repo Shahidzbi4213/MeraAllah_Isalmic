@@ -12,59 +12,58 @@
         android:id="@+id/toolbar_include_prayerCalculation"
         layout="@layout/toolbar" />
 
-    <ScrollView
+    <RadioGroup
+        android:id="@+id/radioGroupMadhab"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.7"
-        android:layout_margin="@dimen/_10sdp">
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@color/card_color">
 
-        <LinearLayout
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/catamaran_medium"
+            android:text="Islamic School of Thoughts:"
+            android:textColor="@color/gold"
+            android:textSize="@dimen/_14sdp" />
+
+
+        <RadioButton
+            android:id="@+id/rbHanafi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/view_background"
-            android:elevation="@dimen/_10sdp"
-            android:orientation="vertical">
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:background="@drawable/radio_bg"
+            android:button="@null"
+            android:buttonTint="@color/gold"
+            android:fontFamily="@font/catamaran_medium"
+            android:gravity="center"
+            android:text="HANAFI"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_5sdp"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:fontFamily="@font/capriola"
-                android:text="Islamic School of Thoughts:"
-                android:textColor="@color/gold"
-                android:textSize="@dimen/_14sdp" />
-
-            <RadioGroup
-                android:id="@+id/radioGroupMadhab"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_5sdp"
-                android:layout_marginTop="@dimen/_10sdp">
-
-                <RadioButton
-                    android:id="@+id/rbHanafi"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:buttonTint="@color/gold"
-                    android:fontFamily="@font/capriola"
-                    android:text="HANAFI"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/_12sdp" />
-
-                <RadioButton
-                    android:id="@+id/rbShafi"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:buttonTint="@color/gold"
-                    android:fontFamily="@font/capriola"
-                    android:text="SHAFI"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/_12sdp" />
-            </RadioGroup>
-        </LinearLayout>
-
-    </ScrollView>
+        <RadioButton
+            android:id="@+id/rbShafi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/radio_bg"
+            android:button="@null"
+            android:buttonTint="@color/gold"
+            android:fontFamily="@font/catamaran_medium"
+            android:gravity="center"
+            android:text="SHAFI"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp" />
+    </RadioGroup>
 
 
     <ScrollView
@@ -85,7 +84,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_5sdp"
                 android:layout_marginTop="@dimen/_5sdp"
-                android:fontFamily="@font/capriola"
+                android:fontFamily="@font/catamaran_medium"
                 android:text="Calculation Method:"
                 android:textColor="@color/gold"
                 android:textSize="@dimen/_14sdp" />
@@ -93,7 +92,7 @@
 
             <RadioGroup
                 android:id="@+id/radioGroupMethod"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_5sdp"
                 android:layout_marginTop="@dimen/_10sdp">
@@ -103,8 +102,14 @@
                     android:id="@+id/rbMuslimLeague"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:background="@drawable/radio_bg"
+                    android:button="@null"
                     android:buttonTint="@color/gold"
-                    android:fontFamily="@font/capriola"
+                    android:fontFamily="@font/catamaran_medium"
+                    android:gravity="center"
                     android:text="Muslim World League"
                     android:textColor="#FFFFFF"
                     android:textSize="@dimen/_12sdp" />
@@ -113,8 +118,14 @@
                     android:id="@+id/rbEgyptian"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:background="@drawable/radio_bg"
+                    android:button="@null"
                     android:buttonTint="@color/gold"
-                    android:fontFamily="@font/capriola"
+                    android:fontFamily="@font/catamaran_medium"
+                    android:gravity="center"
                     android:text="Egyptian"
                     android:textColor="#FFFFFF"
                     android:textSize="@dimen/_12sdp" />
@@ -123,8 +134,14 @@
                     android:id="@+id/rbKarachi"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:background="@drawable/radio_bg"
+                    android:button="@null"
                     android:buttonTint="@color/gold"
-                    android:fontFamily="@font/capriola"
+                    android:fontFamily="@font/catamaran_medium"
+                    android:gravity="center"
                     android:text="University of Islamic Sciences, Karachi"
                     android:textColor="#FFFFFF"
                     android:textSize="@dimen/_12sdp" />
@@ -133,8 +150,14 @@
                     android:id="@+id/rbMakkah"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:background="@drawable/radio_bg"
+                    android:button="@null"
                     android:buttonTint="@color/gold"
-                    android:fontFamily="@font/capriola"
+                    android:fontFamily="@font/catamaran_medium"
+                    android:gravity="center"
                     android:text="Umm al-Qura University, Makkah"
                     android:textColor="#FFFFFF"
                     android:textSize="@dimen/_12sdp" />
@@ -143,8 +166,14 @@
                     android:id="@+id/rbDubai"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:background="@drawable/radio_bg"
+                    android:button="@null"
                     android:buttonTint="@color/gold"
-                    android:fontFamily="@font/capriola"
+                    android:fontFamily="@font/catamaran_medium"
+                    android:gravity="center"
                     android:text="Dubai"
                     android:textColor="#FFFFFF"
                     android:textSize="@dimen/_12sdp" />
@@ -153,8 +182,14 @@
                     android:id="@+id/rbQatar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:background="@drawable/radio_bg"
+                    android:button="@null"
                     android:buttonTint="@color/gold"
-                    android:fontFamily="@font/capriola"
+                    android:fontFamily="@font/catamaran_medium"
+                    android:gravity="center"
                     android:text="Qatar"
                     android:textColor="#FFFFFF"
                     android:textSize="@dimen/_12sdp" />
@@ -163,8 +198,14 @@
                     android:id="@+id/rbKuwait"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:background="@drawable/radio_bg"
+                    android:button="@null"
                     android:buttonTint="@color/gold"
-                    android:fontFamily="@font/capriola"
+                    android:fontFamily="@font/catamaran_medium"
+                    android:gravity="center"
                     android:text="Kuwait"
                     android:textColor="#FFFFFF"
                     android:textSize="@dimen/_12sdp" />
@@ -173,8 +214,14 @@
                     android:id="@+id/rbMoonsighting"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:background="@drawable/radio_bg"
+                    android:button="@null"
                     android:buttonTint="@color/gold"
-                    android:fontFamily="@font/capriola"
+                    android:fontFamily="@font/catamaran_medium"
+                    android:gravity="center"
                     android:text="Moonsighting Committee"
                     android:textColor="#FFFFFF"
                     android:textSize="@dimen/_12sdp" />
@@ -183,8 +230,15 @@
                     android:id="@+id/rbSingapore"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="@drawable/radio_bg"
+                    android:button="@null"
                     android:buttonTint="@color/gold"
-                    android:fontFamily="@font/capriola"
+                    android:fontFamily="@font/catamaran_medium"
+                    android:gravity="center"
                     android:text="Singapore"
                     android:textColor="#FFFFFF"
                     android:textSize="@dimen/_12sdp" />

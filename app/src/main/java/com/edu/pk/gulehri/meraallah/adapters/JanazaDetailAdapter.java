@@ -82,7 +82,7 @@ public class JanazaDetailAdapter extends RecyclerView.Adapter<JanazaDetailAdapte
                 holder.binding.txtTwo.setText("دعا: " + " " + DataModel.FUNERAL_PRAYER_DUA[position].getFUNERAL_DUA());
 
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                    holder.binding.txtThree.setTypeface(ResourcesCompat.getFont(mContext, R.font.lateef));
+                    holder.binding.txtThree.setTypeface(ResourcesCompat.getFont(mContext, R.font.jameel));
                     holder.binding.txtThree.setTextSize(TypedValue.COMPLEX_UNIT_PX, mContext.getResources().getDimension(R.dimen._22sdp));
                 } else {
                     holder.binding.txtThree.setTypeface(Typeface.MONOSPACE);
@@ -94,7 +94,7 @@ public class JanazaDetailAdapter extends RecyclerView.Adapter<JanazaDetailAdapte
             } else if (SELECT_LANGUAGE.equals("English")) {
 
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                    holder.binding.txtOne.setTypeface(ResourcesCompat.getFont(mContext, R.font.dosis_medium));
+                    holder.binding.txtOne.setTypeface(ResourcesCompat.getFont(mContext, R.font.catamaran_medium));
                     holder.binding.txtOne.setTextSize(TypedValue.COMPLEX_UNIT_PX, mContext.getResources().getDimension(R.dimen._18sdp));
                 } else {
                     holder.binding.txtOne.setTypeface(Typeface.SERIF);

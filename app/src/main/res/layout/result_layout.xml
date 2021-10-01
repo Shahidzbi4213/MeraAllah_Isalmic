@@ -42,7 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:fontFamily="@font/capriola"
+            android:fontFamily="@font/catamaran_medium"
             android:layout_marginTop="@dimen/_7sdp"
             android:text="@string/quiz_result"
             android:textColor="@android:color/white"
@@ -71,7 +71,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:elevation="@dimen/_1sdp"
-                android:fontFamily="@font/capriola"
+                android:fontFamily="@font/catamaran_medium"
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/_18sdp"
                 tools:text="20" />
@@ -80,7 +80,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:elevation="@dimen/_1sdp"
-                android:fontFamily="@font/capriola"
+                android:fontFamily="@font/catamaran_medium"
                 android:text="@string/questions"
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/_13sdp" />
@@ -101,7 +101,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:elevation="@dimen/_1sdp"
-                android:fontFamily="@font/capriola"
+                android:fontFamily="@font/catamaran_medium"
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/_18sdp"
                 tools:text="15" />
@@ -110,7 +110,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:elevation="@dimen/_1sdp"
-                android:fontFamily="@font/capriola"
+                android:fontFamily="@font/catamaran_medium"
                 android:text="@string/correct"
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/_13sdp" />
@@ -131,7 +131,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:elevation="@dimen/_1sdp"
-                android:fontFamily="@font/capriola"
+                android:fontFamily="@font/catamaran_medium"
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/_18sdp"
                 tools:text="5" />
@@ -140,7 +140,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:elevation="@dimen/_1sdp"
-                android:fontFamily="@font/capriola"
+                android:fontFamily="@font/catamaran_medium"
                 android:text="@string/wrong"
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/_13sdp" />
@@ -163,7 +163,7 @@
             android:padding="@dimen/_10sdp"
             android:background="#C78500"
             android:elevation="@dimen/_5sdp"
-            android:fontFamily="@font/dosis_medium"
+            android:fontFamily="@font/catamaran_medium"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -172,7 +172,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:elevation="@dimen/_1sdp"
-                android:fontFamily="@font/capriola"
+                android:fontFamily="@font/catamaran_medium"
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/_18sdp"
                 tools:text="60" />
@@ -181,7 +181,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:elevation="@dimen/_1sdp"
-                android:fontFamily="@font/capriola"
+                android:fontFamily="@font/catamaran_medium"
                 android:text="@string/yourScore"
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/_13sdp" />
@@ -202,7 +202,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:elevation="@dimen/_1sdp"
-                android:fontFamily="@font/capriola"
+                android:fontFamily="@font/catamaran_medium"
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/_18sdp"
                 tools:text="80" />
@@ -211,7 +211,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:elevation="@dimen/_1sdp"
-                android:fontFamily="@font/capriola"
+                android:fontFamily="@font/catamaran_medium"
                 android:text="@string/highScore"
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/_13sdp" />
@@ -234,7 +234,7 @@
             android:layout_marginBottom="8dp"
             android:background="@drawable/button_play_again"
             android:elevation="@dimen/_10sdp"
-            android:fontFamily="@font/capriola"
+            android:fontFamily="@font/catamaran_medium"
             android:text="@string/playAgain"
             android:textColor="@android:color/black"
             android:textSize="@dimen/_12sdp"
@@ -252,7 +252,7 @@
             android:layout_marginBottom="8dp"
             android:background="@drawable/button_main_menu"
             android:elevation="@dimen/_10sdp"
-            android:fontFamily="@font/capriola"
+            android:fontFamily="@font/catamaran_medium"
             android:text="@string/mainMenu"
             android:textColor="@android:color/black"
             android:textSize="@dimen/_12sdp"
@@ -271,7 +271,7 @@
             android:layout_marginBottom="8dp"
             android:background="@drawable/showasnwer_backgroung"
             android:elevation="@dimen/_10sdp"
-            android:fontFamily="@font/capriola"
+            android:fontFamily="@font/catamaran_medium"
             android:text="@string/show_answers"
             android:textSize="@dimen/_12sdp"
             app:layout_constraintBottom_toBottomOf="parent"

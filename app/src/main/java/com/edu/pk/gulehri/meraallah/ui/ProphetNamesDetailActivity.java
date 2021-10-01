@@ -1,5 +1,8 @@
 package com.edu.pk.gulehri.meraallah.ui;
 
+import static com.edu.pk.gulehri.meraallah.constansts.Constants.ANIMATION_DURATION_A;
+import static com.edu.pk.gulehri.meraallah.constansts.Constants.ANIMATION_DURATION_B;
+
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
@@ -19,17 +22,14 @@ import androidx.core.content.res.ResourcesCompat;
 
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
-import com.edu.pk.gulehri.meraallah.Details.Details;
 import com.edu.pk.gulehri.meraallah.R;
 import com.edu.pk.gulehri.meraallah.adapters.ProphetNamesAdapter;
 import com.edu.pk.gulehri.meraallah.constansts.Constants;
 import com.edu.pk.gulehri.meraallah.databinding.ActivityProphetNamesDetailBinding;
+import com.edu.pk.gulehri.meraallah.model.Details;
 import com.edu.pk.gulehri.meraallah.model.Model;
 
 import java.util.Objects;
-
-import static com.edu.pk.gulehri.meraallah.constansts.Constants.ANIMATION_DURATION_A;
-import static com.edu.pk.gulehri.meraallah.constansts.Constants.ANIMATION_DURATION_B;
 
 public class ProphetNamesDetailActivity extends AppCompatActivity
         implements View.OnClickListener, View.OnTouchListener, GestureDetector.OnGestureListener {

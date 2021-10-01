@@ -34,7 +34,7 @@
                 android:layout_marginBottom="@dimen/_10sdp"
                 android:background="@drawable/view_background"
                 android:elevation="@dimen/_10sdp"
-                android:fontFamily="@font/lateef"
+                android:fontFamily="@font/q_font"
                 android:gravity="center"
                 android:layoutDirection="rtl"
                 android:lineSpacingExtra="@dimen/_5sdp"

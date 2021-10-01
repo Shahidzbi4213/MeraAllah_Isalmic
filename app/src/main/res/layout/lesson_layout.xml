@@ -44,7 +44,7 @@
                 android:layout_marginTop="@dimen/_5sdp"
                 android:layout_marginBottom="@dimen/_5sdp"
                 android:layout_weight="1"
-                android:fontFamily="@font/capriola"
+                android:fontFamily="@font/catamaran_medium"
                 android:gravity="center_vertical"
                 android:text="Lesson 0"
                 android:textColor="@color/white"

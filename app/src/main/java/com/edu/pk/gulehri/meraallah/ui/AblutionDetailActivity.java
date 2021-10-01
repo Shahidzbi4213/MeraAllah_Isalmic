@@ -1,5 +1,7 @@
 package com.edu.pk.gulehri.meraallah.ui;
 
+import static android.graphics.text.LineBreaker.JUSTIFICATION_MODE_INTER_WORD;
+
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
@@ -21,8 +23,6 @@ import androidx.core.content.res.ResourcesCompat;
 import com.edu.pk.gulehri.meraallah.R;
 import com.edu.pk.gulehri.meraallah.adapters.AblutionAdapter;
 import com.edu.pk.gulehri.meraallah.model.Model;
-
-import static android.graphics.text.LineBreaker.JUSTIFICATION_MODE_INTER_WORD;
 
 public class AblutionDetailActivity extends AppCompatActivity {
 
@@ -72,7 +72,7 @@ public class AblutionDetailActivity extends AppCompatActivity {
 
         } else if (lang.equals("English")) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                Typeface t = ResourcesCompat.getFont(this, R.font.dosis_medium);
+                Typeface t = ResourcesCompat.getFont(this, R.font.catamaran_medium);
                 ablutionProcess.setTypeface(t);
                 ablutionDuaTranslation.setTypeface(t);
                 ablutionDuaTransliteration.setTypeface(t);

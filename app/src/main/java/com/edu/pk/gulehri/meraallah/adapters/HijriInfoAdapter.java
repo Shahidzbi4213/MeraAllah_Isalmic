@@ -47,7 +47,7 @@ public class HijriInfoAdapter extends RecyclerView.Adapter<HijriInfoAdapter.MyHo
         holder.mLinearLayout.setLayoutDirection(View.LAYOUT_DIRECTION_LTR);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
 
-            Typeface typeface = ResourcesCompat.getFont(mContext, R.font.dosis_medium);
+            Typeface typeface = ResourcesCompat.getFont(mContext, R.font.catamaran_medium);
 
             holder.heading.setTypeface(typeface);
             holder.count.setTypeface(typeface);

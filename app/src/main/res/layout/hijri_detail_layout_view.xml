@@ -35,7 +35,7 @@
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginEnd="@dimen/_5sdp"
                 android:layout_marginBottom="@dimen/_10sdp"
-                android:fontFamily="@font/dosis_medium"
+                android:fontFamily="@font/catamaran_medium"
                 android:gravity="center"
                 android:text="Hijri Calender"
                 android:textColor="@color/gold"
@@ -60,11 +60,11 @@
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginEnd="@dimen/_5sdp"
                 android:layout_marginBottom="@dimen/_10sdp"
-                android:fontFamily="@font/lateef"
+                android:fontFamily="@font/q_font"
                 android:gravity="center"
                 android:text="Hijri Calender"
                 android:textColor="@color/white"
-                android:textSize="@dimen/_25sdp" />
+                android:textSize="@dimen/_20sdp" />
 
             <view
                 android:id="@+id/first"
@@ -84,7 +84,7 @@
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginEnd="@dimen/_10sdp"
                 android:layout_marginBottom="@dimen/_10sdp"
-                android:fontFamily="@font/dosis_medium"
+                android:fontFamily="@font/catamaran_medium"
                 android:gravity="center"
                 android:lineSpacingExtra="@dimen/_3sdp"
                 android:paddingStart="@dimen/_5sdp"
@@ -111,7 +111,7 @@
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginEnd="@dimen/_5sdp"
                 android:layout_marginBottom="@dimen/_10sdp"
-                android:fontFamily="@font/dosis_medium"
+                android:fontFamily="@font/catamaran_medium"
                 android:gravity="center"
                 android:lineSpacingExtra="@dimen/_3sdp"
                 android:paddingStart="@dimen/_5sdp"

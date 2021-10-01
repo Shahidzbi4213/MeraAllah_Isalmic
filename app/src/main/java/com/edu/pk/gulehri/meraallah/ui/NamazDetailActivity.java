@@ -1,5 +1,8 @@
 package com.edu.pk.gulehri.meraallah.ui;
 
+import static android.graphics.text.LineBreaker.BREAK_STRATEGY_BALANCED;
+import static android.graphics.text.LineBreaker.JUSTIFICATION_MODE_INTER_WORD;
+
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -23,9 +26,6 @@ import com.edu.pk.gulehri.meraallah.databinding.ActivityNamazDetailBinding;
 import com.edu.pk.gulehri.meraallah.model.Model;
 
 import java.util.Objects;
-
-import static android.graphics.text.LineBreaker.BREAK_STRATEGY_BALANCED;
-import static android.graphics.text.LineBreaker.JUSTIFICATION_MODE_INTER_WORD;
 
 public class NamazDetailActivity extends AppCompatActivity {
     /**
@@ -131,7 +131,7 @@ public class NamazDetailActivity extends AppCompatActivity {
             } else if (LANGUAGE.equals("English")) {
 
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    Typeface t = ResourcesCompat.getFont(this, R.font.dosis_medium);
+                    Typeface t = ResourcesCompat.getFont(this, R.font.catamaran_medium);
                     binding.namazProcess.setTypeface(t);
                     binding.namazTranslation.setTypeface(t);
                     binding.transliteration.setTypeface(t);
