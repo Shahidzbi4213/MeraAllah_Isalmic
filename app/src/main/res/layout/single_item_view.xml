@@ -39,7 +39,7 @@
                 android:fontFamily="@font/catamaran_medium"
                 android:textColor="@color/gold"
                 android:textSize="@dimen/_14sdp"
-                android:textStyle="italic|bold" />
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/heading"
