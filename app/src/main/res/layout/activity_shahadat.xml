@@ -33,11 +33,13 @@
                 android:background="@drawable/view_background"
                 android:fontFamily="@font/catamaran_medium"
                 android:gravity="center"
+                android:justificationMode="inter_word"
                 android:lineSpacingExtra="@dimen/_2sdp"
                 android:padding="@dimen/_10sdp"
                 android:text="Reciting this statement three times in front of witnesses is all that anyone need do to become a Muslim. A Muslim is expected to recite this statement out loud, with total sincerity, fully understanding what it means."
                 android:textColor="@color/white"
-                android:textSize="@dimen/_17sdp" />
+                android:textSize="@dimen/_17sdp"
+                tools:targetApi="o" />
 
 
             <TextView
@@ -88,8 +90,6 @@
                 android:text="Translation: I bear witness that there is no deity but God, and I bear witness that Muhammad is the messenger of God."
                 android:textColor="@color/gold"
                 android:textSize="@dimen/_16sdp" />
-
-
 
         </LinearLayout>
     </ScrollView>

@@ -18,9 +18,6 @@ import com.edu.pk.gulehri.meraallah.databinding.ActivityTasbeehBinding;
 
 public class TasbeehActivity extends AppCompatActivity {
 
-    /**
-     * vars
-     */
     private ActivityTasbeehBinding tasbeehBinding;
 
     @Override

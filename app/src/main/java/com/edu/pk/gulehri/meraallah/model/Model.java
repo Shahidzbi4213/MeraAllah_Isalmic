@@ -253,7 +253,7 @@ public class Model {
             new Model(hadith, "Today's Hadith"),
             new Model(calender, "Hijri Calender"),
             new Model(ar_quran, "Quran"),
-            new Model(quranfifteen, "Al Quran"),
+            new Model(quranfifteen, "Quran [PDF]"),
             new Model(graveyard, "Janaza"),
             new Model(kalimas, "Six Kalimas"),
             new Model(qaida, "Qaida"),

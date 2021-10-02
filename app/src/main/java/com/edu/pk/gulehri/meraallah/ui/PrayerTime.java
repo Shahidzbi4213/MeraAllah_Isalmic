@@ -1,5 +1,11 @@
 package com.edu.pk.gulehri.meraallah.ui;
 
+import static android.Manifest.permission.ACCESS_COARSE_LOCATION;
+import static android.Manifest.permission.ACCESS_FINE_LOCATION;
+import static android.content.pm.PackageManager.PERMISSION_GRANTED;
+import static android.os.Build.VERSION_CODES.M;
+import static com.edu.pk.gulehri.meraallah.constansts.Constants.TAG;
+
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
@@ -49,12 +55,6 @@ import java.util.Objects;
 import java.util.TimeZone;
 
 import im.delight.android.location.SimpleLocation;
-
-import static android.Manifest.permission.ACCESS_COARSE_LOCATION;
-import static android.Manifest.permission.ACCESS_FINE_LOCATION;
-import static android.content.pm.PackageManager.PERMISSION_GRANTED;
-import static android.os.Build.VERSION_CODES.M;
-import static com.edu.pk.gulehri.meraallah.constansts.Constants.TAG;
 
 public class PrayerTime extends AppCompatActivity implements View.OnClickListener {
 
@@ -158,12 +158,14 @@ public class PrayerTime extends AppCompatActivity implements View.OnClickListene
                 longitude = sp.getFloat("lon", 0);
             }
 
+            Coordinates coordinates = new Coordinates(latitude, longitude);
+            DateComponents date = DateComponents.from(new Date());
+            CalculationParameters params = CalculationMethod.KARACHI.getParameters();
+
             if (Data.isEmpty() && MethodData.isEmpty()) {
-                Toast.makeText(this, "Selected Option From Above Settings", Toast.LENGTH_SHORT).show();
+                params.madhab = Madhab.HANAFI;
+                params = CalculationMethod.KARACHI.getParameters();
             } else {
-                Coordinates coordinates = new Coordinates(latitude, longitude);
-                DateComponents date = DateComponents.from(new Date());
-                CalculationParameters params = CalculationMethod.KARACHI.getParameters();
 
                 if ("Muslim World League".equals(MethodData)) {
                     params = CalculationMethod.MUSLIM_WORLD_LEAGUE.getParameters();
@@ -296,6 +298,7 @@ public class PrayerTime extends AppCompatActivity implements View.OnClickListene
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 Toast.makeText(this, "Permission Granted", Toast.LENGTH_SHORT).show();
                 location = new SimpleLocation(this);
+                calculateTPrayerTime();
 
             } else {
                 Toast.makeText(this, "Permission Denied", Toast.LENGTH_SHORT).show();

@@ -54,7 +54,8 @@
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/activity_silent_phone.xml" value="0.18854166666666666" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/activity_supplication_detail.xml" value="0.19270833333333334" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/activity_surah_names.xml" value="0.18854166666666666" />
-        <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/activity_tasbeeh_detail.xml" value="0.19270833333333334" />
+        <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/activity_tasbeeh.xml" value="0.19270833333333334" />
+        <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/activity_tasbeeh_detail.xml" value="0.33" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/activity_zakkat_detail.xml" value="0.19270833333333334" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/fragment_urdu_hajj.xml" value="0.19270833333333334" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/gold_rates_layout.xml" value="0.1" />
@@ -67,9 +68,9 @@
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/result_layout.xml" value="0.19270833333333334" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/sample_dialog.xml" value="0.19270833333333334" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/showanswer_background.xml" value="0.19270833333333334" />
-        <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/single_item_view.xml" value="0.19270833333333334" />
+        <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/single_item_view.xml" value="0.5" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/surah_info_dialog.xml" value="0.33" />
-        <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/surah_names_list_view.xml" value="0.5" />
+        <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/surah_names_list_view.xml" value="0.67" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/toolbar.xml" value="0.18854166666666666" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/zakkat_dteail_layout_item_view.xml" value="0.19270833333333334" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/menu/options_menu.xml" value="0.19270833333333334" />

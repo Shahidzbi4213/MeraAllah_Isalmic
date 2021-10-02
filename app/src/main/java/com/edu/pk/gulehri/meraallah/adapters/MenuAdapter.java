@@ -74,7 +74,7 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MyHolder> {
         boolean qaidaFlag = sp.getBoolean(QaidaActivity.CHECK_IS_FILE_DOWNLOAD, false);
 
 
-        if ((holder.name.getText().toString().equals("Al Quran")) && (!quranFlag)) {
+        if ((holder.name.getText().toString().equals("Quran [PDF]")) && (!quranFlag)) {
             holder.button.setVisibility(View.VISIBLE);
         } else if ((holder.name.getText().toString().equals("Qaida")) && (!qaidaFlag)) {
             holder.button.setVisibility(View.VISIBLE);
@@ -163,7 +163,7 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MyHolder> {
                     intent = new Intent(mContext, QaidaActivity.class);
                     break;
 
-                case "Al Quran":
+                case "Quran [PDF]":
                     intent = new Intent(mContext, SurahNamesActivity.class);
                     break;
 

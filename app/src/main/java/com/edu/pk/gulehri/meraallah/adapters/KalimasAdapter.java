@@ -45,6 +45,12 @@ public class KalimasAdapter extends RecyclerView.Adapter<KalimasAdapter.DataHold
         if (language.equals("Urdu")) {
             holder.binding.myLayout.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
 
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+
+                Typeface typeface = ResourcesCompat.getFont(mContext, R.font.q_font);
+                holder.binding.heading.setTypeface(typeface);
+            }
+
             holder.binding.heading.setText(DataModel.SIX_KALIMAS_HEADINGS[position].getFUNERAL_PRAYER_PROCESS_IN_ENGLISH());
             holder.binding.count.setText(String.format("(%d)", position + 1));
 

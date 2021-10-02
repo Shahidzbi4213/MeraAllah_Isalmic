@@ -207,6 +207,7 @@
             android:fontFamily="@font/catamaran_medium"
             android:gravity="center"
             android:text="@string/location"
+            android:textStyle="bold"
             android:textColor="@color/black"
             app:autoSizeMaxTextSize="@dimen/_13sdp"
             app:autoSizeTextType="uniform"

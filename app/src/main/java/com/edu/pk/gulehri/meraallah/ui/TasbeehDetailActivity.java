@@ -13,7 +13,6 @@ import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -39,11 +38,8 @@ public class TasbeehDetailActivity extends AppCompatActivity implements View.OnT
     private GestureDetector mGestureDetector;
     private int POSITION;
     private static final String TOTAL_VALUE_COUNTER = "Total Value Count";
-
-    private LinearLayout tasbeehatLayout, counterIncrease, linearLayoutFirst;
     private int progr = 0, totalCount = 0, max = 33;
     private SharedPreferences sharedPreferences;
-
     private ActivityTasbeehDetailBinding tasbeehDetailBinding;
 
 

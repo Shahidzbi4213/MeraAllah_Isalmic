@@ -78,8 +78,6 @@ public class KalimasDetailActivity extends AppCompatActivity implements View.OnC
     private SharedPreferences.Editor edit;
     private String CHILD, PATH;
 
-    // /storage/emulated/0/Android/data/com.edu.pk.gulehri.meraallah/files/Android/Kalimah Shahadat.mp3
-    // /storage/self/primary/Android/data/com.edu.pk.gulehri.meraallah/files/Android/Kalimah Tamjeed.mp3
 
 
     @RequiresApi(api = M)

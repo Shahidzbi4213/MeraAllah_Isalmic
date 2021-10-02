@@ -143,7 +143,7 @@
             android:padding="@dimen/_5sdp"
             android:text="@string/tasbeeh_dua"
             android:textColor="@color/gold"
-            app:autoSizeMaxTextSize="@dimen/_25sdp"
+            app:autoSizeMaxTextSize="@dimen/_18sdp"
             app:autoSizeTextType="uniform" />
 
         <TextView
@@ -158,7 +158,7 @@
             android:padding="@dimen/_5sdp"
             android:text="@string/tasbeeh_translation"
             android:textColor="@color/white"
-            app:autoSizeMaxTextSize="@dimen/_22sdp"
+            app:autoSizeMaxTextSize="@dimen/_18sdp"
             app:autoSizeTextType="uniform" />
 
         <TextView
@@ -196,6 +196,7 @@
             android:layout_height="@dimen/_70sdp"
             android:contentDescription="Plus Counter"
             android:padding="@dimen/_10sdp"
+            android:elevation="@dimen/_40sdp"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/plus"
             app:tint="#FFD700" />

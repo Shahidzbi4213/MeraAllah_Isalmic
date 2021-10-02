@@ -77,13 +77,20 @@ public class JanazaDetailAdapter extends RecyclerView.Adapter<JanazaDetailAdapte
             }
         }
         if (SELECTED_POSITION == 1) {
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                holder.binding.txtTwo.setTypeface(ResourcesCompat.getFont(mContext, R.font.q_font));
+            } else {
+                holder.binding.txtTwo.setTypeface(Typeface.DEFAULT);
+            }
+
             if (SELECT_LANGUAGE.equals("Urdu")) {
                 holder.binding.txtOne.setText(DataModel.FUNERAL_PRAYER_DUA[position].getFUNERAL_DUA_HEADING_URDU());
                 holder.binding.txtTwo.setText("دعا: " + " " + DataModel.FUNERAL_PRAYER_DUA[position].getFUNERAL_DUA());
 
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
                     holder.binding.txtThree.setTypeface(ResourcesCompat.getFont(mContext, R.font.jameel));
-                    holder.binding.txtThree.setTextSize(TypedValue.COMPLEX_UNIT_PX, mContext.getResources().getDimension(R.dimen._22sdp));
+                    holder.binding.txtThree.setTextSize(TypedValue.COMPLEX_UNIT_PX, mContext.getResources().getDimension(R.dimen._20sdp));
                 } else {
                     holder.binding.txtThree.setTypeface(Typeface.MONOSPACE);
                     holder.binding.txtThree.setTextSize(TypedValue.COMPLEX_UNIT_PX, mContext.getResources().getDimension(R.dimen._19sdp));

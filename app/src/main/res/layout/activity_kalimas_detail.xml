@@ -54,7 +54,7 @@
                 android:padding="@dimen/_10sdp"
                 android:text="اللَّهُمَّ أَهِلَّهُ عَلَيْنَا بِالأَمْنِ وَالإِيمَانِ ، والسَّلامَةِ والإِسْلامِ ، وَالتَّوْفِيقِ لِمَا تُحِبُّ وَتَرْضَى ، رَبُّنَا وَرَبُّكَ اللهُ"
                 android:textColor="@color/gold"
-                android:textSize="@dimen/_20sdp" />
+                android:textSize="@dimen/_18sdp" />
 
 
             <TextView
@@ -72,7 +72,7 @@
                 android:padding="@dimen/_10sdp"
                 android:text="@string/tarjuma"
                 android:textColor="@color/white"
-                android:textSize="@dimen/_20sdp" />
+                android:textSize="@dimen/_18sdp" />
 
             <TextView
                 android:id="@+id/kalimasTransliteration"
