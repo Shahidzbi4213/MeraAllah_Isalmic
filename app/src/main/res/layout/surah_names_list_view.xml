@@ -1,87 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/dark_blue"
-    android:orientation="vertical">
+    android:layout_marginStart="@dimen/_8sdp"
+    android:layout_marginEnd="@dimen/_8sdp"
+    android:elevation="@dimen/_10sdp"
+    app:cardBackgroundColor="@color/card_color"
+    app:cardCornerRadius="@dimen/_10sdp"
+    app:cardUseCompatPadding="true">
 
 
-    <androidx.cardview.widget.CardView
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/surahNameListLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_8sdp"
-        android:layout_marginEnd="@dimen/_8sdp"
-        android:elevation="@dimen/_10sdp"
-        app:cardBackgroundColor="@android:color/transparent"
-        app:cardCornerRadius="@dimen/_10sdp"
-        app:cardUseCompatPadding="true">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/surahNameListLayout"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/surahCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/catamaran_medium"
+            android:text="(1)"
+            android:textColor="@color/gold"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/surahArabic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/q_font"
+            android:text="تکبیر تحریمہ"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_18sdp"
+            app:layout_constraintEnd_toStartOf="@+id/surahCount"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/surahEnglish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/catamaran_medium"
+            android:text="Al Fatiha"
+            android:textColor="#747373"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.79"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/surahArabic"
+            app:layout_constraintVertical_bias="0.44" />
+
+        <ImageButton
+            android:id="@+id/btnForInfo"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:background="@color/card_color"
-            android:padding="@dimen/_10sdp">
+            android:layout_marginStart="16dp"
+            android:background="@android:color/transparent"
+            android:elevation="@dimen/_5sdp"
+            android:src="@drawable/ic_info"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="#747373"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
 
-            <TextView
-                android:id="@+id/surahCount"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="(1)"
-                android:textColor="@color/gold"
-                android:textSize="@dimen/_14sdp"
-                android:textStyle="italic|bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.504" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <TextView
-                android:id="@+id/surahArabic"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="@dimen/_7sdp"
-                android:layout_marginEnd="@dimen/_15sdp"
-                android:fontFamily="@font/q_font"
-                android:text="تکبیر تحریمہ"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_16sdp"
-                app:layout_constraintEnd_toStartOf="@+id/surahCount"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/surahEnglish"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_7sdp"
-                android:layout_marginEnd="@dimen/_15sdp"
-                android:fontFamily="@font/catamaran_medium"
-                android:text="Al Fatiha"
-                android:textColor="#747373"
-                android:textSize="@dimen/_12sdp"
-                app:layout_constraintEnd_toStartOf="@+id/surahCount"
-                app:layout_constraintTop_toBottomOf="@+id/surahArabic" />
-
-            <ImageButton
-                android:id="@+id/btnForInfo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_5sdp"
-                android:background="@android:color/transparent"
-                android:elevation="@dimen/_5sdp"
-                android:src="@drawable/ic_info"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </androidx.cardview.widget.CardView>
-
-</LinearLayout>
+</androidx.cardview.widget.CardView>

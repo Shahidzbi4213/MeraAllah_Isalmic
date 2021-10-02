@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mmLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -48,10 +49,12 @@
                 android:fontFamily="@font/q_font"
                 android:padding="@dimen/_10sdp"
                 android:layoutDirection="rtl"
+                android:justificationMode="inter_word"
                 android:lineSpacingExtra="@dimen/_5sdp"
                 android:text="يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ كُتِبَ عَلَيْكُمُ ٱلصِّيَامُ كَمَا كُتِبَ عَلَى ٱلَّذِينَ مِن قَبْلِكُمْ لَعَلَّكُمْ تَتَّقُونَ"
                 android:textColor="@color/gold"
-                android:textSize="@dimen/_20sdp" />
+                android:textSize="@dimen/_20sdp"
+                tools:targetApi="o" />
 
             <view
                 android:id="@+id/first"
@@ -71,10 +74,13 @@
                 android:layout_marginTop="@dimen/_5sdp"
                 android:layout_marginEnd="@dimen/_10sdp"
                 android:fontFamily="@font/jameel"
+                android:justificationMode="inter_word"
                 android:padding="@dimen/_10sdp"
+                android:lineSpacingExtra="@dimen/_5sdp"
                 android:text="اے ایمان والو! تم پر روزہ رکھنا اسی طرح روزہ رکھتا ہے جس طرح تم سے پہلے لوگوں پر یہ حکم دیا گیا تھا کہ تم نیک ہوجاؤ"
                 android:textColor="@color/white"
-                android:textSize="@dimen/_20sdp" />
+                android:textSize="@dimen/_20sdp"
+                tools:targetApi="o" />
 
 
             <view

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@android:color/transparent"
@@ -45,9 +46,11 @@
                 android:fontFamily="@font/catamaran_medium"
                 android:lineSpacingExtra="@dimen/_3sdp"
                 android:padding="@dimen/_10sdp"
+                android:justificationMode="inter_word"
                 android:text="@string/question_demo"
                 android:textColor="@color/gold"
-                android:textSize="@dimen/_16sdp" />
+                android:textSize="@dimen/_16sdp"
+                tools:targetApi="o" />
 
             <view
                 android:id="@+id/viewLine"

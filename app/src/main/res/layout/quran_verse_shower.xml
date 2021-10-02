@@ -10,7 +10,7 @@
     app:cardCornerRadius="@dimen/_10sdp"
     app:cardElevation="@dimen/_10sdp">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -18,14 +18,11 @@
 
         <LinearLayout
             android:id="@+id/linearLayout"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_5sdp"
             android:layout_marginEnd="@dimen/_5sdp"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:orientation="horizontal">
 
             <ImageButton
                 android:id="@+id/btnCopySurah"
@@ -60,43 +57,71 @@
                 android:textSize="@dimen/_12sdp" />
         </LinearLayout>
 
+
         <TextView
-            android:id="@+id/tvAyah"
-            android:layout_width="0dp"
+            android:id="@+id/tvTasmia"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_5sdp"
             android:layout_marginTop="@dimen/_10sdp"
             android:layout_marginEnd="@dimen/_5sdp"
             android:fontFamily="@font/q_font"
+            android:gravity="center"
             android:justificationMode="inter_word"
             android:lineSpacingExtra="5dp"
-            android:padding="@dimen/_6sdp"
             android:text="TextView"
             android:textColor="@color/gold"
             android:textDirection="rtl"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            android:textStyle="bold"
+            android:visibility="gone"
+            tools:targetApi="o" />
+
+        <TextView
+            android:id="@+id/tvTasmiaTranslation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:fontFamily="@font/jameel"
+            android:gravity="center"
+            android:justificationMode="inter_word"
+            android:lineSpacingExtra="5dp"
+            android:text="TextView"
+            android:textColor="@color/white"
+            android:textDirection="rtl"
+            android:textStyle="bold"
+            android:visibility="gone"
+            tools:targetApi="o" />
+
+        <TextView
+            android:id="@+id/tvAyah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:fontFamily="@font/q_font"
+            android:justificationMode="inter_word"
+            android:lineSpacingExtra="5dp"
+            android:text="TextView"
+            android:textColor="@color/gold"
+            android:textDirection="rtl"
             tools:targetApi="o" />
 
         <TextView
             android:id="@+id/tvTranslation"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_5sdp"
-            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
             android:layout_marginEnd="@dimen/_5sdp"
             android:layout_marginBottom="@dimen/_10sdp"
             android:justificationMode="inter_word"
             android:lineSpacingExtra="3dp"
-            android:padding="@dimen/_5sdp"
             android:text="TextView"
             android:textColor="@color/white"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvAyah"
             tools:targetApi="o" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 </androidx.cardview.widget.CardView>

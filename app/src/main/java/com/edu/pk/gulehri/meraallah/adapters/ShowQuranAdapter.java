@@ -87,28 +87,56 @@ public class ShowQuranAdapter extends RecyclerView.Adapter<ShowQuranAdapter.Qura
             Typeface typeface = ResourcesCompat.getFont(mContext, R.font.jameel);
             holder.binding.tvTranslation.setTypeface(typeface);
             holder.binding.tvTranslation.setText(listUrdu.get(position));
+
+            if (position == 0) {
+                holder.binding.tvTasmia.setVisibility(View.VISIBLE);
+                holder.binding.tvTasmiaTranslation.setVisibility(View.VISIBLE);
+                holder.binding.tvTasmia.setText(R.string.bismiAllah);
+                holder.binding.tvTasmiaTranslation.setText(R.string.tasmia_translation_urdu);
+            } else {
+                holder.binding.tvTasmia.setVisibility(View.GONE);
+                holder.binding.tvTasmiaTranslation.setVisibility(View.GONE);
+            }
+
         } else if (radioButton == R.id.radioEnglish) {
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 Typeface typeface = ResourcesCompat.getFont(mContext, R.font.catamaran_medium);
                 holder.binding.tvTranslation.setTypeface(typeface);
+                holder.binding.tvTasmiaTranslation.setTypeface(typeface);
             } else {
                 holder.binding.tvTranslation.setTypeface(Typeface.SERIF);
+                holder.binding.tvTasmiaTranslation.setTypeface(Typeface.SERIF);
             }
 
+
+            if (position == 0) {
+                holder.binding.tvTasmia.setVisibility(View.VISIBLE);
+                holder.binding.tvTasmiaTranslation.setVisibility(View.VISIBLE);
+                holder.binding.tvTasmia.setText(R.string.bismiAllah);
+                holder.binding.tvTasmiaTranslation.setText(R.string.tasmia_translation_english);
+            } else {
+                holder.binding.tvTasmia.setVisibility(View.GONE);
+                holder.binding.tvTasmiaTranslation.setVisibility(View.GONE);
+            }
 
             holder.binding.tvTranslation.setText(listEnglish.get(position));
         }
 
         if (!checkSeekArabic) {
-            holder.binding.tvAyah.setTextSize(TypedValue.COMPLEX_UNIT_PX, 50);
+            holder.binding.tvAyah.setTextSize(TypedValue.COMPLEX_UNIT_PX, 60);
+            holder.binding.tvTasmia.setTextSize(TypedValue.COMPLEX_UNIT_PX, 60);
         } else {
             holder.binding.tvAyah.setTextSize(TypedValue.COMPLEX_UNIT_PX, seekArabic);
+            holder.binding.tvTasmia.setTextSize(TypedValue.COMPLEX_UNIT_PX, seekArabic);
+
         }
         if (!checkSeekTranslation) {
             holder.binding.tvTranslation.setTextSize(TypedValue.COMPLEX_UNIT_PX, 45);
+            holder.binding.tvTasmiaTranslation.setTextSize(TypedValue.COMPLEX_UNIT_PX, 45);
         } else {
             holder.binding.tvTranslation.setTextSize(TypedValue.COMPLEX_UNIT_PX, seekTranslation);
+            holder.binding.tvTasmiaTranslation.setTextSize(TypedValue.COMPLEX_UNIT_PX, seekTranslation);
         }
 
 

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mmLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -15,8 +16,8 @@
         android:layout_marginStart="@dimen/_10sdp"
         android:layout_marginEnd="@dimen/_10sdp"
         android:background="@android:color/transparent"
-        app:cardBackgroundColor="@color/card_color"
         android:elevation="@dimen/_10sdp"
+        app:cardBackgroundColor="@color/card_color"
         app:cardCornerRadius="@dimen/_10sdp"
         app:cardUseCompatPadding="true">
 
@@ -37,13 +38,15 @@
                 android:layout_marginBottom="@dimen/_10sdp"
                 android:fontFamily="@font/jameel"
                 android:gravity="center"
+                android:justificationMode="inter_word"
                 android:layoutDirection="rtl"
                 android:lineSpacingExtra="@dimen/_5sdp"
                 android:paddingStart="@dimen/_5sdp"
                 android:paddingEnd="@dimen/_5sdp"
                 android:text="Zakkat"
                 android:textColor="@color/gold"
-                android:textSize="@dimen/_22sdp" />
+                android:textSize="@dimen/_22sdp"
+                tools:targetApi="o" />
 
             <view
                 android:id="@+id/zeroView"
@@ -53,7 +56,8 @@
                 android:layout_marginStart="@dimen/_5sdp"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:layout_marginEnd="@dimen/_5sdp"
-                android:background="#747075" />
+                android:background="#747075"
+                tools:ignore="SpeakableTextPresentCheck" />
 
             <TextView
                 android:id="@+id/txtTwo"
@@ -65,13 +69,15 @@
                 android:layout_marginBottom="@dimen/_10sdp"
                 android:fontFamily="@font/jameel"
                 android:gravity="center"
+                android:justificationMode="inter_word"
                 android:layoutDirection="rtl"
                 android:lineSpacingExtra="@dimen/_5sdp"
                 android:paddingStart="@dimen/_5sdp"
                 android:paddingEnd="@dimen/_5sdp"
                 android:text="Zakkat"
                 android:textColor="@color/white"
-                android:textSize="@dimen/_22sdp" />
+                android:textSize="@dimen/_22sdp"
+                tools:targetApi="o" />
 
             <view
                 android:id="@+id/firstView"
@@ -93,11 +99,13 @@
                 android:layout_marginBottom="@dimen/_10sdp"
                 android:fontFamily="@font/catamaran_medium"
                 android:gravity="center"
+                android:justificationMode="inter_word"
                 android:lineSpacingExtra="@dimen/_3sdp"
                 android:paddingStart="@dimen/_5sdp"
                 android:paddingEnd="@dimen/_5sdp"
                 android:textColor="@color/gold"
-                android:textSize="@dimen/_16sdp" />
+                android:textSize="@dimen/_16sdp"
+                tools:targetApi="o" />
 
 
             <view
@@ -120,11 +128,13 @@
                 android:layout_marginBottom="@dimen/_10sdp"
                 android:fontFamily="@font/catamaran_medium"
                 android:gravity="center"
+                android:justificationMode="inter_word"
                 android:lineSpacingExtra="@dimen/_3sdp"
                 android:paddingStart="@dimen/_5sdp"
                 android:paddingEnd="@dimen/_5sdp"
                 android:textColor="@color/white"
-                android:textSize="@dimen/_16sdp" />
+                android:textSize="@dimen/_16sdp"
+                tools:targetApi="o" />
 
             <view
                 android:id="@+id/thirdView"
@@ -146,11 +156,13 @@
                 android:layout_marginBottom="@dimen/_10sdp"
                 android:fontFamily="@font/catamaran_medium"
                 android:gravity="center"
+                android:justificationMode="inter_word"
                 android:lineSpacingExtra="@dimen/_3sdp"
                 android:paddingStart="@dimen/_5sdp"
                 android:paddingEnd="@dimen/_5sdp"
                 android:textColor="@color/gold"
-                android:textSize="@dimen/_16sdp" />
+                android:textSize="@dimen/_16sdp"
+                tools:targetApi="o" />
 
 
         </LinearLayout>

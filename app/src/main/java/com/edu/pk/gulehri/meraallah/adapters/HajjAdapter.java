@@ -7,7 +7,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Build;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,7 +19,6 @@ import androidx.core.content.res.ResourcesCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.edu.pk.gulehri.meraallah.R;
-import com.edu.pk.gulehri.meraallah.constansts.Constants;
 import com.edu.pk.gulehri.meraallah.model.Model;
 import com.edu.pk.gulehri.meraallah.ui.HajjDetailActivity;
 
@@ -72,7 +70,6 @@ public class HajjAdapter extends RecyclerView.Adapter<HajjAdapter.MyHajjHolder> 
             holder.mCount.setText(format("(%d)", position + 1));
             holder.heading.setText(Model.HAJJ_HEADINGS[position].getHAJJ_HEADINGS_ENGLISH());
         }
-        Log.i(Constants.TAG, "onBindViewHolder: " + position);
 
         holder.mLayout.setOnClickListener(v -> {
 

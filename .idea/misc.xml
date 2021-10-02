@@ -15,6 +15,7 @@
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/drawable/toggle_track.xml" value="0.20885416666666667" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout-sw600dp/activity_quiz.xml" value="0.1" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout-sw600dp/name_view.xml" value="0.14140625" />
+        <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout-sw600dp/sample_dialog.xml" value="0.14453125" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout-v26/ramadan_detail_bg.xml" value="0.19270833333333334" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout-v26/zakkat_dteail_layout_item_view.xml" value="0.19270833333333334" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/activity_ablution.xml" value="0.18854166666666666" />
@@ -55,6 +56,7 @@
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/activity_surah_names.xml" value="0.18854166666666666" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/activity_tasbeeh_detail.xml" value="0.19270833333333334" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/activity_zakkat_detail.xml" value="0.19270833333333334" />
+        <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/fragment_urdu_hajj.xml" value="0.19270833333333334" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/gold_rates_layout.xml" value="0.1" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/hijri_detail_layout_view.xml" value="0.19270833333333334" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/lesson_layout.xml" value="0.1" />
@@ -64,9 +66,10 @@
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/ramadan_detail_bg.xml" value="0.1824074074074074" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/result_layout.xml" value="0.19270833333333334" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/sample_dialog.xml" value="0.19270833333333334" />
-        <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/single_item_view.xml" value="0.175" />
+        <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/showanswer_background.xml" value="0.19270833333333334" />
+        <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/single_item_view.xml" value="0.19270833333333334" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/surah_info_dialog.xml" value="0.33" />
-        <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/surah_names_list_view.xml" value="0.19270833333333334" />
+        <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/surah_names_list_view.xml" value="0.5" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/toolbar.xml" value="0.18854166666666666" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/zakkat_dteail_layout_item_view.xml" value="0.19270833333333334" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/menu/options_menu.xml" value="0.19270833333333334" />
@@ -116,9 +119,6 @@
         </list>
       </value>
     </option>
-  </component>
-  <component name="ProjectPlainTextFileTypeManager">
-    <file url="file://$PROJECT_DIR$/app/src/main/res/font/tauri.xml" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="Android API 30 Platform" project-jdk-type="Android SDK">
     <output url="file://$PROJECT_DIR$/build/classes" />

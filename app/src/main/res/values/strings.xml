@@ -101,6 +101,8 @@
     <string name="year">Year</string>
     <string name="holy_quran">Holy Quran</string>
     <string name="quran_setting">Quran Setting</string>
+    <string name="tasmia_translation_urdu">شروع الله کے نام سے جو بڑا مہربان نہایت رحم والا ہے</string>
+    <string name="tasmia_translation_english">In the name of Allah Most Gracious Most Merciful.</string>
 
 
 </resources>

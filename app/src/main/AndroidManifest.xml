@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.edu.pk.gulehri.meraallah">
-    <!-- Device  Boot Permission -->
+
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> <!-- Storage Permission -->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- Do Not Disturb  And Battery Optimization Permissions -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
-    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" /> <!-- Location Permission -->
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- Read Wifi State  And Internet Permissions -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
@@ -20,11 +23,14 @@
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MeraAllah">
+        android:theme="@style/Theme.MeraAllah"
+        tools:ignore="AllowBackup">
+
+        <!-- Activities -->
+
         <activity
             android:name=".ui.QuranSettingActivity"
             android:exported="true" />
-        <!-- Activities -->
         <activity
             android:name=".ui.ShowQuranActivity"
             android:exported="true" />
@@ -43,18 +49,18 @@
             android:screenOrientation="fullSensor" />
         <activity
             android:name=".ui.ProphetNamesActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity android:name=".ui.NewBornDetailActivity" />
         <activity android:name=".ui.NewBornActivity" />
         <activity android:name=".ui.QaidaViewerActivity" />
         <activity android:name=".ui.QuranFifteenActivity" />
         <activity
             android:name=".ui.SurahNamesActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity android:name=".ui.JanazaDetailActivity" />
         <activity
             android:name=".ui.QaidaActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity android:name=".ui.KalimasDetailActivity" />
         <activity android:name=".ui.KalimasActivity" />
         <activity android:name=".ui.JanazaActivity" />
@@ -63,7 +69,7 @@
         <activity android:name=".ui.HijriCalenderInformation" />
         <activity
             android:name=".ui.HijriCalender"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".ui.HadithOfDay"
             android:launchMode="singleTop" />
@@ -74,20 +80,20 @@
         <activity android:name=".ui.ShowAnswer" />
         <activity
             android:name=".ui.CalculateZakkatActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity android:name=".ui.PrayerTime" />
         <activity android:name=".ui.HajjActivity" />
         <activity android:name=".ui.HajjDetailActivity" />
         <activity
             android:name=".ui.SilentPhoneActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity android:name=".ui.RamadanDetailActivity" />
         <activity android:name=".ui.RamadanActivity" />
         <activity android:name=".ui.AblutionDetailActivity" />
         <activity android:name=".ui.AblutionActivity" />
         <activity
             android:name=".ui.TasbeehDetailActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity android:name=".ui.TasbeehActivity" />
         <activity android:name=".ui.NamazActivity" />
         <activity android:name=".ui.SupplicationDetailActivity" />
@@ -102,14 +108,17 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.QuizActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name="com.hassanjamil.hqibla.CompassActivity"
             android:label="Find Qibla"
-            android:screenOrientation="portrait"
-            android:theme="@style/QiblaTheme" /> <!-- Splash Screen As Launcher Activity -->
+            android:screenOrientation="fullSensor"
+            android:theme="@style/QiblaTheme" />
+
+        <!-- Splash Screen As Launcher Activity -->
         <activity
             android:name=".ui.SplashScreen"
+            android:exported="true"
             android:noHistory="true"
             android:theme="@style/SplashScreen">
             <intent-filter>
@@ -117,10 +126,14 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- Fonts That has been Added to the Project -->
+        </activity>
+
+        <!-- Fonts That has been Added to the Project -->
         <meta-data
             android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" /> <!-- Registering Broadcast BootReceiver -->
+            android:resource="@array/preloaded_fonts" />
+
+        <!-- Registering Broadcast BootReceiver -->
         <receiver
             android:name=".receivers.BootReceiver"
             android:enabled="true">
