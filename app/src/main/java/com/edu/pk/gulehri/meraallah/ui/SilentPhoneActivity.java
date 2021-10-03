@@ -1,39 +1,5 @@
 package com.edu.pk.gulehri.meraallah.ui;
 
-import android.annotation.SuppressLint;
-import android.app.AlarmManager;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
-import android.app.TimePickerDialog;
-import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.graphics.drawable.Drawable;
-import android.net.Uri;
-import android.os.Bundle;
-import android.os.PowerManager;
-import android.view.Gravity;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.TimePicker;
-import android.widget.Toast;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.content.ContextCompat;
-
-import com.daimajia.androidanimations.library.YoYo;
-import com.edu.pk.gulehri.meraallah.R;
-import com.edu.pk.gulehri.meraallah.databinding.ActivitySilentPhoneBinding;
-import com.edu.pk.gulehri.meraallah.fragments.FragmentTimePicker;
-import com.edu.pk.gulehri.meraallah.receivers.RingerReceiver;
-
-import java.text.DateFormat;
-import java.util.Calendar;
-import java.util.Objects;
-
-import static android.app.AlarmManager.INTERVAL_DAY;
 import static android.app.AlarmManager.RTC_WAKEUP;
 import static android.app.PendingIntent.FLAG_UPDATE_CURRENT;
 import static android.app.PendingIntent.getBroadcast;
@@ -52,6 +18,42 @@ import static com.edu.pk.gulehri.meraallah.constansts.Constants.NormalTime;
 import static com.edu.pk.gulehri.meraallah.constansts.Constants.TAG;
 import static com.edu.pk.gulehri.meraallah.constansts.Constants.ZUHUR_TIME;
 
+import android.annotation.SuppressLint;
+import android.app.AlarmManager;
+import android.app.AlertDialog;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.app.TimePickerDialog;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
+import android.os.Bundle;
+import android.os.PowerManager;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.TimePicker;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
+
+import com.daimajia.androidanimations.library.YoYo;
+import com.edu.pk.gulehri.meraallah.R;
+import com.edu.pk.gulehri.meraallah.databinding.ActivitySilentPhoneBinding;
+import com.edu.pk.gulehri.meraallah.databinding.SilentPhoneInfoDialogBinding;
+import com.edu.pk.gulehri.meraallah.fragments.FragmentTimePicker;
+import com.edu.pk.gulehri.meraallah.receivers.RingerReceiver;
+
+import java.text.DateFormat;
+import java.util.Calendar;
+import java.util.Objects;
+
 public class SilentPhoneActivity extends AppCompatActivity
         implements TimePickerDialog.OnTimeSetListener, View.OnClickListener {
 
@@ -69,10 +71,8 @@ public class SilentPhoneActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //Setting Binding of views
         binding = ActivitySilentPhoneBinding.inflate(getLayoutInflater());
-        View view = binding.getRoot();
-        setContentView(view);
+        setContentView(binding.getRoot());
 
 
         setToolbar();
@@ -87,7 +87,7 @@ public class SilentPhoneActivity extends AppCompatActivity
         setSupportActionBar(binding.toolbarIncludeSilent.mToolbar);
         binding.toolbarIncludeSilent.toolbarText.setText(R.string.silent_phone);
         binding.toolbarIncludeSilent.toolbarImageFirst.setImageResource(R.drawable.reset);
-        binding.toolbarIncludeSilent.toolbarImageSecond.setImageResource(0);
+        binding.toolbarIncludeSilent.toolbarImageSecond.setImageResource(R.drawable.ic_info);
         binding.toolbarIncludeSilent.mToolbar.setElevation(0);
 
 
@@ -143,6 +143,7 @@ public class SilentPhoneActivity extends AppCompatActivity
         binding.resetJummah.setOnClickListener(this);
 
         binding.toolbarIncludeSilent.toolbarImageFirst.setOnClickListener(this);
+        binding.toolbarIncludeSilent.toolbarImageSecond.setOnClickListener(this);
 
     }
 
@@ -203,6 +204,17 @@ public class SilentPhoneActivity extends AppCompatActivity
             id = 5;
             cancelSingleAlarm(id);
             binding.timeJummah.setText("");
+        } else if (v.getId() == R.id.toolbarImageSecond) {
+
+            SilentPhoneInfoDialogBinding dialogBinding = SilentPhoneInfoDialogBinding.inflate(LayoutInflater.from(this));
+            AlertDialog builder = new AlertDialog.Builder(this).setView(dialogBinding.getRoot())
+                    .setCancelable(false).create();
+
+            builder.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+            builder.getWindow().setWindowAnimations(R.style.DialogAnimation);
+
+            dialogBinding.btnGone.setOnClickListener(v2 -> builder.dismiss());
+            builder.show();
         }
     }
 

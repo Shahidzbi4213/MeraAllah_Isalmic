@@ -262,10 +262,8 @@ public class SurahNamesActivity extends AppCompatActivity
 
         if (requestCode == REQUEST_CODE) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                Toast.makeText(this, "Permission Granted", Toast.LENGTH_SHORT).show();
                 showNotice();
             } else {
-                Toast.makeText(this, "Permission Denied", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(this, MainActivity.class));
             }
         }

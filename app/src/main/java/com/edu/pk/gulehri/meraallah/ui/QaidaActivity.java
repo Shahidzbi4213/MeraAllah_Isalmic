@@ -1,5 +1,10 @@
 package com.edu.pk.gulehri.meraallah.ui;
 
+import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
+import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
+import static android.content.pm.PackageManager.PERMISSION_GRANTED;
+import static android.os.Build.VERSION_CODES.M;
+
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
@@ -34,11 +39,6 @@ import com.google.firebase.storage.StorageReference;
 
 import java.io.File;
 import java.util.Objects;
-
-import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
-import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
-import static android.content.pm.PackageManager.PERMISSION_GRANTED;
-import static android.os.Build.VERSION_CODES.M;
 
 public class QaidaActivity extends AppCompatActivity {
 
@@ -214,10 +214,8 @@ public class QaidaActivity extends AppCompatActivity {
 
         if (requestCode == REQUEST_CODE) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                Toast.makeText(this, "Permission Granted", Toast.LENGTH_SHORT).show();
                 showNotice();
             } else {
-                Toast.makeText(this, "Permission Denied", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(this, MainActivity.class));
             }
         }

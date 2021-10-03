@@ -166,9 +166,9 @@ public class QuranSettingActivity extends AppCompatActivity {
         }
 
         if (!checkSeekArabic) {
-            binding.arabicPx.setText("" + 50 + "%");
-            binding.seekBarArabic.setProgress(50);
-            edit.putInt("seekbarArabic", 50);
+            binding.arabicPx.setText("" + 60 + "%");
+            binding.seekBarArabic.setProgress(60);
+            edit.putInt("seekbarArabic", 60);
             edit.apply();
         } else {
             final int progress = sp.getInt("seekbarArabic", 0);
@@ -177,9 +177,9 @@ public class QuranSettingActivity extends AppCompatActivity {
         }
 
         if (!checkSeekTranslation) {
-            binding.translationPx.setText("" + 45 + "%");
-            binding.seekBarTranslation.setProgress(45);
-            edit.putInt("seekbarTranslation", 45);
+            binding.translationPx.setText("" + 50 + "%");
+            binding.seekBarTranslation.setProgress(50);
+            edit.putInt("seekbarTranslation", 50);
             edit.apply();
         } else {
             final int progress = sp.getInt("seekbarTranslation", 0);

@@ -103,6 +103,7 @@
     <string name="quran_setting">Quran Setting</string>
     <string name="tasmia_translation_urdu">شروع الله کے نام سے جو بڑا مہربان نہایت رحم والا ہے</string>
     <string name="tasmia_translation_english">In the name of Allah Most Gracious Most Merciful.</string>
+    <string name="silent_note">By Setting Up Prayer times your phone will go to silent mode when clock reaches that time. And will remain silent for next 20 minutes. After that the app will bring phone back to  normal mode.</string>
 
 
 </resources>

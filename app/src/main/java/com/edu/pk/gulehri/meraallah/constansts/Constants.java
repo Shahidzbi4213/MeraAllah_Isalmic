@@ -49,10 +49,10 @@ public class Constants {
 
     /**
      * Bring Back to Normal
-     * After 3 min
+     * After 20 min
      */
 
-    public static final int NormalTime = 180000;
+    public static final int NormalTime = 1200000;
 
     /**
      * Animation Duration

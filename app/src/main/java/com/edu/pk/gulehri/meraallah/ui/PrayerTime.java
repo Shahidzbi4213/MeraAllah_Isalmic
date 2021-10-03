@@ -296,12 +296,10 @@ public class PrayerTime extends AppCompatActivity implements View.OnClickListene
 
         if (requestCode == REQUEST_LOCATION_PERMISSION) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                Toast.makeText(this, "Permission Granted", Toast.LENGTH_SHORT).show();
                 location = new SimpleLocation(this);
                 calculateTPrayerTime();
 
             } else {
-                Toast.makeText(this, "Permission Denied", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(this, MainActivity.class));
             }
         }

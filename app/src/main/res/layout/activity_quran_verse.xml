@@ -41,7 +41,7 @@
                 android:padding="@dimen/_15sdp"
                 android:textAlignment="center"
                 android:textColor="@color/gold"
-                android:textSize="@dimen/_25sdp" />
+                android:textSize="@dimen/_18sdp" />
 
             <com.bullhead.quranquotes.views.QuranVerseView
                 android:id="@+id/quranVerse"

@@ -32,7 +32,7 @@ public class ShowQuranAdapter extends RecyclerView.Adapter<ShowQuranAdapter.Qura
     private final ArrayList<Arabic> listArabic;
     private final ArrayList<String> listUrdu;
     private final ArrayList<String> listEnglish;
-    private Context mContext;
+    private final Context mContext;
 
 
     public ShowQuranAdapter(Context mContext, String surahName, int surahNumber, ArrayList<Arabic> listArabic, ArrayList<String> listUrdu, ArrayList<String> listEnglish) {
@@ -132,8 +132,8 @@ public class ShowQuranAdapter extends RecyclerView.Adapter<ShowQuranAdapter.Qura
 
         }
         if (!checkSeekTranslation) {
-            holder.binding.tvTranslation.setTextSize(TypedValue.COMPLEX_UNIT_PX, 45);
-            holder.binding.tvTasmiaTranslation.setTextSize(TypedValue.COMPLEX_UNIT_PX, 45);
+            holder.binding.tvTranslation.setTextSize(TypedValue.COMPLEX_UNIT_PX, 50);
+            holder.binding.tvTasmiaTranslation.setTextSize(TypedValue.COMPLEX_UNIT_PX, 50);
         } else {
             holder.binding.tvTranslation.setTextSize(TypedValue.COMPLEX_UNIT_PX, seekTranslation);
             holder.binding.tvTasmiaTranslation.setTextSize(TypedValue.COMPLEX_UNIT_PX, seekTranslation);
@@ -142,7 +142,7 @@ public class ShowQuranAdapter extends RecyclerView.Adapter<ShowQuranAdapter.Qura
 
         NumberFormat nf = NumberFormat.getInstance(Locale.forLanguageTag("AR"));
         holder.binding.tvSurah.setText(surahName);
-        holder.binding.tvSurahNumber.setText(String.valueOf(surahNumber + 1));
+        holder.binding.tvSurahNumber.setText("(" + (surahNumber + 1) + ":" + listArabic.get(position).getVerseNumber() + ")");
         holder.binding.tvAyah.setText(listArabic.get(position).getQuranArabic() + " " + "\u06DD" + nf.format(Integer.parseInt(listArabic.get(position).getVerseNumber())));
 
         holder.binding.btnCopySurah.setOnClickListener(v -> {
