@@ -51,9 +51,9 @@
                 android:layout_marginStart="@dimen/_10sdp"
                 android:layout_marginEnd="@dimen/_10sdp"
                 android:layout_weight="1"
+                android:elevation="@dimen/_10sdp"
                 android:fontFamily="@font/catamaran_medium"
                 android:text="Translation"
-                android:elevation="@dimen/_10sdp"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_16sdp"
                 android:thumb="@drawable/toggle_thumb"
@@ -83,15 +83,15 @@
                 android:id="@+id/radioUrdu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginBottom="@dimen/_10sdp"
-                android:fontFamily="@font/catamaran_medium"
-                android:text="Urdu"
+                android:layout_weight="1"
                 android:background="@drawable/radio_bg"
                 android:button="@null"
                 android:elevation="@dimen/_10sdp"
+                android:fontFamily="@font/catamaran_medium"
                 android:gravity="center"
+                android:text="Urdu"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_16sdp" />
 
@@ -99,14 +99,14 @@
                 android:id="@+id/radioEnglish"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="@font/catamaran_medium"
-                android:text="English"
                 android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_weight="1"
                 android:background="@drawable/radio_bg"
                 android:button="@null"
                 android:elevation="@dimen/_10sdp"
+                android:fontFamily="@font/catamaran_medium"
                 android:gravity="center"
+                android:text="English"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_16sdp" />
         </RadioGroup>
@@ -125,7 +125,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="244dp"
+            android:layout_height="match_parent"
             android:layout_marginTop="@dimen/_5sdp"
             android:layout_marginBottom="@dimen/_5sdp"
             android:orientation="vertical">
@@ -141,13 +141,13 @@
                 android:textColor="#FFFFFF"
                 android:textSize="@dimen/_16sdp" />
 
-            <SeekBar
+            <androidx.appcompat.widget.AppCompatSeekBar
                 android:id="@+id/seekBarArabic"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
                 android:layout_marginStart="@dimen/_10sdp"
                 android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_weight="1"
                 android:progressDrawable="@drawable/seekbar_style"
                 android:thumb="@drawable/seek_thumb" />
 
@@ -174,13 +174,13 @@
                 android:textColor="#FFFFFF"
                 android:textSize="@dimen/_16sdp" />
 
-            <SeekBar
+            <androidx.appcompat.widget.AppCompatSeekBar
                 android:id="@+id/seekBarTranslation"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
                 android:layout_marginStart="@dimen/_10sdp"
                 android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_weight="1"
                 android:progressDrawable="@drawable/seekbar_style"
                 android:thumb="@drawable/seek_thumb" />
 

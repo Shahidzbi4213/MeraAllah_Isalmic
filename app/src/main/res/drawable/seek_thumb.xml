@@ -4,8 +4,8 @@
         <shape android:shape="oval">
             <solid android:color="@color/white" />
             <size
-                android:width="@dimen/_20sdp"
-                android:height="@dimen/_20sdp" />
+                android:width="@dimen/_12sdp"
+                android:height="@dimen/_12sdp" />
         </shape>
     </item>
 </layer-list>
