@@ -1,7 +1,7 @@
 package com.edu.pk.gulehri.meraallah.model;
 
 public class CountriesList {
-    
+
     private final String Country;
     private final String Currency;
 

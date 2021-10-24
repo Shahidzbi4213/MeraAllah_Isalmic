@@ -3,21 +3,29 @@ package com.edu.pk.gulehri.meraallah.ui;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.res.Configuration;
+import android.content.pm.ActivityInfo;
+import android.net.Uri;
 import android.os.Bundle;
-import android.widget.Toast;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
+import com.edu.pk.gulehri.meraallah.R;
 import com.edu.pk.gulehri.meraallah.databinding.ActivityVideoPlayBinding;
-import com.khizar1556.mkvideoplayer.MKPlayer;
+import com.google.android.exoplayer2.MediaItem;
+import com.google.android.exoplayer2.SimpleExoPlayer;
 
 public class VideoPlayActivity extends AppCompatActivity {
 
     private ActivityVideoPlayBinding binding;
     private int cardID;
+    private SimpleExoPlayer player;
+    private boolean fullScreen = false;
+    private ImageView fullScreenView;
     private String path, title;
-    private MKPlayer player;
     private SharedPreferences sp;
     private SharedPreferences.Editor edit;
 
@@ -25,16 +33,18 @@ public class VideoPlayActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         binding = ActivityVideoPlayBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         sp = getPreferences(MODE_PRIVATE);
         edit = sp.edit();
 
-        player = new MKPlayer(VideoPlayActivity.this);
+
         getValue();
         setPaths();
-        setPlayer();
+        initializePlayer(Uri.parse(path));
 
 
     }
@@ -78,39 +88,32 @@ public class VideoPlayActivity extends AppCompatActivity {
         }
     }
 
-    private void setPlayer() {
-        player.play(path);
-        player.setTitle(title);
+    private void initializePlayer(Uri uri) {
+        player = new SimpleExoPlayer.Builder(VideoPlayActivity.this).build();
+        binding.playerView.setPlayer(player);
 
 
-        player.setPlayerCallbacks(new MKPlayer.playerCallbacks() {
-            @Override
-            public void onNextClick() {
-                //It is the method for next song.It is called when you pressed the next icon
-                //Do according to your requirement
-                int posForward = player.getCurrentPosition() + 10000;
-                player.seekTo(posForward, true);
+        MediaItem mediaItem = MediaItem.fromUri(uri);
+        player.setMediaItem(mediaItem);
+        player.prepare();
+        player.play();
+
+        fullScreenView = binding.playerView.findViewById(R.id.exo_fullscreen_icon);
+
+
+        fullScreenView.setOnClickListener(v -> {
+            if (!fullScreen) {
+                setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+                fullScreenView.setImageDrawable(ContextCompat.
+                        getDrawable(VideoPlayActivity.this, R.drawable.exo_ic_fullscreen_exit));
+                fullScreen = true;
+            } else {
+                fullScreenView.setImageDrawable(ContextCompat.
+                        getDrawable(VideoPlayActivity.this, R.drawable.exo_ic_fullscreen_enter));
+                setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
             }
 
-            @Override
-            public void onPreviousClick() {
-                //It is the method for previous song.It is called when you pressed the previous icon
-                //Do according to your requirement
-                int posRewind = player.getCurrentPosition() - 10000;
-                player.seekTo(posRewind, true);
-            }
         });
-
-        player.onComplete(() -> player.pause());
-        player.onError((what, extra) -> Toast.makeText(getApplicationContext(), "video play error", Toast.LENGTH_SHORT).show());
-    }
-
-    @Override
-    public void onConfigurationChanged(Configuration newConfig) {
-        super.onConfigurationChanged(new Configuration());
-        if (player != null) {
-            player.onConfigurationChanged(newConfig);
-        }
 
     }
 
@@ -118,34 +121,13 @@ public class VideoPlayActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        if (player != null) {
-            player.onPause();
-        }
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        if (player != null) {
-            player.onResume();
-        }
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        if (player != null) {
-
-            edit.putLong("time", player.getCurrentPosition());
-            edit.apply();
-            player.onDestroy();
-        }
+        player.stop();
+        player.clearMediaItems();
     }
 
 
     @Override
     public void onBackPressed() {
-
         startActivity(new Intent(this, VideoActivity.class));
         super.onBackPressed();
         finish();

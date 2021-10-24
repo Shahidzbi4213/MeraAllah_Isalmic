@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "671254215853",
+    "firebase_url": "https://mera-allah-6395f-default-rtdb.firebaseio.com",
     "project_id": "mera-allah-6395f",
     "storage_bucket": "mera-allah-6395f.appspot.com"
   },
@@ -13,6 +14,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "671254215853-h5hhl44t5sm2e6a9893fltlsufheildf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.edu.pk.gulehri.meraallah",
+            "certificate_hash": "e643a8178941ebd8a6bdaffe52bd63843c906cf3"
+          }
+        },
         {
           "client_id": "671254215853-9kvebkhbaddq4nf1vnfit9prbip6436n.apps.googleusercontent.com",
           "client_type": 3

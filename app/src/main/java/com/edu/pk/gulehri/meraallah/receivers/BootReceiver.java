@@ -1,5 +1,12 @@
 package com.edu.pk.gulehri.meraallah.receivers;
 
+import static android.app.AlarmManager.RTC_WAKEUP;
+import static android.app.PendingIntent.getBroadcast;
+import static android.content.Context.ALARM_SERVICE;
+import static com.edu.pk.gulehri.meraallah.constansts.Constants.DELAY;
+import static com.edu.pk.gulehri.meraallah.constansts.Constants.NormalTime;
+
+import android.annotation.SuppressLint;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
@@ -11,14 +18,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 
 import java.util.Calendar;
-
-import static android.app.AlarmManager.INTERVAL_DAY;
-import static android.app.AlarmManager.RTC_WAKEUP;
-import static android.app.PendingIntent.FLAG_UPDATE_CURRENT;
-import static android.app.PendingIntent.getBroadcast;
-import static android.content.Context.ALARM_SERVICE;
-import static com.edu.pk.gulehri.meraallah.constansts.Constants.DELAY;
-import static com.edu.pk.gulehri.meraallah.constansts.Constants.NormalTime;
 
 
 public class BootReceiver extends BroadcastReceiver {
@@ -50,6 +49,7 @@ public class BootReceiver extends BroadcastReceiver {
         calendar.set(Calendar.SECOND, 0);
 
         Intent intent = new Intent(mContext, NotificationReceiver.class);
+        @SuppressLint("UnspecifiedImmutableFlag")
         PendingIntent pendingIntent = PendingIntent.getBroadcast(mContext, 42, intent, 0);
         AlarmManager manager = (AlarmManager) mContext.getSystemService(ALARM_SERVICE);
 

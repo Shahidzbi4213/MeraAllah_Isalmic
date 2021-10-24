@@ -1,5 +1,11 @@
 package com.edu.pk.gulehri.meraallah.helper;
 
+import static android.app.NotificationManager.IMPORTANCE_HIGH;
+import static android.app.PendingIntent.FLAG_UPDATE_CURRENT;
+import static android.os.Build.VERSION.SDK_INT;
+import static android.os.Build.VERSION_CODES.O;
+
+import android.annotation.SuppressLint;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -7,20 +13,12 @@ import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.Intent;
 import android.graphics.Color;
-import android.os.Build;
 
 import androidx.annotation.RequiresApi;
 import androidx.core.app.NotificationCompat;
 
 import com.edu.pk.gulehri.meraallah.R;
 import com.edu.pk.gulehri.meraallah.ui.HadithOfDay;
-
-import static android.app.NotificationManager.IMPORTANCE_HIGH;
-import static android.app.PendingIntent.FLAG_UPDATE_CURRENT;
-import static android.content.Context.NOTIFICATION_SERVICE;
-import static android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP;
-import static android.os.Build.VERSION.SDK_INT;
-import static android.os.Build.VERSION_CODES.O;
 
 /**
  * Created by Shahid Iqbal on 6/10/2021
@@ -55,7 +53,7 @@ public class NotificationHelper extends ContextWrapper {
 
     public NotificationCompat.Builder getChannelNotification() {
         Intent intent = new Intent(this, HadithOfDay.class);
-        PendingIntent pendingIntent = PendingIntent.getActivity(this,
+        @SuppressLint("UnspecifiedImmutableFlag") PendingIntent pendingIntent = PendingIntent.getActivity(this,
                 78, intent, FLAG_UPDATE_CURRENT);
         return new NotificationCompat.Builder(getApplicationContext(), channelID)
                 .setContentTitle("Hadith of the Day")
