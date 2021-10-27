@@ -1,7 +1,5 @@
 package com.edu.pk.gulehri.meraallah.ui;
 
-import static com.edu.pk.gulehri.meraallah.R.id;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -46,6 +44,7 @@ public class QuranSettingActivity extends AppCompatActivity {
 
     }
 
+
     private void setToolBar() {
         try {
             setSupportActionBar(binding.tbQuranSetting.mToolbar);
@@ -73,6 +72,7 @@ public class QuranSettingActivity extends AppCompatActivity {
             edit.putBoolean("switchArabic", b);
             edit.apply();
         });
+
         binding.switchTranslation.setOnCheckedChangeListener((compoundButton, b) -> {
             edit.putBoolean("checkTranslation", true);
             edit.putBoolean("switchTranslation", b);
@@ -81,7 +81,7 @@ public class QuranSettingActivity extends AppCompatActivity {
 
         binding.langGroup.setOnCheckedChangeListener((radioGroup, i) -> {
             edit.putBoolean("checkLang", true);
-            edit.putInt("rbID", radioGroup.getCheckedRadioButtonId());
+            edit.putInt("id", radioGroup.getCheckedRadioButtonId());
             edit.apply();
         });
 
@@ -130,10 +130,13 @@ public class QuranSettingActivity extends AppCompatActivity {
     }
 
     @SuppressLint("SetTextI18n")
-    private void getValue() {
+    public void getValue() {
         final boolean checkArabic = sp.getBoolean("checkArabic", false);
         final boolean checkTranslation = sp.getBoolean("checkTranslation", false);
+
         final boolean checkLang = sp.getBoolean("checkLang", false);
+        final int id = sp.getInt("id", 0);
+
         final boolean checkSeekArabic = sp.getBoolean("checkSeekArabic", false);
         final boolean checkSeekTranslation = sp.getBoolean("checkSeekTranslation", false);
 
@@ -155,15 +158,6 @@ public class QuranSettingActivity extends AppCompatActivity {
             binding.switchTranslation.setChecked(sp.getBoolean("switchTranslation", false));
         }
 
-        //setting Radio Buttons
-        if (!checkLang) {
-            binding.radioUrdu.setChecked(true);
-            edit.putInt("rbID", id.radioUrdu);
-            edit.apply();
-        } else {
-            RadioButton radioButton = findViewById(sp.getInt("rbID", 0));
-            radioButton.setChecked(true);
-        }
 
         if (!checkSeekArabic) {
             binding.arabicPx.setText("" + 60 + "%");
@@ -185,6 +179,23 @@ public class QuranSettingActivity extends AppCompatActivity {
             final int progress = sp.getInt("seekbarTranslation", 0);
             binding.translationPx.setText("" + progress + "%");
             binding.seekBarTranslation.setProgress(progress);
+        }
+
+
+        if (!checkLang || id == 0) {
+            binding.radioUrdu.setChecked(true);
+            edit.putInt("id", R.id.radioUrdu);
+            edit.apply();
+
+        } else {
+
+            RadioButton button = (RadioButton) findViewById(id);
+            try {
+                button.setChecked(true);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
         }
 
     }

@@ -3,6 +3,7 @@ package com.edu.pk.gulehri.meraallah.ui;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
@@ -87,6 +88,10 @@ public class ShowQuranActivity extends AppCompatActivity {
                 startActivity(new Intent(ShowQuranActivity.this, QuranSettingActivity.class));
                 finish();
             });
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                binding.tBarShowQuran.toolbarText.setTypeface(getResources().getFont(R.font.jameel));
+            }
             binding.tBarShowQuran.toolbarText.setText(surahLists.get(chapter).getName());
 
 
@@ -192,8 +197,7 @@ public class ShowQuranActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
-            startActivity(new Intent(this, MainActivity.class));
-            finish();
+            onBackPressed();
         }
         return super.onOptionsItemSelected(item);
     }

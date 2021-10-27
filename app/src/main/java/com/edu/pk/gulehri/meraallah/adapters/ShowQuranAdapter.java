@@ -61,8 +61,9 @@ public class ShowQuranAdapter extends RecyclerView.Adapter<ShowQuranAdapter.Qura
         final boolean checkTranslation = sp.getBoolean("checkTranslation", false);
         final boolean switchTranslation = sp.getBoolean("switchTranslation", false);
 
-        final int radioButton = sp.getInt("rbID", 0);
+
         final boolean checkLang = sp.getBoolean("checkLang", false);
+        final int radioId = sp.getInt("id", 0);
 
         final boolean checkSeekArabic = sp.getBoolean("checkSeekArabic", false);
         final boolean checkSeekTranslation = sp.getBoolean("checkSeekTranslation", false);
@@ -71,19 +72,7 @@ public class ShowQuranAdapter extends RecyclerView.Adapter<ShowQuranAdapter.Qura
         final int seekTranslation = sp.getInt("seekbarTranslation", 0);
 
 
-        if (switchArabic || !checkArabic) {
-            holder.binding.tvAyah.setVisibility(View.VISIBLE);
-        } else {
-            holder.binding.tvAyah.setVisibility(View.GONE);
-        }
-
-        if (switchTranslation || !checkTranslation) {
-            holder.binding.tvTranslation.setVisibility(View.VISIBLE);
-        } else {
-            holder.binding.tvTranslation.setVisibility(View.GONE);
-        }
-
-        if (!checkLang || radioButton == R.id.radioUrdu) {
+        if (radioId == R.id.radioUrdu || !checkLang || radioId == 0) {
             Typeface typeface = ResourcesCompat.getFont(mContext, R.font.jameel);
             holder.binding.tvTranslation.setTypeface(typeface);
             holder.binding.tvTranslation.setText(listUrdu.get(position));
@@ -98,8 +87,8 @@ public class ShowQuranAdapter extends RecyclerView.Adapter<ShowQuranAdapter.Qura
                 holder.binding.tvTasmiaTranslation.setVisibility(View.GONE);
             }
 
-        } else if (radioButton == R.id.radioEnglish) {
 
+        } else {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 Typeface typeface = ResourcesCompat.getFont(mContext, R.font.catamaran_medium);
                 holder.binding.tvTranslation.setTypeface(typeface);
@@ -108,7 +97,6 @@ public class ShowQuranAdapter extends RecyclerView.Adapter<ShowQuranAdapter.Qura
                 holder.binding.tvTranslation.setTypeface(Typeface.SERIF);
                 holder.binding.tvTasmiaTranslation.setTypeface(Typeface.SERIF);
             }
-
 
             if (position == 0) {
                 holder.binding.tvTasmia.setVisibility(View.VISIBLE);
@@ -121,7 +109,22 @@ public class ShowQuranAdapter extends RecyclerView.Adapter<ShowQuranAdapter.Qura
             }
 
             holder.binding.tvTranslation.setText(listEnglish.get(position));
+
         }
+
+
+        if (switchArabic || !checkArabic) {
+            holder.binding.tvAyah.setVisibility(View.VISIBLE);
+        } else {
+            holder.binding.tvAyah.setVisibility(View.GONE);
+        }
+
+        if (switchTranslation || !checkTranslation) {
+            holder.binding.tvTranslation.setVisibility(View.VISIBLE);
+        } else {
+            holder.binding.tvTranslation.setVisibility(View.GONE);
+        }
+
 
         if (!checkSeekArabic) {
             holder.binding.tvAyah.setTextSize(TypedValue.COMPLEX_UNIT_PX, 60);

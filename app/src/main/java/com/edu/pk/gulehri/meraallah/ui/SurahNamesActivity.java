@@ -288,11 +288,6 @@ public class SurahNamesActivity extends AppCompatActivity
 
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        startActivity(new Intent(this, MainActivity.class));
-    }
 
 
     @RequiresApi(api = Build.VERSION_CODES.N)

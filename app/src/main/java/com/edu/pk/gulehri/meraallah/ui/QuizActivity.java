@@ -471,7 +471,7 @@ public class QuizActivity extends AppCompatActivity {
         //The Condition says when back button is pressed twice with in 2 seconds only thn it will send intent StartQuizActivity
         if (backPressedTime + 2000 > System.currentTimeMillis()) {
             flag = true;
-            startActivity(new Intent(QuizActivity.this, MainActivity.class));
+            super.onBackPressed();
             QuizActivity.this.finish();
         }
         /*if back button is not pressed twice with in the 2 second the toast will appear*/
