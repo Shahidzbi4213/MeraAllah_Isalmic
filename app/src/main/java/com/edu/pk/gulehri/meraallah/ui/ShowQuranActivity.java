@@ -90,7 +90,7 @@ public class ShowQuranActivity extends AppCompatActivity {
             });
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                binding.tBarShowQuran.toolbarText.setTypeface(getResources().getFont(R.font.jameel));
+                binding.tBarShowQuran.toolbarText.setTypeface(getResources().getFont(R.font.q_font));
             }
             binding.tBarShowQuran.toolbarText.setText(surahLists.get(chapter).getName());
 
