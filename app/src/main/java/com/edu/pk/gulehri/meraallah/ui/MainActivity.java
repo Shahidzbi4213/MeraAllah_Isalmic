@@ -1,5 +1,9 @@
 package com.edu.pk.gulehri.meraallah.ui;
 
+import static android.os.Build.VERSION.SDK_INT;
+import static android.os.Build.VERSION_CODES.Q;
+
+import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Build;
@@ -30,9 +34,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
-import static android.os.Build.VERSION.SDK_INT;
-import static android.os.Build.VERSION_CODES.Q;
-
 
 public class MainActivity extends AppCompatActivity implements SearchView.OnQueryTextListener {
 
@@ -52,6 +53,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
         setRecycleViewAdapter();
         setToolbar();
+
 
     }
 
@@ -121,7 +123,8 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         ImageView imageSearch = searchView.findViewById(androidx.appcompat.R.id.search_button);
 
         try {
-            Field field = TextView.class.getDeclaredField("mCursorDrawableRes");
+            @SuppressLint("SoonBlockedPrivateApi") Field field =
+                    TextView.class.getDeclaredField("mCursorDrawableRes");
             field.setAccessible(true);
             field.set(txtSearch, R.drawable.my_cursor);
         } catch (Exception e) {

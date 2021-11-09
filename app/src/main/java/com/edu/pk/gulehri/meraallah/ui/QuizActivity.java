@@ -41,9 +41,11 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import com.edu.pk.gulehri.meraallah.R;
 import com.edu.pk.gulehri.meraallah.database.MyDbHelper;
 import com.edu.pk.gulehri.meraallah.databinding.ActivityQuizBinding;
 import com.edu.pk.gulehri.meraallah.databinding.ResultLayoutBinding;
+import com.edu.pk.gulehri.meraallah.utils.Status;
 import com.google.gson.Gson;
 
 import java.util.Collections;
@@ -68,6 +70,7 @@ public class QuizActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         quizBinding = ActivityQuizBinding.inflate(getLayoutInflater());
         setContentView(quizBinding.getRoot());
 
@@ -83,9 +86,12 @@ public class QuizActivity extends AppCompatActivity {
         //helper object that help in creating Database
         dbHelper = new MyDbHelper(this);
 
+        //Setting Status Bar
+        final Status status = new Status(QuizActivity.this);
+        status.setWindowFlag(false);
+        getWindow().setStatusBarColor(getResources().getColor(R.color.card_color));
 
         //Getting question of selected category and storing it list
-
         questionList = dbHelper.getAllData();
         //This give us the number of total question in the list
         questionTotal = questionList.size();

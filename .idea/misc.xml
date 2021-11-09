@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/drawable/edittext_bg.xml" value="0.20885416666666667" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/drawable/ic_download.xml" value="0.20885416666666667" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/drawable/radio_bg.xml" value="0.20885416666666667" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/drawable/radio_normal.xml" value="0.20885416666666667" />
@@ -24,7 +25,8 @@
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/activity_allah_names.xml" value="0.18854166666666666" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/activity_allah_names_detail.xml" value="0.18854166666666666" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/activity_arabic_quran.xml" value="0.19270833333333334" />
-        <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/activity_calculate_zakat.xml" value="0.18854166666666666" />
+        <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/activity_calculate_zakat.xml" value="0.19270833333333334" />
+        <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/activity_custom_player.xml" value="0.19270833333333334" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/activity_hadith_of_day.xml" value="0.18854166666666666" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/activity_hajj.xml" value="0.18854166666666666" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/activity_hajj_detail.xml" value="0.19270833333333334" />
@@ -46,7 +48,7 @@
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/activity_prophet_names_detail.xml" value="0.18854166666666666" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/activity_qaida.xml" value="0.18854166666666666" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/activity_qaida_viewer.xml" value="0.18854166666666666" />
-        <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/activity_quiz.xml" value="0.12" />
+        <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/activity_quiz.xml" value="0.4077961019490255" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/activity_quran_setting.xml" value="0.21" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/activity_quran_verse.xml" value="0.1" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/activity_ramadan_detail.xml" value="0.19270833333333334" />
@@ -58,7 +60,7 @@
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/activity_tasbeeh.xml" value="0.19270833333333334" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/activity_tasbeeh_detail.xml" value="0.33" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/activity_video.xml" value="0.22478736330498178" />
-        <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/activity_video_play.xml" value="0.18" />
+        <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/activity_video_play.xml" value="0.19270833333333334" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/activity_zakkat_detail.xml" value="0.19270833333333334" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/exo_custom.xml" value="0.19270833333333334" />
         <entry key="..\:/Android Workspace/Projects/MeraAllah/app/src/main/res/layout/fragment_urdu_hajj.xml" value="0.19270833333333334" />

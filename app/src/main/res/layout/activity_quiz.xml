@@ -13,7 +13,6 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/_150sdp"
         android:background="@color/card_color"
-        android:elevation="@dimen/_5sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -96,8 +95,8 @@
         android:layout_height="@dimen/_120sdp"
         android:layout_marginStart="@dimen/_15sdp"
         android:layout_marginEnd="@dimen/_15sdp"
-        android:elevation="@dimen/_5sdp"
         android:background="@drawable/question_background"
+        android:elevation="@dimen/_5sdp"
         android:fontFamily="@font/catamaran_medium"
         android:gravity="center"
         android:padding="@dimen/_10sdp"
@@ -208,7 +207,7 @@
             android:textStyle="bold" />
     </RadioGroup>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 
 

@@ -127,20 +127,18 @@ public class CalculateZakkatActivity extends AppCompatActivity implements View.O
     private void calculateZakkat() {
         if (!haveNetworkConnection()) {
             Toast.makeText(this, "Connect to Internet", Toast.LENGTH_SHORT).show();
+        } else if (binding.CompleteCountry.getText().toString().isEmpty()) {
+            binding.CompleteCountry.setError("Select a Country to proceed");
+        } else if (binding.editTextCash.getText().toString().isEmpty()) {
+            binding.editTextCash.setError("Give amount to proceed");
         } else {
-            if (binding.CompleteCountry.getText().toString().isEmpty()) {
-                binding.CompleteCountry.setError("Select a Country to proceed");
-            }
-            if (binding.editTextCash.getText().toString().isEmpty()) {
-                binding.editTextCash.setError("Give amount to proceed");
-            } else {
-                Country = binding.CompleteCountry.getText().toString();
-                Cash = Integer.parseInt(binding.editTextCash.getText().toString());
-                position = getPosition(Country);
-                Currency = CountriesList.COUNTRY_CURRENCY[position].getCurrency();
-                fetchRates(Country, Currency);
-            }
+            Country = binding.CompleteCountry.getText().toString();
+            Cash = Integer.parseInt(binding.editTextCash.getText().toString());
+            position = getPosition(Country);
+            Currency = CountriesList.COUNTRY_CURRENCY[position].getCurrency();
+            fetchRates(Country, Currency);
         }
+
     }
 
     private void fetchRates(String country, String currency) {
